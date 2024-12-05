@@ -12,7 +12,12 @@ const data = FileAttachment("data/user/distribution.csv").csv({ typed: true });
 ```
 
 ```js
-const threshold = view(Inputs.range([10, 100], { step: 1, label: "Cutoff:" }));
+const threshold_old = view(
+    Inputs.range([10, 100], { step: 1, label: "Cutoff Alt:" })
+);
+const threshold_young = view(
+    Inputs.range([10, 100], { step: 1, label: "Cutoff Jung:" })
+);
 ```
 
 ```js
@@ -26,24 +31,44 @@ const scale2 = d3.scaleOrdinal(
 );
 display(
     Plot.plot({
-        height: 800,
+        height: 500,
         width: 1000,
         x: { label: "Score" },
-        color: { legend: true, scheme: "Paired" },
+        color: { legend: true },
         marks: [
             Plot.dot(
                 data,
                 Plot.stackY2({
                     x: "score",
-                    fill: (d) =>
-                        d.age === "young" ? scale1(d.type) : scale2(d.type),
+                    fill: (d) => scale1(d.type),
                     sort: "type",
-                    fy: "age",
-                    fillOpacity: (d) => (d.score < threshold ? 0.3 : 1),
+                    fillOpacity: (d) => (d.score < threshold_old ? 0.3 : 1),
                 })
             ),
             Plot.ruleY([0]),
-            Plot.ruleX([threshold - 0.5]),
+            Plot.ruleX([threshold_old - 0.5]),
+        ],
+    })
+);
+
+display(
+    Plot.plot({
+        height: 500,
+        width: 1000,
+        x: { label: "Score" },
+        color: { legend: true },
+        marks: [
+            Plot.dot(
+                data,
+                Plot.stackY2({
+                    x: "score",
+                    fill: (d) => scale2(d.type),
+                    sort: "type",
+                    fillOpacity: (d) => (d.score < threshold_young ? 0.3 : 1),
+                })
+            ),
+            Plot.ruleY([0]),
+            Plot.ruleX([threshold_young - 0.5]),
         ],
     })
 );
@@ -62,7 +87,7 @@ const grp_old = data
         if (!acc[type]) {
             acc[type] = { belowThreshold: 0, aboveThreshold: 0 };
         }
-        if (score < threshold) {
+        if (score < threshold_old) {
             acc[type].belowThreshold += 1;
         } else {
             acc[type].aboveThreshold += 1;
@@ -166,7 +191,7 @@ const grp_young = data
         if (!acc[type]) {
             acc[type] = { belowThreshold: 0, aboveThreshold: 0 };
         }
-        if (score < threshold) {
+        if (score < threshold_young) {
             acc[type].belowThreshold += 1;
         } else {
             acc[type].aboveThreshold += 1;
