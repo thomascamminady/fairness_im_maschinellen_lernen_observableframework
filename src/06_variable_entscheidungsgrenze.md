@@ -1,16 +1,17 @@
 ---
-title: Feste Entscheidungsgrenze
+title: Variable Entscheidungsgrenze
 style: css/custom.css
 ---
 
-# Feste Entscheidungsgrenze
+# Variable Entscheidungsgrenze
 
 ```js
 const data = FileAttachment("data/user/distribution.csv").csv({ typed: true });
-const fixedThreshold = 70;
 ```
 
-Jetzt setzen wir eine fixe Grenze bei 70
+```js
+const threshold = view(Inputs.range([0, 100], { step: 1, label: "Cutoff:" }));
+```
 
 ```js
 display(
@@ -26,7 +27,7 @@ display(
                     x: "score",
                     fill: "type",
                     sort: "type",
-                    fillOpacity: (d) => (d.score < fixedThreshold ? 0.3 : 1),
+                    fillOpacity: (d) => (d.score < threshold ? 0.3 : 1),
                 })
             ),
             Plot.ruleY([0]),
@@ -51,6 +52,19 @@ const groupedData = data.reduce((acc, item) => {
     }
     return acc;
 }, {});
+const n_true_positive = groupedData["Zahlt zurück"]["aboveThreshold"];
+const n_false_positive = groupedData["Zahlt nicht zurück"]["aboveThreshold"];
+const n_false_negative = groupedData["Zahlt zurück"]["belowThreshold"];
+const n_true_negative = groupedData["Zahlt nicht zurück"]["belowThreshold"];
+
+const precision = (
+    (100 * n_true_positive) /
+    (n_true_positive + n_false_positive)
+).toFixed(2);
+const recall = (
+    (100 * n_true_positive) /
+    (n_true_positive + n_false_negative)
+).toFixed(2);
 ```
 
 ```html
@@ -99,16 +113,23 @@ Fülle jetzt aus:
             <tr>
                 <th>True positive Rate</th>
                 <th>Positive Rate</th>
-                <th>Genauigkeit</th>
+                <th>Precision</th>
+                <th>Recall</th>
                 <th>Gewinn</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="true"></td>
-                <td contenteditable="true"></td>
-                <td contenteditable="true"></td>
-                <td contenteditable="true"></td>
+                <td contenteditable="false">n=${n_true_positive}</td>
+                <td contenteditable="false">
+                    n= ${n_true_positive+n_false_positive}
+                </td>
+                <td contenteditable="false">${precision}%</td>
+                <td contenteditable="false">${recall}%</td>
+                <td contenteditable="false">
+                    ${100 * groupedData["Zahlt zurück"]["aboveThreshold"] - 1000
+                    * groupedData["Zahlt nicht zurück"]["aboveThreshold"]}
+                </td>
             </tr>
         </tbody>
     </table>
