@@ -4,19 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="generator" content="Observable Framework v1.13.0">
-<title>Datensatz | Fairness im maschinellen Lernen</title>
+<title>Histogram | Fairness im maschinellen Lernen</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
 <link rel="preload" as="style" href="./_import/css/custom.001d0aa3.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.ea9fd553.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
 <link rel="stylesheet" type="text/css" href="./_import/css/custom.001d0aa3.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
 <link rel="modulepreload" href="./_observablehq/client.dc9674dc.js">
 <link rel="modulepreload" href="./_observablehq/runtime.9393ab6d.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.92d283a6.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.1907cb1a.js">
 <link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.16/e828d8c8.js">
 <link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/407f7a1f.js">
-<link rel="modulepreload" href="./_npm/d3@7.9.0/7055d4c5.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/063eb405.js">
 <link rel="modulepreload" href="./_npm/isoformat@0.2.1/c68fbd73.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/7055d4c5.js">
 <link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/a62ae5ce.js">
 <link rel="modulepreload" href="./_npm/d3-array@3.2.4/e95f898e.js">
 <link rel="modulepreload" href="./_npm/d3-axis@3.0.0/d44feff9.js">
@@ -56,54 +60,85 @@
 import {define} from "./_observablehq/client.dc9674dc.js";
 import {registerFile} from "./_observablehq/stdlib.92d283a6.js";
 
-registerFile("./data/user/distribution.csv", {"name":"./data/user/distribution.csv","mimeType":"text/csv","path":"./_file/data/user/distribution.50542c76.csv","lastModified":1733389556682,"size":59380});
+registerFile("./data/user/random_user_1.csv", {"name":"./data/user/random_user_1.csv","mimeType":"text/csv","path":"./_file/data/user/random_user_1.1caf26c7.csv","lastModified":1733389132539,"size":3491});
+registerFile("./data/user/random_user_2.csv", {"name":"./data/user/random_user_2.csv","mimeType":"text/csv","path":"./_file/data/user/random_user_2.893b1997.csv","lastModified":1733389132540,"size":3532});
+registerFile("./data/user/random_user_3.csv", {"name":"./data/user/random_user_3.csv","mimeType":"text/csv","path":"./_file/data/user/random_user_3.877d12fb.csv","lastModified":1733389132541,"size":3486});
 
-define({id: "976701e6", inputs: ["FileAttachment"], outputs: ["data"], body: (FileAttachment) => {
-const data = FileAttachment("./data/user/distribution.csv").csv({ typed: true });
-return {data};
+define({id: "a642fc65", inputs: ["FileAttachment"], outputs: ["names1","names2","names3"], body: (FileAttachment) => {
+const names1 = FileAttachment("./data/user/random_user_1.csv").csv({
+    typed: true,
+});
+const names2 = FileAttachment("./data/user/random_user_2.csv").csv({
+    typed: true,
+});
+const names3 = FileAttachment("./data/user/random_user_3.csv").csv({
+    typed: true,
+});
+return {names1,names2,names3};
 }});
 
-define({id: "02dc768e", inputs: ["display","Plot","data"], body: (display,Plot,data) => {
-display(
-    Plot.plot({
-        aspectRatio: 1,
-        x: { label: "Score" },
-        color: { legend: true, scheme: "Paired" },
-        marks: [
-            Plot.dot(
-                data,
-                Plot.stackY2({
-                    x: "score",
-                    fill: "type",
-                    sort: "type",
-                })
-            ),
-            Plot.ruleY([0]),
-        ],
-    })
-);
+define({id: "c7d3b9c2", inputs: ["Inputs","names1"], body: (Inputs,names1) => {
+Inputs.table(names1);
 }});
 
-define({id: "16749a87", inputs: ["display","Plot","data"], body: (display,Plot,data) => {
-display(
-    Plot.plot({
-        aspectRatio: 1,
-        x: { label: "Score" },
-        color: { legend: true, scheme: "Paired" },
-        marks: [
-            Plot.dot(
-                data,
-                Plot.stackY2({
-                    x: "score",
-                    fill: "type",
-                    sort: "type",
-                    fy: "age",
-                })
-            ),
-            Plot.ruleY([0]),
-        ],
-    })
-);
+define({id: "e34bad4d", mode: "inline", inputs: ["Plot","names1","display"], body: async (Plot,names1,display) => {
+display(await(
+Plot.plot({
+height:200,width:200,  x: {label: "Score"},
+  color: { legend: true ,  scheme: "Paired"},
+  marks: [
+    Plot.dot(
+      names1,
+      Plot.stackY2({
+        x: "score",
+        fill: "type",
+        sort:"type",
+      })
+    ),
+    Plot.ruleY([0])
+  ]
+})
+))
+}});
+
+define({id: "0a37c43c", mode: "inline", inputs: ["Plot","names2","display"], body: async (Plot,names2,display) => {
+display(await(
+Plot.plot({
+height:200,width:200,  x: {label: "Score"},
+  color: { legend: true ,  scheme: "Paired"},
+  marks: [
+    Plot.dot(
+      names2,
+      Plot.stackY2({
+        x: "score",
+        fill: "type",
+        sort:"type",
+      })
+    ),
+    Plot.ruleY([0])
+  ]
+})
+))
+}});
+
+define({id: "c96d0025", mode: "inline", inputs: ["Plot","names3","display"], body: async (Plot,names3,display) => {
+display(await(
+Plot.plot({
+height:200,width:200,  x: {label: "Score"},
+  color: { legend: true ,  scheme: "Paired"},
+  marks: [
+    Plot.dot(
+      names3,
+      Plot.stackY2({
+        x: "score",
+        fill: "type",
+        sort:"type",
+      })
+    ),
+    Plot.ruleY([0])
+  ]
+})
+))
 }});
 
 </script>
@@ -119,8 +154,8 @@ display(
   <ol>
     <li class="observablehq-link"><a href="./01_einleitung">Einleitung</a></li>
     <li class="observablehq-link"><a href="./02_vierfelder">Vierfeldertafel</a></li>
-    <li class="observablehq-link"><a href="./03_histogram">Histogram</a></li>
-    <li class="observablehq-link observablehq-link-active"><a href="./04_einfuehrung_datensatz">Datensatz</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./03_histogram">Histogram</a></li>
+    <li class="observablehq-link"><a href="./04_einfuehrung_datensatz">Datensatz</a></li>
     <li class="observablehq-link"><a href="./05_feste_entscheidungsgrenze">Feste Entscheidungsgrenze</a></li>
   </ol>
 </nav>
@@ -131,21 +166,29 @@ display(
 </nav>
 </aside>
 <main id="observablehq-main" class="observablehq">
-<h1 id="datensatz" tabindex="-1"><a class="observablehq-header-anchor" href="#datensatz">Datensatz</a></h1>
-<div class="observablehq observablehq--block"><!--:976701e6:--></div>
-<p>So sieht unser datensatz aus.</p>
-<p>Manche leute haben einen guten score</p>
-<p>manche einen schlechten</p>
-<p>manche zahlen</p>
-<p>manche nicht</p>
-<p>Hier der Plot</p>
-<div class="observablehq observablehq--block"><!--:02dc768e:--></div>
-<p>TODO: Das hier kommt weg. In der Wirklichkeit ist das hier der Datensatz</p>
-<div class="observablehq observablehq--block"><!--:16749a87:--></div>
+<h1 id="histogram" tabindex="-1"><a class="observablehq-header-anchor" href="#histogram">Histogram</a></h1>
+<p>Hier ist eine tolle Tabelle.</p>
+<div class="observablehq observablehq--block"><!--:a642fc65:--></div>
+<div class="observablehq observablehq--block"><!--:c7d3b9c2:--></div>
+<p>Welches dieser Histogramme ist das richtige?</p>
+<div class="grid grid-cols-3">
+  <div class="card" style="max-width: 200px;">
+    <h2>Option A</h2>
+        <observablehq-loading></observablehq-loading><!--:e34bad4d:-->
+  </div>
+  <div class="card" style="max-width: 200px;">
+    <h2>Option B</h2>
+        <observablehq-loading></observablehq-loading><!--:0a37c43c:-->
+  </div>
+  <div class="card" style="max-width: 200px;">
+    <h2>Option C</h2>
+        <observablehq-loading></observablehq-loading><!--:c96d0025:-->
+  </div>
+</div>
 </main>
 <footer id="observablehq-footer">
-<nav><a rel="prev" href="./03_histogram"><span>Histogram</span></a><a rel="next" href="./05_feste_entscheidungsgrenze"><span>Feste Entscheidungsgrenze</span></a></nav>
-<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-12-05T12:09:24">Dec 5, 2024</a>.</div>
+<nav><a rel="prev" href="./02_vierfelder"><span>Vierfeldertafel</span></a><a rel="next" href="./04_einfuehrung_datensatz"><span>Datensatz</span></a></nav>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-12-05T12:58:55">Dec 5, 2024</a>.</div>
 </footer>
 </div>
 </body>
