@@ -44,7 +44,7 @@ const groupedData = data.reduce((acc, item) => {
     if (!acc[type]) {
         acc[type] = { belowThreshold: 0, aboveThreshold: 0 };
     }
-    if (score < threshold) {
+    if (score < fixedThreshold) {
         acc[type].belowThreshold += 1;
     } else {
         acc[type].aboveThreshold += 1;
