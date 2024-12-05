@@ -1,0 +1,65 @@
+@import url("observablehq:default.css");
+@import url("observablehq:theme-air.css");
+
+
+td {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    text-align: center;
+    text-anchor: middle;
+}
+
+
+th {
+    background-color: #ffffff;
+    /* font-weight: bold; */
+    text-align: center;
+    text-anchor: middle;
+}
+
+td[contenteditable="true"] {
+    background-color: #26a3e108;
+    border-color: #26a3e1;
+    /* Light yellow for editable cells */
+    cursor: text;
+}
+
+td[contenteditable="true"]:focus {
+    outline: 2px solid #4c68af;
+    /* Green outline when focused */
+}
+
+td[contenteditable="false"] {
+    background-color: #fff;
+    border-color: #26a3e1;
+    cursor: text;
+}
+
+
+
+
+.table-container {
+    width: 100%;
+    max-height: 500px;
+    /* Adjust height as needed */
+    overflow-y: auto;
+}
+
+
+/* Styling for the table */
+#sortable-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#sortable-table th,
+#sortable-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+#sortable-table th {
+    cursor: pointer;
+    background-color: #f4f4f4;
+}

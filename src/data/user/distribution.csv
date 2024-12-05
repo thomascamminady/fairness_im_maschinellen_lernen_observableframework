@@ -1,0 +1,2001 @@
+score,age,pays_back,type
+72,young,true,Zahlt zurück
+43,young,false,Zahlt nicht zurück
+41,young,true,Zahlt zurück
+55,young,false,Zahlt nicht zurück
+49,young,false,Zahlt nicht zurück
+42,young,true,Zahlt zurück
+49,young,false,Zahlt nicht zurück
+53,young,false,Zahlt nicht zurück
+55,young,false,Zahlt nicht zurück
+58,young,false,Zahlt nicht zurück
+50,young,true,Zahlt zurück
+50,young,true,Zahlt zurück
+47,young,false,Zahlt nicht zurück
+40,young,false,Zahlt nicht zurück
+53,young,false,Zahlt nicht zurück
+43,young,false,Zahlt nicht zurück
+42,young,false,Zahlt nicht zurück
+50,young,true,Zahlt zurück
+51,young,true,Zahlt zurück
+36,young,false,Zahlt nicht zurück
+54,young,true,Zahlt zurück
+45,young,false,Zahlt nicht zurück
+29,young,false,Zahlt nicht zurück
+47,young,true,Zahlt zurück
+54,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+48,young,false,Zahlt nicht zurück
+61,young,true,Zahlt zurück
+36,young,true,Zahlt zurück
+50,young,true,Zahlt zurück
+43,young,false,Zahlt nicht zurück
+38,young,false,Zahlt nicht zurück
+54,young,true,Zahlt zurück
+55,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+58,young,false,Zahlt nicht zurück
+53,young,false,Zahlt nicht zurück
+53,young,true,Zahlt zurück
+61,young,true,Zahlt zurück
+42,young,false,Zahlt nicht zurück
+69,young,false,Zahlt nicht zurück
+58,young,true,Zahlt zurück
+57,young,true,Zahlt zurück
+38,young,false,Zahlt nicht zurück
+46,young,false,Zahlt nicht zurück
+40,young,false,Zahlt nicht zurück
+54,young,false,Zahlt nicht zurück
+66,young,false,Zahlt nicht zurück
+40,young,false,Zahlt nicht zurück
+40,young,true,Zahlt zurück
+37,young,false,Zahlt nicht zurück
+55,young,false,Zahlt nicht zurück
+46,young,true,Zahlt zurück
+51,young,false,Zahlt nicht zurück
+65,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+50,young,false,Zahlt nicht zurück
+64,young,true,Zahlt zurück
+69,young,false,Zahlt nicht zurück
+39,young,true,Zahlt zurück
+47,young,true,Zahlt zurück
+45,young,false,Zahlt nicht zurück
+51,young,true,Zahlt zurück
+30,young,true,Zahlt zurück
+52,young,false,Zahlt nicht zurück
+58,young,true,Zahlt zurück
+65,young,false,Zahlt nicht zurück
+68,young,true,Zahlt zurück
+52,young,false,Zahlt nicht zurück
+46,young,true,Zahlt zurück
+62,young,true,Zahlt zurück
+36,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+44,young,false,Zahlt nicht zurück
+70,young,true,Zahlt zurück
+61,young,true,Zahlt zurück
+61,young,true,Zahlt zurück
+51,young,false,Zahlt nicht zurück
+40,young,true,Zahlt zurück
+38,young,true,Zahlt zurück
+38,young,false,Zahlt nicht zurück
+49,young,true,Zahlt zurück
+46,young,false,Zahlt nicht zurück
+51,young,true,Zahlt zurück
+55,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+49,young,true,Zahlt zurück
+47,young,false,Zahlt nicht zurück
+50,young,true,Zahlt zurück
+55,young,true,Zahlt zurück
+64,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+46,young,true,Zahlt zurück
+65,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+38,young,false,Zahlt nicht zurück
+53,young,true,Zahlt zurück
+58,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+46,young,false,Zahlt nicht zurück
+53,young,false,Zahlt nicht zurück
+51,young,false,Zahlt nicht zurück
+46,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+38,young,false,Zahlt nicht zurück
+61,young,true,Zahlt zurück
+65,young,false,Zahlt nicht zurück
+48,young,false,Zahlt nicht zurück
+56,young,true,Zahlt zurück
+64,young,true,Zahlt zurück
+46,young,true,Zahlt zurück
+50,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+47,young,true,Zahlt zurück
+53,young,true,Zahlt zurück
+47,young,false,Zahlt nicht zurück
+36,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+62,young,false,Zahlt nicht zurück
+55,young,true,Zahlt zurück
+57,young,true,Zahlt zurück
+56,young,false,Zahlt nicht zurück
+47,young,false,Zahlt nicht zurück
+58,young,false,Zahlt nicht zurück
+62,young,true,Zahlt zurück
+49,young,false,Zahlt nicht zurück
+51,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+44,young,true,Zahlt zurück
+34,young,false,Zahlt nicht zurück
+72,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+51,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+51,young,false,Zahlt nicht zurück
+34,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+51,young,false,Zahlt nicht zurück
+43,young,false,Zahlt nicht zurück
+40,young,true,Zahlt zurück
+51,young,true,Zahlt zurück
+50,young,true,Zahlt zurück
+68,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+52,young,true,Zahlt zurück
+51,young,true,Zahlt zurück
+53,young,true,Zahlt zurück
+42,young,true,Zahlt zurück
+55,young,true,Zahlt zurück
+64,young,true,Zahlt zurück
+60,young,false,Zahlt nicht zurück
+53,young,true,Zahlt zurück
+57,young,true,Zahlt zurück
+47,young,true,Zahlt zurück
+43,young,false,Zahlt nicht zurück
+61,young,false,Zahlt nicht zurück
+55,young,true,Zahlt zurück
+38,young,false,Zahlt nicht zurück
+70,young,true,Zahlt zurück
+49,young,true,Zahlt zurück
+54,young,false,Zahlt nicht zurück
+47,young,false,Zahlt nicht zurück
+42,young,true,Zahlt zurück
+45,young,true,Zahlt zurück
+56,young,true,Zahlt zurück
+44,young,true,Zahlt zurück
+45,young,false,Zahlt nicht zurück
+55,young,false,Zahlt nicht zurück
+45,young,true,Zahlt zurück
+56,young,false,Zahlt nicht zurück
+42,young,true,Zahlt zurück
+37,young,false,Zahlt nicht zurück
+43,young,false,Zahlt nicht zurück
+34,young,true,Zahlt zurück
+56,young,true,Zahlt zurück
+44,young,true,Zahlt zurück
+39,young,false,Zahlt nicht zurück
+34,young,true,Zahlt zurück
+49,young,true,Zahlt zurück
+63,young,false,Zahlt nicht zurück
+57,young,true,Zahlt zurück
+47,young,true,Zahlt zurück
+51,young,false,Zahlt nicht zurück
+56,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+60,young,false,Zahlt nicht zurück
+60,young,true,Zahlt zurück
+45,young,false,Zahlt nicht zurück
+65,young,false,Zahlt nicht zurück
+60,young,true,Zahlt zurück
+37,young,false,Zahlt nicht zurück
+49,young,false,Zahlt nicht zurück
+45,young,true,Zahlt zurück
+41,young,false,Zahlt nicht zurück
+63,young,false,Zahlt nicht zurück
+60,young,true,Zahlt zurück
+55,young,false,Zahlt nicht zurück
+44,young,false,Zahlt nicht zurück
+55,young,true,Zahlt zurück
+37,young,false,Zahlt nicht zurück
+48,young,true,Zahlt zurück
+36,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+47,young,false,Zahlt nicht zurück
+57,young,false,Zahlt nicht zurück
+54,young,true,Zahlt zurück
+46,young,true,Zahlt zurück
+52,young,true,Zahlt zurück
+49,young,true,Zahlt zurück
+63,young,true,Zahlt zurück
+45,young,false,Zahlt nicht zurück
+40,young,false,Zahlt nicht zurück
+38,young,true,Zahlt zurück
+38,young,true,Zahlt zurück
+48,young,false,Zahlt nicht zurück
+47,young,false,Zahlt nicht zurück
+49,young,true,Zahlt zurück
+35,young,true,Zahlt zurück
+42,young,true,Zahlt zurück
+25,young,false,Zahlt nicht zurück
+59,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+51,young,true,Zahlt zurück
+50,young,false,Zahlt nicht zurück
+54,young,false,Zahlt nicht zurück
+51,young,true,Zahlt zurück
+41,young,true,Zahlt zurück
+53,young,false,Zahlt nicht zurück
+46,young,true,Zahlt zurück
+56,young,false,Zahlt nicht zurück
+46,young,false,Zahlt nicht zurück
+60,young,false,Zahlt nicht zurück
+58,young,true,Zahlt zurück
+65,young,true,Zahlt zurück
+54,young,true,Zahlt zurück
+52,young,true,Zahlt zurück
+38,young,true,Zahlt zurück
+57,young,true,Zahlt zurück
+60,young,false,Zahlt nicht zurück
+33,young,true,Zahlt zurück
+33,young,true,Zahlt zurück
+55,young,false,Zahlt nicht zurück
+51,young,true,Zahlt zurück
+44,young,true,Zahlt zurück
+31,young,false,Zahlt nicht zurück
+35,young,false,Zahlt nicht zurück
+44,young,true,Zahlt zurück
+26,young,false,Zahlt nicht zurück
+59,young,true,Zahlt zurück
+60,young,true,Zahlt zurück
+38,young,true,Zahlt zurück
+46,young,true,Zahlt zurück
+55,young,true,Zahlt zurück
+52,young,false,Zahlt nicht zurück
+41,young,false,Zahlt nicht zurück
+63,young,true,Zahlt zurück
+54,young,false,Zahlt nicht zurück
+57,young,false,Zahlt nicht zurück
+58,young,true,Zahlt zurück
+41,young,false,Zahlt nicht zurück
+64,young,false,Zahlt nicht zurück
+55,young,false,Zahlt nicht zurück
+39,young,false,Zahlt nicht zurück
+41,young,true,Zahlt zurück
+41,young,false,Zahlt nicht zurück
+61,young,true,Zahlt zurück
+33,young,true,Zahlt zurück
+48,young,false,Zahlt nicht zurück
+53,young,true,Zahlt zurück
+58,young,false,Zahlt nicht zurück
+66,young,false,Zahlt nicht zurück
+44,young,false,Zahlt nicht zurück
+36,young,true,Zahlt zurück
+35,young,false,Zahlt nicht zurück
+55,young,false,Zahlt nicht zurück
+42,young,false,Zahlt nicht zurück
+45,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+57,young,false,Zahlt nicht zurück
+66,young,true,Zahlt zurück
+44,young,true,Zahlt zurück
+64,young,false,Zahlt nicht zurück
+47,young,false,Zahlt nicht zurück
+36,young,false,Zahlt nicht zurück
+55,young,true,Zahlt zurück
+75,young,true,Zahlt zurück
+56,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+71,young,true,Zahlt zurück
+62,young,true,Zahlt zurück
+71,young,false,Zahlt nicht zurück
+73,young,true,Zahlt zurück
+39,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+48,young,false,Zahlt nicht zurück
+49,young,false,Zahlt nicht zurück
+51,young,true,Zahlt zurück
+64,young,false,Zahlt nicht zurück
+63,young,false,Zahlt nicht zurück
+47,young,false,Zahlt nicht zurück
+54,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+43,young,true,Zahlt zurück
+50,young,true,Zahlt zurück
+53,young,false,Zahlt nicht zurück
+53,young,true,Zahlt zurück
+73,young,true,Zahlt zurück
+57,young,false,Zahlt nicht zurück
+31,young,false,Zahlt nicht zurück
+43,young,false,Zahlt nicht zurück
+39,young,false,Zahlt nicht zurück
+39,young,false,Zahlt nicht zurück
+47,young,true,Zahlt zurück
+63,young,false,Zahlt nicht zurück
+42,young,false,Zahlt nicht zurück
+45,young,false,Zahlt nicht zurück
+41,young,false,Zahlt nicht zurück
+58,young,false,Zahlt nicht zurück
+50,young,true,Zahlt zurück
+56,young,false,Zahlt nicht zurück
+61,young,false,Zahlt nicht zurück
+63,young,false,Zahlt nicht zurück
+40,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+56,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+50,young,true,Zahlt zurück
+36,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+39,young,false,Zahlt nicht zurück
+48,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+53,young,true,Zahlt zurück
+68,young,true,Zahlt zurück
+55,young,false,Zahlt nicht zurück
+66,young,true,Zahlt zurück
+40,young,false,Zahlt nicht zurück
+51,young,false,Zahlt nicht zurück
+29,young,true,Zahlt zurück
+25,young,false,Zahlt nicht zurück
+35,young,false,Zahlt nicht zurück
+40,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+62,young,true,Zahlt zurück
+39,young,false,Zahlt nicht zurück
+50,young,true,Zahlt zurück
+65,young,true,Zahlt zurück
+29,young,false,Zahlt nicht zurück
+39,young,false,Zahlt nicht zurück
+58,young,false,Zahlt nicht zurück
+50,young,true,Zahlt zurück
+39,young,true,Zahlt zurück
+47,young,false,Zahlt nicht zurück
+55,young,true,Zahlt zurück
+38,young,false,Zahlt nicht zurück
+43,young,false,Zahlt nicht zurück
+62,young,true,Zahlt zurück
+44,young,true,Zahlt zurück
+63,young,true,Zahlt zurück
+40,young,false,Zahlt nicht zurück
+37,young,false,Zahlt nicht zurück
+55,young,true,Zahlt zurück
+46,young,true,Zahlt zurück
+55,young,false,Zahlt nicht zurück
+39,young,true,Zahlt zurück
+60,young,false,Zahlt nicht zurück
+42,young,false,Zahlt nicht zurück
+36,young,false,Zahlt nicht zurück
+62,young,true,Zahlt zurück
+43,young,true,Zahlt zurück
+50,young,false,Zahlt nicht zurück
+48,young,false,Zahlt nicht zurück
+57,young,true,Zahlt zurück
+41,young,true,Zahlt zurück
+46,young,false,Zahlt nicht zurück
+58,young,true,Zahlt zurück
+50,young,true,Zahlt zurück
+58,young,false,Zahlt nicht zurück
+37,young,true,Zahlt zurück
+40,young,false,Zahlt nicht zurück
+43,young,false,Zahlt nicht zurück
+49,young,false,Zahlt nicht zurück
+54,young,true,Zahlt zurück
+69,young,true,Zahlt zurück
+58,young,false,Zahlt nicht zurück
+66,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+50,young,false,Zahlt nicht zurück
+45,young,false,Zahlt nicht zurück
+55,young,true,Zahlt zurück
+41,young,false,Zahlt nicht zurück
+56,young,true,Zahlt zurück
+41,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+55,young,true,Zahlt zurück
+60,young,false,Zahlt nicht zurück
+43,young,true,Zahlt zurück
+46,young,true,Zahlt zurück
+46,young,false,Zahlt nicht zurück
+40,young,false,Zahlt nicht zurück
+57,young,false,Zahlt nicht zurück
+55,young,true,Zahlt zurück
+43,young,false,Zahlt nicht zurück
+47,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+67,young,true,Zahlt zurück
+51,young,false,Zahlt nicht zurück
+33,young,false,Zahlt nicht zurück
+47,young,true,Zahlt zurück
+58,young,false,Zahlt nicht zurück
+51,young,false,Zahlt nicht zurück
+40,young,false,Zahlt nicht zurück
+64,young,true,Zahlt zurück
+34,young,false,Zahlt nicht zurück
+37,young,true,Zahlt zurück
+51,young,false,Zahlt nicht zurück
+40,young,false,Zahlt nicht zurück
+42,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+52,young,true,Zahlt zurück
+54,young,true,Zahlt zurück
+67,young,true,Zahlt zurück
+61,young,true,Zahlt zurück
+56,young,true,Zahlt zurück
+57,young,true,Zahlt zurück
+70,young,true,Zahlt zurück
+44,young,true,Zahlt zurück
+54,young,true,Zahlt zurück
+64,young,true,Zahlt zurück
+58,young,true,Zahlt zurück
+34,young,false,Zahlt nicht zurück
+36,young,true,Zahlt zurück
+70,young,false,Zahlt nicht zurück
+68,young,true,Zahlt zurück
+49,young,false,Zahlt nicht zurück
+43,young,true,Zahlt zurück
+45,young,false,Zahlt nicht zurück
+40,young,true,Zahlt zurück
+42,young,false,Zahlt nicht zurück
+75,young,false,Zahlt nicht zurück
+49,young,false,Zahlt nicht zurück
+58,young,true,Zahlt zurück
+39,young,false,Zahlt nicht zurück
+45,young,false,Zahlt nicht zurück
+59,young,true,Zahlt zurück
+43,young,false,Zahlt nicht zurück
+46,young,false,Zahlt nicht zurück
+44,young,false,Zahlt nicht zurück
+34,young,false,Zahlt nicht zurück
+63,young,false,Zahlt nicht zurück
+40,young,false,Zahlt nicht zurück
+50,young,true,Zahlt zurück
+33,young,false,Zahlt nicht zurück
+46,young,false,Zahlt nicht zurück
+46,young,true,Zahlt zurück
+44,young,true,Zahlt zurück
+42,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+50,young,false,Zahlt nicht zurück
+61,young,true,Zahlt zurück
+55,young,false,Zahlt nicht zurück
+49,young,true,Zahlt zurück
+55,young,false,Zahlt nicht zurück
+58,young,true,Zahlt zurück
+41,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+56,young,true,Zahlt zurück
+38,young,false,Zahlt nicht zurück
+46,young,false,Zahlt nicht zurück
+41,young,true,Zahlt zurück
+53,young,true,Zahlt zurück
+54,young,false,Zahlt nicht zurück
+37,young,true,Zahlt zurück
+46,young,false,Zahlt nicht zurück
+57,young,true,Zahlt zurück
+47,young,true,Zahlt zurück
+53,young,true,Zahlt zurück
+46,young,false,Zahlt nicht zurück
+57,young,true,Zahlt zurück
+60,young,true,Zahlt zurück
+61,young,false,Zahlt nicht zurück
+62,young,true,Zahlt zurück
+43,young,true,Zahlt zurück
+51,young,true,Zahlt zurück
+42,young,true,Zahlt zurück
+53,young,true,Zahlt zurück
+40,young,true,Zahlt zurück
+46,young,true,Zahlt zurück
+52,young,false,Zahlt nicht zurück
+39,young,true,Zahlt zurück
+37,young,true,Zahlt zurück
+53,young,false,Zahlt nicht zurück
+56,young,false,Zahlt nicht zurück
+48,young,true,Zahlt zurück
+64,young,true,Zahlt zurück
+47,young,false,Zahlt nicht zurück
+66,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+53,young,false,Zahlt nicht zurück
+54,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+46,young,true,Zahlt zurück
+47,young,false,Zahlt nicht zurück
+38,young,false,Zahlt nicht zurück
+59,young,true,Zahlt zurück
+37,young,false,Zahlt nicht zurück
+53,young,true,Zahlt zurück
+39,young,false,Zahlt nicht zurück
+44,young,false,Zahlt nicht zurück
+40,young,true,Zahlt zurück
+67,young,false,Zahlt nicht zurück
+64,young,false,Zahlt nicht zurück
+45,young,false,Zahlt nicht zurück
+45,young,false,Zahlt nicht zurück
+62,young,false,Zahlt nicht zurück
+47,young,false,Zahlt nicht zurück
+43,young,false,Zahlt nicht zurück
+44,young,false,Zahlt nicht zurück
+41,young,false,Zahlt nicht zurück
+32,young,true,Zahlt zurück
+46,young,false,Zahlt nicht zurück
+38,young,true,Zahlt zurück
+51,young,false,Zahlt nicht zurück
+38,young,true,Zahlt zurück
+48,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+37,young,false,Zahlt nicht zurück
+30,young,false,Zahlt nicht zurück
+56,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+47,young,true,Zahlt zurück
+49,young,true,Zahlt zurück
+61,young,true,Zahlt zurück
+49,young,true,Zahlt zurück
+38,young,false,Zahlt nicht zurück
+43,young,false,Zahlt nicht zurück
+49,young,false,Zahlt nicht zurück
+53,young,false,Zahlt nicht zurück
+58,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+50,young,true,Zahlt zurück
+57,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+46,young,true,Zahlt zurück
+44,young,true,Zahlt zurück
+54,young,false,Zahlt nicht zurück
+47,young,true,Zahlt zurück
+61,young,false,Zahlt nicht zurück
+48,young,false,Zahlt nicht zurück
+39,young,true,Zahlt zurück
+59,young,false,Zahlt nicht zurück
+55,young,true,Zahlt zurück
+75,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+46,young,false,Zahlt nicht zurück
+46,young,true,Zahlt zurück
+47,young,false,Zahlt nicht zurück
+45,young,true,Zahlt zurück
+12,young,false,Zahlt nicht zurück
+51,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+43,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+34,young,false,Zahlt nicht zurück
+59,young,true,Zahlt zurück
+49,young,false,Zahlt nicht zurück
+62,young,true,Zahlt zurück
+38,young,false,Zahlt nicht zurück
+47,young,false,Zahlt nicht zurück
+61,young,true,Zahlt zurück
+71,young,true,Zahlt zurück
+30,young,false,Zahlt nicht zurück
+53,young,false,Zahlt nicht zurück
+60,young,false,Zahlt nicht zurück
+58,young,true,Zahlt zurück
+59,young,true,Zahlt zurück
+43,young,false,Zahlt nicht zurück
+57,young,true,Zahlt zurück
+54,young,true,Zahlt zurück
+53,young,true,Zahlt zurück
+43,young,false,Zahlt nicht zurück
+56,young,false,Zahlt nicht zurück
+37,young,false,Zahlt nicht zurück
+18,young,false,Zahlt nicht zurück
+56,young,false,Zahlt nicht zurück
+50,young,true,Zahlt zurück
+49,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+56,young,true,Zahlt zurück
+57,young,true,Zahlt zurück
+74,young,false,Zahlt nicht zurück
+39,young,false,Zahlt nicht zurück
+43,young,false,Zahlt nicht zurück
+63,young,true,Zahlt zurück
+54,young,true,Zahlt zurück
+39,young,false,Zahlt nicht zurück
+45,young,false,Zahlt nicht zurück
+31,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+60,young,false,Zahlt nicht zurück
+69,young,false,Zahlt nicht zurück
+41,young,true,Zahlt zurück
+60,young,false,Zahlt nicht zurück
+56,young,true,Zahlt zurück
+66,young,true,Zahlt zurück
+45,young,false,Zahlt nicht zurück
+54,young,false,Zahlt nicht zurück
+51,young,true,Zahlt zurück
+63,young,true,Zahlt zurück
+50,young,false,Zahlt nicht zurück
+58,young,true,Zahlt zurück
+46,young,false,Zahlt nicht zurück
+47,young,false,Zahlt nicht zurück
+49,young,true,Zahlt zurück
+56,young,false,Zahlt nicht zurück
+45,young,true,Zahlt zurück
+73,young,true,Zahlt zurück
+67,young,false,Zahlt nicht zurück
+79,young,false,Zahlt nicht zurück
+64,young,true,Zahlt zurück
+40,young,false,Zahlt nicht zurück
+53,young,false,Zahlt nicht zurück
+64,young,false,Zahlt nicht zurück
+62,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+42,young,false,Zahlt nicht zurück
+58,young,false,Zahlt nicht zurück
+42,young,true,Zahlt zurück
+64,young,true,Zahlt zurück
+41,young,true,Zahlt zurück
+42,young,true,Zahlt zurück
+55,young,true,Zahlt zurück
+52,young,true,Zahlt zurück
+43,young,false,Zahlt nicht zurück
+55,young,false,Zahlt nicht zurück
+42,young,false,Zahlt nicht zurück
+55,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+46,young,false,Zahlt nicht zurück
+38,young,true,Zahlt zurück
+58,young,true,Zahlt zurück
+59,young,true,Zahlt zurück
+54,young,true,Zahlt zurück
+60,young,true,Zahlt zurück
+47,young,true,Zahlt zurück
+53,young,true,Zahlt zurück
+49,young,false,Zahlt nicht zurück
+71,young,true,Zahlt zurück
+55,young,true,Zahlt zurück
+43,young,true,Zahlt zurück
+54,young,false,Zahlt nicht zurück
+40,young,true,Zahlt zurück
+54,young,true,Zahlt zurück
+55,young,true,Zahlt zurück
+43,young,true,Zahlt zurück
+59,young,true,Zahlt zurück
+56,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+57,young,true,Zahlt zurück
+61,young,true,Zahlt zurück
+46,young,false,Zahlt nicht zurück
+36,young,false,Zahlt nicht zurück
+46,young,true,Zahlt zurück
+55,young,true,Zahlt zurück
+61,young,false,Zahlt nicht zurück
+58,young,true,Zahlt zurück
+56,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+44,young,true,Zahlt zurück
+56,young,true,Zahlt zurück
+55,young,true,Zahlt zurück
+54,young,false,Zahlt nicht zurück
+55,young,false,Zahlt nicht zurück
+54,young,false,Zahlt nicht zurück
+61,young,true,Zahlt zurück
+63,young,false,Zahlt nicht zurück
+36,young,false,Zahlt nicht zurück
+43,young,false,Zahlt nicht zurück
+46,young,false,Zahlt nicht zurück
+51,young,true,Zahlt zurück
+44,young,true,Zahlt zurück
+61,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+48,young,false,Zahlt nicht zurück
+63,young,true,Zahlt zurück
+43,young,true,Zahlt zurück
+50,young,false,Zahlt nicht zurück
+51,young,true,Zahlt zurück
+38,young,false,Zahlt nicht zurück
+42,young,true,Zahlt zurück
+40,young,true,Zahlt zurück
+52,young,true,Zahlt zurück
+38,young,true,Zahlt zurück
+40,young,true,Zahlt zurück
+47,young,false,Zahlt nicht zurück
+49,young,true,Zahlt zurück
+56,young,true,Zahlt zurück
+53,young,false,Zahlt nicht zurück
+51,young,false,Zahlt nicht zurück
+48,young,false,Zahlt nicht zurück
+35,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+49,young,false,Zahlt nicht zurück
+65,young,true,Zahlt zurück
+50,young,true,Zahlt zurück
+89,young,true,Zahlt zurück
+57,young,false,Zahlt nicht zurück
+64,young,true,Zahlt zurück
+49,young,false,Zahlt nicht zurück
+64,young,true,Zahlt zurück
+49,young,false,Zahlt nicht zurück
+55,young,false,Zahlt nicht zurück
+33,young,false,Zahlt nicht zurück
+51,young,false,Zahlt nicht zurück
+47,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+46,young,true,Zahlt zurück
+48,young,false,Zahlt nicht zurück
+57,young,true,Zahlt zurück
+63,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+36,young,false,Zahlt nicht zurück
+33,young,false,Zahlt nicht zurück
+55,young,false,Zahlt nicht zurück
+43,young,true,Zahlt zurück
+66,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+41,young,false,Zahlt nicht zurück
+72,young,true,Zahlt zurück
+30,young,false,Zahlt nicht zurück
+40,young,true,Zahlt zurück
+55,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+54,young,false,Zahlt nicht zurück
+58,young,true,Zahlt zurück
+43,young,false,Zahlt nicht zurück
+37,young,true,Zahlt zurück
+48,young,false,Zahlt nicht zurück
+65,young,true,Zahlt zurück
+74,young,true,Zahlt zurück
+32,young,true,Zahlt zurück
+52,young,true,Zahlt zurück
+38,young,false,Zahlt nicht zurück
+41,young,true,Zahlt zurück
+51,young,true,Zahlt zurück
+61,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+49,young,true,Zahlt zurück
+39,young,true,Zahlt zurück
+39,young,false,Zahlt nicht zurück
+60,young,true,Zahlt zurück
+41,young,false,Zahlt nicht zurück
+23,young,false,Zahlt nicht zurück
+65,young,true,Zahlt zurück
+60,young,false,Zahlt nicht zurück
+45,young,true,Zahlt zurück
+75,young,true,Zahlt zurück
+29,young,true,Zahlt zurück
+57,young,true,Zahlt zurück
+57,young,false,Zahlt nicht zurück
+49,young,false,Zahlt nicht zurück
+43,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+46,young,false,Zahlt nicht zurück
+53,young,true,Zahlt zurück
+52,young,true,Zahlt zurück
+59,young,true,Zahlt zurück
+50,young,true,Zahlt zurück
+40,young,false,Zahlt nicht zurück
+59,young,true,Zahlt zurück
+42,young,false,Zahlt nicht zurück
+33,young,true,Zahlt zurück
+57,young,true,Zahlt zurück
+34,young,false,Zahlt nicht zurück
+53,young,false,Zahlt nicht zurück
+74,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+51,young,false,Zahlt nicht zurück
+48,young,false,Zahlt nicht zurück
+61,young,true,Zahlt zurück
+55,young,true,Zahlt zurück
+39,young,false,Zahlt nicht zurück
+41,young,false,Zahlt nicht zurück
+60,young,true,Zahlt zurück
+48,young,false,Zahlt nicht zurück
+57,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+55,young,true,Zahlt zurück
+39,young,false,Zahlt nicht zurück
+34,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+49,young,false,Zahlt nicht zurück
+59,young,true,Zahlt zurück
+32,young,true,Zahlt zurück
+57,young,false,Zahlt nicht zurück
+46,young,false,Zahlt nicht zurück
+48,young,false,Zahlt nicht zurück
+35,young,false,Zahlt nicht zurück
+49,young,true,Zahlt zurück
+49,young,false,Zahlt nicht zurück
+44,young,false,Zahlt nicht zurück
+53,young,true,Zahlt zurück
+52,young,false,Zahlt nicht zurück
+71,young,true,Zahlt zurück
+39,young,true,Zahlt zurück
+58,young,true,Zahlt zurück
+15,young,false,Zahlt nicht zurück
+54,young,true,Zahlt zurück
+42,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+50,young,true,Zahlt zurück
+43,young,true,Zahlt zurück
+51,young,false,Zahlt nicht zurück
+37,young,true,Zahlt zurück
+55,young,true,Zahlt zurück
+68,young,true,Zahlt zurück
+30,young,false,Zahlt nicht zurück
+63,young,false,Zahlt nicht zurück
+49,young,true,Zahlt zurück
+59,young,true,Zahlt zurück
+33,young,false,Zahlt nicht zurück
+49,young,true,Zahlt zurück
+40,young,true,Zahlt zurück
+41,young,false,Zahlt nicht zurück
+42,young,true,Zahlt zurück
+64,young,false,Zahlt nicht zurück
+47,young,true,Zahlt zurück
+66,young,true,Zahlt zurück
+59,young,false,Zahlt nicht zurück
+35,young,true,Zahlt zurück
+63,young,true,Zahlt zurück
+81,young,true,Zahlt zurück
+52,young,false,Zahlt nicht zurück
+51,young,false,Zahlt nicht zurück
+55,young,true,Zahlt zurück
+53,young,true,Zahlt zurück
+32,young,false,Zahlt nicht zurück
+49,young,false,Zahlt nicht zurück
+44,young,true,Zahlt zurück
+38,young,true,Zahlt zurück
+45,young,false,Zahlt nicht zurück
+58,young,false,Zahlt nicht zurück
+64,young,false,Zahlt nicht zurück
+48,young,true,Zahlt zurück
+66,young,true,Zahlt zurück
+62,young,false,Zahlt nicht zurück
+44,young,true,Zahlt zurück
+60,young,true,Zahlt zurück
+49,young,false,Zahlt nicht zurück
+57,young,true,Zahlt zurück
+63,young,true,Zahlt zurück
+75,young,false,Zahlt nicht zurück
+58,young,true,Zahlt zurück
+43,young,true,Zahlt zurück
+54,young,false,Zahlt nicht zurück
+49,young,false,Zahlt nicht zurück
+47,young,false,Zahlt nicht zurück
+57,young,false,Zahlt nicht zurück
+57,young,true,Zahlt zurück
+69,young,false,Zahlt nicht zurück
+59,young,false,Zahlt nicht zurück
+47,young,true,Zahlt zurück
+52,young,true,Zahlt zurück
+32,young,true,Zahlt zurück
+40,young,true,Zahlt zurück
+60,young,true,Zahlt zurück
+69,young,true,Zahlt zurück
+55,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+64,young,false,Zahlt nicht zurück
+54,young,false,Zahlt nicht zurück
+54,young,true,Zahlt zurück
+56,young,true,Zahlt zurück
+56,young,false,Zahlt nicht zurück
+47,young,false,Zahlt nicht zurück
+54,young,true,Zahlt zurück
+50,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+60,young,true,Zahlt zurück
+56,young,true,Zahlt zurück
+47,young,false,Zahlt nicht zurück
+62,young,false,Zahlt nicht zurück
+45,young,false,Zahlt nicht zurück
+54,young,true,Zahlt zurück
+56,young,true,Zahlt zurück
+55,young,true,Zahlt zurück
+49,young,true,Zahlt zurück
+56,young,true,Zahlt zurück
+43,young,true,Zahlt zurück
+53,young,false,Zahlt nicht zurück
+45,young,false,Zahlt nicht zurück
+54,young,false,Zahlt nicht zurück
+56,young,false,Zahlt nicht zurück
+64,young,true,Zahlt zurück
+55,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+46,young,true,Zahlt zurück
+49,young,true,Zahlt zurück
+53,young,true,Zahlt zurück
+40,young,false,Zahlt nicht zurück
+42,young,true,Zahlt zurück
+75,young,true,Zahlt zurück
+41,young,true,Zahlt zurück
+42,young,false,Zahlt nicht zurück
+52,young,true,Zahlt zurück
+72,young,true,Zahlt zurück
+49,young,false,Zahlt nicht zurück
+57,young,true,Zahlt zurück
+36,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+34,young,false,Zahlt nicht zurück
+46,young,true,Zahlt zurück
+57,young,false,Zahlt nicht zurück
+65,young,true,Zahlt zurück
+48,young,false,Zahlt nicht zurück
+38,young,true,Zahlt zurück
+58,young,false,Zahlt nicht zurück
+68,young,true,Zahlt zurück
+47,young,false,Zahlt nicht zurück
+41,young,true,Zahlt zurück
+45,young,true,Zahlt zurück
+49,young,false,Zahlt nicht zurück
+54,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+49,young,false,Zahlt nicht zurück
+67,young,true,Zahlt zurück
+63,young,true,Zahlt zurück
+46,young,false,Zahlt nicht zurück
+37,young,true,Zahlt zurück
+50,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+60,young,false,Zahlt nicht zurück
+39,young,false,Zahlt nicht zurück
+37,young,false,Zahlt nicht zurück
+65,young,false,Zahlt nicht zurück
+48,young,false,Zahlt nicht zurück
+47,young,true,Zahlt zurück
+36,young,true,Zahlt zurück
+54,young,false,Zahlt nicht zurück
+45,young,true,Zahlt zurück
+43,young,true,Zahlt zurück
+42,young,false,Zahlt nicht zurück
+40,young,true,Zahlt zurück
+44,young,false,Zahlt nicht zurück
+51,young,false,Zahlt nicht zurück
+38,young,false,Zahlt nicht zurück
+26,young,false,Zahlt nicht zurück
+39,young,true,Zahlt zurück
+47,young,false,Zahlt nicht zurück
+49,young,true,Zahlt zurück
+53,young,false,Zahlt nicht zurück
+60,young,true,Zahlt zurück
+35,young,true,Zahlt zurück
+43,young,false,Zahlt nicht zurück
+52,young,false,Zahlt nicht zurück
+64,young,true,Zahlt zurück
+59,young,true,Zahlt zurück
+50,young,false,Zahlt nicht zurück
+62,young,false,Zahlt nicht zurück
+49,young,true,Zahlt zurück
+61,young,true,Zahlt zurück
+41,young,true,Zahlt zurück
+39,young,false,Zahlt nicht zurück
+48,young,true,Zahlt zurück
+49,young,false,Zahlt nicht zurück
+28,young,true,Zahlt zurück
+39,young,true,Zahlt zurück
+44,young,true,Zahlt zurück
+48,young,true,Zahlt zurück
+56,young,false,Zahlt nicht zurück
+51,young,false,Zahlt nicht zurück
+28,young,false,Zahlt nicht zurück
+34,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+36,young,false,Zahlt nicht zurück
+64,young,true,Zahlt zurück
+58,young,true,Zahlt zurück
+60,young,true,Zahlt zurück
+54,young,true,Zahlt zurück
+60,young,true,Zahlt zurück
+43,young,true,Zahlt zurück
+53,young,true,Zahlt zurück
+57,young,true,Zahlt zurück
+46,young,true,Zahlt zurück
+70,young,true,Zahlt zurück
+69,young,true,Zahlt zurück
+62,young,true,Zahlt zurück
+54,young,false,Zahlt nicht zurück
+70,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+44,young,false,Zahlt nicht zurück
+50,young,false,Zahlt nicht zurück
+53,young,true,Zahlt zurück
+66,young,true,Zahlt zurück
+56,young,true,Zahlt zurück
+63,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+65,old,false,Zahlt nicht zurück
+87,old,true,Zahlt zurück
+64,old,false,Zahlt nicht zurück
+72,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+74,old,false,Zahlt nicht zurück
+70,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+59,old,false,Zahlt nicht zurück
+71,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+58,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+82,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+83,old,true,Zahlt zurück
+69,old,false,Zahlt nicht zurück
+80,old,true,Zahlt zurück
+57,old,false,Zahlt nicht zurück
+75,old,false,Zahlt nicht zurück
+60,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+58,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+76,old,false,Zahlt nicht zurück
+67,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+96,old,true,Zahlt zurück
+58,old,true,Zahlt zurück
+84,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+60,old,false,Zahlt nicht zurück
+65,old,false,Zahlt nicht zurück
+66,old,false,Zahlt nicht zurück
+68,old,false,Zahlt nicht zurück
+58,old,true,Zahlt zurück
+77,old,false,Zahlt nicht zurück
+68,old,true,Zahlt zurück
+62,old,false,Zahlt nicht zurück
+65,old,false,Zahlt nicht zurück
+67,old,true,Zahlt zurück
+52,old,false,Zahlt nicht zurück
+87,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+48,old,false,Zahlt nicht zurück
+73,old,true,Zahlt zurück
+58,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+66,old,false,Zahlt nicht zurück
+78,old,true,Zahlt zurück
+67,old,false,Zahlt nicht zurück
+86,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+88,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+50,old,true,Zahlt zurück
+87,old,true,Zahlt zurück
+85,old,false,Zahlt nicht zurück
+51,old,false,Zahlt nicht zurück
+45,old,false,Zahlt nicht zurück
+75,old,false,Zahlt nicht zurück
+65,old,false,Zahlt nicht zurück
+72,old,false,Zahlt nicht zurück
+84,old,true,Zahlt zurück
+55,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+74,old,false,Zahlt nicht zurück
+69,old,true,Zahlt zurück
+54,old,true,Zahlt zurück
+57,old,false,Zahlt nicht zurück
+72,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+82,old,false,Zahlt nicht zurück
+79,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+97,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+56,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+54,old,false,Zahlt nicht zurück
+73,old,true,Zahlt zurück
+55,old,false,Zahlt nicht zurück
+73,old,false,Zahlt nicht zurück
+49,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+68,old,false,Zahlt nicht zurück
+78,old,true,Zahlt zurück
+58,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+88,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+82,old,true,Zahlt zurück
+77,old,false,Zahlt nicht zurück
+71,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+63,old,false,Zahlt nicht zurück
+85,old,true,Zahlt zurück
+56,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+57,old,false,Zahlt nicht zurück
+84,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+58,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+82,old,false,Zahlt nicht zurück
+55,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+86,old,true,Zahlt zurück
+60,old,false,Zahlt nicht zurück
+51,old,true,Zahlt zurück
+57,old,true,Zahlt zurück
+49,old,false,Zahlt nicht zurück
+85,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+59,old,false,Zahlt nicht zurück
+65,old,false,Zahlt nicht zurück
+70,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+52,old,false,Zahlt nicht zurück
+72,old,true,Zahlt zurück
+87,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+88,old,true,Zahlt zurück
+85,old,true,Zahlt zurück
+88,old,true,Zahlt zurück
+76,old,false,Zahlt nicht zurück
+75,old,false,Zahlt nicht zurück
+59,old,true,Zahlt zurück
+56,old,false,Zahlt nicht zurück
+79,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+59,old,true,Zahlt zurück
+65,old,false,Zahlt nicht zurück
+73,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+74,old,false,Zahlt nicht zurück
+81,old,true,Zahlt zurück
+89,old,true,Zahlt zurück
+73,old,false,Zahlt nicht zurück
+71,old,true,Zahlt zurück
+61,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+75,old,false,Zahlt nicht zurück
+53,old,true,Zahlt zurück
+92,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+51,old,true,Zahlt zurück
+64,old,false,Zahlt nicht zurück
+68,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+52,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+53,old,true,Zahlt zurück
+60,old,false,Zahlt nicht zurück
+48,old,false,Zahlt nicht zurück
+80,old,true,Zahlt zurück
+59,old,false,Zahlt nicht zurück
+81,old,false,Zahlt nicht zurück
+63,old,true,Zahlt zurück
+70,old,false,Zahlt nicht zurück
+78,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+69,old,false,Zahlt nicht zurück
+67,old,false,Zahlt nicht zurück
+77,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+78,old,false,Zahlt nicht zurück
+72,old,true,Zahlt zurück
+50,old,false,Zahlt nicht zurück
+70,old,false,Zahlt nicht zurück
+57,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+58,old,false,Zahlt nicht zurück
+61,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+75,old,false,Zahlt nicht zurück
+70,old,false,Zahlt nicht zurück
+78,old,false,Zahlt nicht zurück
+77,old,false,Zahlt nicht zurück
+52,old,true,Zahlt zurück
+64,old,false,Zahlt nicht zurück
+77,old,true,Zahlt zurück
+74,old,false,Zahlt nicht zurück
+81,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+72,old,false,Zahlt nicht zurück
+61,old,false,Zahlt nicht zurück
+77,old,true,Zahlt zurück
+76,old,false,Zahlt nicht zurück
+76,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+80,old,false,Zahlt nicht zurück
+62,old,false,Zahlt nicht zurück
+72,old,true,Zahlt zurück
+83,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+71,old,false,Zahlt nicht zurück
+69,old,false,Zahlt nicht zurück
+76,old,false,Zahlt nicht zurück
+70,old,true,Zahlt zurück
+87,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+84,old,true,Zahlt zurück
+61,old,true,Zahlt zurück
+57,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+57,old,false,Zahlt nicht zurück
+77,old,false,Zahlt nicht zurück
+76,old,true,Zahlt zurück
+53,old,false,Zahlt nicht zurück
+96,old,true,Zahlt zurück
+79,old,false,Zahlt nicht zurück
+59,old,false,Zahlt nicht zurück
+79,old,false,Zahlt nicht zurück
+58,old,false,Zahlt nicht zurück
+71,old,false,Zahlt nicht zurück
+92,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+90,old,true,Zahlt zurück
+62,old,false,Zahlt nicht zurück
+79,old,false,Zahlt nicht zurück
+80,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+73,old,false,Zahlt nicht zurück
+72,old,true,Zahlt zurück
+55,old,false,Zahlt nicht zurück
+86,old,true,Zahlt zurück
+68,old,false,Zahlt nicht zurück
+86,old,false,Zahlt nicht zurück
+65,old,false,Zahlt nicht zurück
+50,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+78,old,false,Zahlt nicht zurück
+63,old,false,Zahlt nicht zurück
+57,old,true,Zahlt zurück
+79,old,false,Zahlt nicht zurück
+78,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+60,old,false,Zahlt nicht zurück
+84,old,true,Zahlt zurück
+88,old,true,Zahlt zurück
+86,old,false,Zahlt nicht zurück
+76,old,true,Zahlt zurück
+64,old,false,Zahlt nicht zurück
+61,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+75,old,false,Zahlt nicht zurück
+72,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+64,old,false,Zahlt nicht zurück
+71,old,true,Zahlt zurück
+89,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+67,old,false,Zahlt nicht zurück
+68,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+90,old,true,Zahlt zurück
+69,old,false,Zahlt nicht zurück
+74,old,true,Zahlt zurück
+65,old,false,Zahlt nicht zurück
+64,old,false,Zahlt nicht zurück
+85,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+82,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+64,old,false,Zahlt nicht zurück
+63,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+88,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+49,old,false,Zahlt nicht zurück
+74,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+84,old,false,Zahlt nicht zurück
+65,old,false,Zahlt nicht zurück
+74,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+51,old,true,Zahlt zurück
+61,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+78,old,false,Zahlt nicht zurück
+69,old,false,Zahlt nicht zurück
+83,old,false,Zahlt nicht zurück
+66,old,false,Zahlt nicht zurück
+71,old,false,Zahlt nicht zurück
+76,old,false,Zahlt nicht zurück
+67,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+54,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+91,old,true,Zahlt zurück
+70,old,false,Zahlt nicht zurück
+74,old,true,Zahlt zurück
+56,old,true,Zahlt zurück
+55,old,false,Zahlt nicht zurück
+81,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+57,old,false,Zahlt nicht zurück
+59,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+58,old,false,Zahlt nicht zurück
+61,old,true,Zahlt zurück
+58,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+61,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+76,old,false,Zahlt nicht zurück
+59,old,true,Zahlt zurück
+58,old,true,Zahlt zurück
+82,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+55,old,false,Zahlt nicht zurück
+66,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+50,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+82,old,false,Zahlt nicht zurück
+79,old,true,Zahlt zurück
+54,old,true,Zahlt zurück
+86,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+65,old,false,Zahlt nicht zurück
+67,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+63,old,false,Zahlt nicht zurück
+75,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+61,old,false,Zahlt nicht zurück
+72,old,true,Zahlt zurück
+56,old,false,Zahlt nicht zurück
+83,old,true,Zahlt zurück
+87,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+53,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+69,old,false,Zahlt nicht zurück
+62,old,false,Zahlt nicht zurück
+62,old,false,Zahlt nicht zurück
+55,old,true,Zahlt zurück
+69,old,false,Zahlt nicht zurück
+73,old,true,Zahlt zurück
+74,old,false,Zahlt nicht zurück
+78,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+73,old,false,Zahlt nicht zurück
+57,old,true,Zahlt zurück
+62,old,false,Zahlt nicht zurück
+79,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+73,old,false,Zahlt nicht zurück
+68,old,false,Zahlt nicht zurück
+58,old,true,Zahlt zurück
+69,old,false,Zahlt nicht zurück
+75,old,false,Zahlt nicht zurück
+67,old,false,Zahlt nicht zurück
+91,old,true,Zahlt zurück
+80,old,false,Zahlt nicht zurück
+72,old,false,Zahlt nicht zurück
+88,old,false,Zahlt nicht zurück
+66,old,true,Zahlt zurück
+49,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+83,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+86,old,true,Zahlt zurück
+61,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+71,old,false,Zahlt nicht zurück
+68,old,true,Zahlt zurück
+82,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+54,old,true,Zahlt zurück
+60,old,false,Zahlt nicht zurück
+74,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+78,old,false,Zahlt nicht zurück
+70,old,false,Zahlt nicht zurück
+45,old,false,Zahlt nicht zurück
+65,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+70,old,false,Zahlt nicht zurück
+82,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+85,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+73,old,false,Zahlt nicht zurück
+84,old,true,Zahlt zurück
+77,old,false,Zahlt nicht zurück
+76,old,true,Zahlt zurück
+55,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+87,old,true,Zahlt zurück
+63,old,false,Zahlt nicht zurück
+58,old,true,Zahlt zurück
+67,old,false,Zahlt nicht zurück
+60,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+84,old,true,Zahlt zurück
+55,old,true,Zahlt zurück
+58,old,false,Zahlt nicht zurück
+59,old,false,Zahlt nicht zurück
+79,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+67,old,false,Zahlt nicht zurück
+72,old,false,Zahlt nicht zurück
+65,old,true,Zahlt zurück
+79,old,false,Zahlt nicht zurück
+76,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+65,old,false,Zahlt nicht zurück
+84,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+83,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+87,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+57,old,false,Zahlt nicht zurück
+78,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+71,old,false,Zahlt nicht zurück
+81,old,true,Zahlt zurück
+74,old,false,Zahlt nicht zurück
+69,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+78,old,false,Zahlt nicht zurück
+69,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+92,old,true,Zahlt zurück
+61,old,true,Zahlt zurück
+75,old,false,Zahlt nicht zurück
+73,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+60,old,false,Zahlt nicht zurück
+79,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+56,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+84,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+70,old,false,Zahlt nicht zurück
+71,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+48,old,true,Zahlt zurück
+82,old,true,Zahlt zurück
+75,old,false,Zahlt nicht zurück
+54,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+84,old,true,Zahlt zurück
+62,old,false,Zahlt nicht zurück
+55,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+63,old,false,Zahlt nicht zurück
+79,old,true,Zahlt zurück
+51,old,true,Zahlt zurück
+69,old,false,Zahlt nicht zurück
+56,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+61,old,false,Zahlt nicht zurück
+82,old,true,Zahlt zurück
+65,old,false,Zahlt nicht zurück
+70,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+97,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+70,old,false,Zahlt nicht zurück
+77,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+62,old,false,Zahlt nicht zurück
+70,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+63,old,false,Zahlt nicht zurück
+58,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+64,old,false,Zahlt nicht zurück
+56,old,false,Zahlt nicht zurück
+58,old,false,Zahlt nicht zurück
+73,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+67,old,false,Zahlt nicht zurück
+58,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+84,old,false,Zahlt nicht zurück
+66,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+65,old,false,Zahlt nicht zurück
+67,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+86,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+46,old,true,Zahlt zurück
+83,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+67,old,false,Zahlt nicht zurück
+59,old,false,Zahlt nicht zurück
+71,old,true,Zahlt zurück
+57,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+61,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+83,old,false,Zahlt nicht zurück
+97,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+85,old,true,Zahlt zurück
+58,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+83,old,true,Zahlt zurück
+53,old,false,Zahlt nicht zurück
+55,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+55,old,true,Zahlt zurück
+83,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+55,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+85,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+58,old,true,Zahlt zurück
+65,old,false,Zahlt nicht zurück
+75,old,false,Zahlt nicht zurück
+79,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+58,old,false,Zahlt nicht zurück
+66,old,false,Zahlt nicht zurück
+63,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+71,old,false,Zahlt nicht zurück
+86,old,true,Zahlt zurück
+56,old,false,Zahlt nicht zurück
+68,old,true,Zahlt zurück
+88,old,true,Zahlt zurück
+74,old,false,Zahlt nicht zurück
+85,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+61,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+69,old,false,Zahlt nicht zurück
+58,old,true,Zahlt zurück
+65,old,false,Zahlt nicht zurück
+77,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+82,old,true,Zahlt zurück
+89,old,true,Zahlt zurück
+48,old,false,Zahlt nicht zurück
+77,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+77,old,false,Zahlt nicht zurück
+55,old,true,Zahlt zurück
+70,old,false,Zahlt nicht zurück
+67,old,false,Zahlt nicht zurück
+79,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+74,old,false,Zahlt nicht zurück
+73,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+67,old,false,Zahlt nicht zurück
+63,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+74,old,false,Zahlt nicht zurück
+55,old,true,Zahlt zurück
+67,old,false,Zahlt nicht zurück
+66,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+86,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+61,old,true,Zahlt zurück
+65,old,false,Zahlt nicht zurück
+99,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+59,old,false,Zahlt nicht zurück
+64,old,true,Zahlt zurück
+49,old,true,Zahlt zurück
+86,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+66,old,false,Zahlt nicht zurück
+62,old,true,Zahlt zurück
+44,old,true,Zahlt zurück
+55,old,false,Zahlt nicht zurück
+70,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+55,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+82,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+55,old,true,Zahlt zurück
+77,old,false,Zahlt nicht zurück
+64,old,true,Zahlt zurück
+84,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+45,old,false,Zahlt nicht zurück
+62,old,false,Zahlt nicht zurück
+73,old,true,Zahlt zurück
+68,old,false,Zahlt nicht zurück
+69,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+84,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+81,old,false,Zahlt nicht zurück
+66,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+50,old,false,Zahlt nicht zurück
+77,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+61,old,false,Zahlt nicht zurück
+78,old,false,Zahlt nicht zurück
+92,old,true,Zahlt zurück
+59,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+61,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+71,old,false,Zahlt nicht zurück
+62,old,true,Zahlt zurück
+86,old,true,Zahlt zurück
+62,old,false,Zahlt nicht zurück
+78,old,false,Zahlt nicht zurück
+40,old,true,Zahlt zurück
+55,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+47,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+71,old,false,Zahlt nicht zurück
+73,old,false,Zahlt nicht zurück
+78,old,false,Zahlt nicht zurück
+63,old,true,Zahlt zurück
+60,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+55,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+84,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+51,old,true,Zahlt zurück
+69,old,false,Zahlt nicht zurück
+80,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+40,old,true,Zahlt zurück
+62,old,false,Zahlt nicht zurück
+61,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+63,old,false,Zahlt nicht zurück
+57,old,false,Zahlt nicht zurück
+67,old,false,Zahlt nicht zurück
+58,old,true,Zahlt zurück
+73,old,false,Zahlt nicht zurück
+65,old,false,Zahlt nicht zurück
+73,old,true,Zahlt zurück
+54,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+59,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+58,old,true,Zahlt zurück
+82,old,true,Zahlt zurück
+65,old,false,Zahlt nicht zurück
+57,old,false,Zahlt nicht zurück
+72,old,true,Zahlt zurück
+78,old,false,Zahlt nicht zurück
+69,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+57,old,false,Zahlt nicht zurück
+95,old,true,Zahlt zurück
+83,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+83,old,true,Zahlt zurück
+62,old,false,Zahlt nicht zurück
+68,old,true,Zahlt zurück
+63,old,false,Zahlt nicht zurück
+74,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+52,old,false,Zahlt nicht zurück
+84,old,true,Zahlt zurück
+48,old,true,Zahlt zurück
+82,old,true,Zahlt zurück
+51,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+83,old,true,Zahlt zurück
+70,old,false,Zahlt nicht zurück
+65,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+74,old,false,Zahlt nicht zurück
+78,old,false,Zahlt nicht zurück
+73,old,true,Zahlt zurück
+71,old,false,Zahlt nicht zurück
+79,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+91,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+71,old,false,Zahlt nicht zurück
+60,old,false,Zahlt nicht zurück
+82,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+82,old,true,Zahlt zurück
+44,old,false,Zahlt nicht zurück
+63,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+83,old,false,Zahlt nicht zurück
+78,old,true,Zahlt zurück
+63,old,false,Zahlt nicht zurück
+84,old,true,Zahlt zurück
+61,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+82,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+73,old,false,Zahlt nicht zurück
+82,old,false,Zahlt nicht zurück
+66,old,true,Zahlt zurück
+56,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+65,old,false,Zahlt nicht zurück
+49,old,true,Zahlt zurück
+56,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+62,old,false,Zahlt nicht zurück
+58,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+59,old,false,Zahlt nicht zurück
+73,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+59,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+58,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+52,old,false,Zahlt nicht zurück
+72,old,true,Zahlt zurück
+61,old,false,Zahlt nicht zurück
+71,old,true,Zahlt zurück
+70,old,false,Zahlt nicht zurück
+70,old,false,Zahlt nicht zurück
+71,old,false,Zahlt nicht zurück
+79,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+86,old,false,Zahlt nicht zurück
+68,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+61,old,false,Zahlt nicht zurück
+62,old,false,Zahlt nicht zurück
+60,old,true,Zahlt zurück
+68,old,false,Zahlt nicht zurück
+93,old,true,Zahlt zurück
+51,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+66,old,false,Zahlt nicht zurück
+61,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+74,old,false,Zahlt nicht zurück
+77,old,true,Zahlt zurück
+70,old,false,Zahlt nicht zurück
+68,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+57,old,true,Zahlt zurück
+74,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+83,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+77,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+58,old,false,Zahlt nicht zurück
+77,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+75,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+69,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+51,old,false,Zahlt nicht zurück
+68,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+76,old,false,Zahlt nicht zurück
+77,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+79,old,false,Zahlt nicht zurück
+60,old,false,Zahlt nicht zurück
+59,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+80,old,true,Zahlt zurück
+79,old,false,Zahlt nicht zurück
+82,old,true,Zahlt zurück
+62,old,true,Zahlt zurück
+70,old,true,Zahlt zurück
+65,old,true,Zahlt zurück
+64,old,true,Zahlt zurück
+86,old,true,Zahlt zurück
+82,old,true,Zahlt zurück
+83,old,false,Zahlt nicht zurück
+69,old,true,Zahlt zurück
+72,old,true,Zahlt zurück
+76,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+74,old,false,Zahlt nicht zurück
+70,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+67,old,false,Zahlt nicht zurück
+75,old,true,Zahlt zurück
+63,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+73,old,true,Zahlt zurück
+81,old,true,Zahlt zurück
+78,old,true,Zahlt zurück
+68,old,false,Zahlt nicht zurück
+65,old,true,Zahlt zurück
+68,old,true,Zahlt zurück
+63,old,false,Zahlt nicht zurück
+54,old,true,Zahlt zurück
+67,old,true,Zahlt zurück
+71,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
+79,old,true,Zahlt zurück
+71,old,false,Zahlt nicht zurück
+81,old,true,Zahlt zurück
+56,old,true,Zahlt zurück
+85,old,true,Zahlt zurück
+66,old,true,Zahlt zurück
