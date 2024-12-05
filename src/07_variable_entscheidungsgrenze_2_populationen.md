@@ -12,7 +12,7 @@ const data = FileAttachment("data/user/distribution.csv").csv({ typed: true });
 ```
 
 ```js
-const threshold = view(Inputs.range([0, 100], { step: 1, label: "Cutoff:" }));
+const threshold = view(Inputs.range([10, 100], { step: 1, label: "Cutoff:" }));
 ```
 
 ```js
@@ -43,6 +43,7 @@ display(
                 })
             ),
             Plot.ruleY([0]),
+            Plot.ruleX([threshold - 0.5]),
         ],
     })
 );

@@ -31,6 +31,7 @@ display(
                 })
             ),
             Plot.ruleY([0]),
+            Plot.ruleX([threshold - 0.5]),
         ],
     })
 );
