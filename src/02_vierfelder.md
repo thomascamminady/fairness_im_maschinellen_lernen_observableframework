@@ -5,7 +5,7 @@ style: css/custom.css
 
 # Vierfeldertafel
 
-Eine Bank vergibt Kredite von 1000€. Manche Menschen bekommen einen Kredit, manche nicht. Manche Menschen zahlen den Kredit zurück, manche nicht. Wenn man zurück zahlt, zahlt man 1100€ zurück. Das ist inklusive 10% Zinsen. Wenn nicht zurück gezahlt wird, verliert die Bank 1000€.
+Eine Bank vergibt Kredite von 1000€. Manche Menschen bekommen einen Kredit, manche nicht. Manche Menschen zahlen den Kredit zurück, manche nicht. Wenn man zurück zahlt, zahlt man 1200€ zurück. Das ist inklusive 20% Zinsen. Wenn nicht zurück gezahlt wird, verliert die Bank 1000€.
 
 Hier ist eine Vierfeldertafel:
 

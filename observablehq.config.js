@@ -25,7 +25,7 @@ export default {
   // Some additional configuration options and their defaults:
   theme: "default", // try "light", "dark", "slate", etc.
   // header: "", // what to show in the header (HTML)
-  footer: "Awesome app by Sarah, Steffen, Thomas.",
+  footer: "Copyright © 2024, Sarah Schönbrodt, Steffen Schneider, Thomas Camminady",
   sidebar: true, // whether to show the sidebar
   toc: true, // whether to show the table of contents
   pager: true, // whether to show previous & next links in the footer

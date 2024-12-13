@@ -2,6 +2,7 @@
 @import url("observablehq:theme-air.css");
 
 
+
 td {
     border: 1px solid #ffffff;
     padding: 10px;
@@ -12,7 +13,6 @@ td {
 
 th {
     background-color: #ffffff;
-    /* font-weight: bold; */
     text-align: center;
     text-anchor: middle;
 }
@@ -26,7 +26,6 @@ td[contenteditable="true"] {
 
 td[contenteditable="true"]:focus {
     outline: 2px solid #4c68af;
-    /* Green outline when focused */
 }
 
 td[contenteditable="false"] {

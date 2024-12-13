@@ -1,7 +1,6 @@
 ---
 title: Variable Entscheidungsgrenze, zwei Populationen
 style: css/custom.css
-theme: [wide]
 ---
 
 # Variable Entscheidungsgrenze, zwei Populationen
@@ -143,7 +142,7 @@ Fülle jetzt aus:
                 <td contenteditable="false">${precision_old}%</td>
                 <td contenteditable="false">${recall_old}%</td>
                 <td contenteditable="false">
-                    ${100 * grp_old["Zahlt zurück"]["aboveThreshold"] - 1000 *
+                    ${200 * grp_old["Zahlt zurück"]["aboveThreshold"] - 1000 *
                     grp_old["Zahlt nicht zurück"]["aboveThreshold"]}
                 </td>
             </tr>
@@ -277,7 +276,7 @@ Fülle jetzt aus:
                 <td contenteditable="false">${precision_young}%</td>
                 <td contenteditable="false">${recall_young}%</td>
                 <td contenteditable="false">
-                    ${100 * grp_young["Zahlt zurück"]["aboveThreshold"] - 1000 *
+                    ${200 * grp_young["Zahlt zurück"]["aboveThreshold"] - 1000 *
                     grp_young["Zahlt nicht zurück"]["aboveThreshold"]}
                 </td>
             </tr>

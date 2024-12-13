@@ -128,7 +128,7 @@ Fülle jetzt aus:
                 <td contenteditable="false">${precision}%</td>
                 <td contenteditable="false">${recall}%</td>
                 <td contenteditable="false">
-                    ${100 * groupedData["Zahlt zurück"]["aboveThreshold"] - 1000
+                    ${200 * groupedData["Zahlt zurück"]["aboveThreshold"] - 1000
                     * groupedData["Zahlt nicht zurück"]["aboveThreshold"]}
                 </td>
             </tr>
