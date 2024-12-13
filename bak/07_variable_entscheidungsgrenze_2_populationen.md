@@ -1,7 +1,6 @@
 ---
 title: Variable Entscheidungsgrenze, zwei Populationen
 style: css/custom.css
-theme: [wide]
 ---
 
 # Variable Entscheidungsgrenze, zwei Populationen
@@ -10,6 +9,18 @@ Haha, gotcha, this was actually two populations
 
 ```js
 const data = FileAttachment("data/user/distribution.csv").csv({ typed: true });
+```
+
+```js
+const threshold_old = view(
+    Inputs.range([10, 100], { step: 1, label: "Cutoff Alt:" })
+);
+const threshold_young = view(
+    Inputs.range([10, 100], { step: 1, label: "Cutoff Jung:" })
+);
+```
+
+```js
 const scale1 = d3.scaleOrdinal(
     ["Zahlt zurück", "Zahlt nicht zurück"],
     ["#6a3d9a", "#cab2d6"]
@@ -18,37 +29,52 @@ const scale2 = d3.scaleOrdinal(
     ["Zahlt zurück", "Zahlt nicht zurück"],
     ["#33a02c", "#b2df8a"]
 );
-```
+display(
+    Plot.plot({
+        height: 500,
+        width: 1000,
+        x: { label: "Score" },
+        color: { legend: true },
+        marks: [
+            Plot.dot(
+                data,
+                Plot.stackY2({
+                    x: "score",
+                    fill: (d) => scale1(d.type),
+                    sort: "type",
+                    fillOpacity: (d) => (d.score < threshold_old ? 0.3 : 1),
+                })
+            ),
+            Plot.ruleY([0]),
+            Plot.ruleX([threshold_old - 0.5]),
+        ],
+    })
+);
 
-<div class="grid grid-cols-2">
-  <div class="card" style="max-width: 700px;">
-    <h2>Alte Menschen</h2>
-    
-```js
-const threshold_old = view(
-    Inputs.range([10, 100], { step: 1, label: "Cutoff Alt:" })
+display(
+    Plot.plot({
+        height: 500,
+        width: 1000,
+        x: { label: "Score" },
+        color: { legend: true },
+        marks: [
+            Plot.dot(
+                data,
+                Plot.stackY2({
+                    x: "score",
+                    fill: (d) => scale2(d.type),
+                    sort: "type",
+                    fillOpacity: (d) => (d.score < threshold_young ? 0.3 : 1),
+                })
+            ),
+            Plot.ruleY([0]),
+            Plot.ruleX([threshold_young - 0.5]),
+        ],
+    })
 );
 ```
 
-${Plot.plot({
-height: 500,
-width: 500,
-x: { label: "Score" },
-color: { legend: true },
-marks: [
-Plot.dot(
-data,
-Plot.stackY2({
-x: "score",
-fill: (d) => scale1(d.type),
-sort: "type",
-fillOpacity: (d) => (d.score < threshold_old ? 0.3 : 1),
-})
-),
-Plot.ruleY([0]),
-Plot.ruleX([threshold_old - 0.5]),
-],
-})}
+## Für alt
 
 Unsere Vorhersage:
 
@@ -136,9 +162,9 @@ Fülle jetzt aus:
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="false">${n_true_positive_old}</td>
+                <td contenteditable="false">n=${n_true_positive_old}</td>
                 <td contenteditable="false">
-                    ${n_true_positive_old+n_false_positive_old}
+                    n= ${n_true_positive_old+n_false_positive_old}
                 </td>
                 <td contenteditable="false">${precision_old}%</td>
                 <td contenteditable="false">${recall_old}%</td>
@@ -152,36 +178,7 @@ Fülle jetzt aus:
 </div>
 ```
 
-</div>
-
-  <div class="card" style="max-width: 500px;">
-    <h2>Junge Menschen</h2>
-
-```js
-const threshold_young = view(
-    Inputs.range([10, 100], { step: 1, label: "Cutoff Jung:" })
-);
-```
-
-${Plot.plot({
-height: 500,
-width: 500,
-x: { label: "Score" },
-color: { legend: true },
-marks: [
-Plot.dot(
-data,
-Plot.stackY2({
-x: "score",
-fill: (d) => scale2(d.type),
-sort: "type",
-fillOpacity: (d) => (d.score < threshold_young ? 0.3 : 1),
-})
-),
-Plot.ruleY([0]),
-Plot.ruleX([threshold_young - 0.5]),
-],
-})}
+## Für jung
 
 Unsere Vorhersage:
 
@@ -270,9 +267,9 @@ Fülle jetzt aus:
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="false">${n_true_positive_young}</td>
+                <td contenteditable="false">n=${n_true_positive_young}</td>
                 <td contenteditable="false">
-                    ${n_true_positive_young+n_false_positive_young}
+                    n= ${n_true_positive_young+n_false_positive_young}
                 </td>
                 <td contenteditable="false">${precision_young}%</td>
                 <td contenteditable="false">${recall_young}%</td>
@@ -285,6 +282,3 @@ Fülle jetzt aus:
     </table>
 </div>
 ```
-
-  </div>
-</div>

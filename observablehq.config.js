@@ -27,8 +27,8 @@ export default {
   // header: "", // what to show in the header (HTML)
   footer: "Awesome app by Sarah, Steffen, Thomas.",
   sidebar: true, // whether to show the sidebar
-  // toc: true, // whether to show the table of contents
-  // pager: true, // whether to show previous & next links in the footer
+  toc: true, // whether to show the table of contents
+  pager: true, // whether to show previous & next links in the footer
   // output: "dist", // path to the output root for build
   search: true, // activate search
   linkify: true, // convert URLs in Markdown to links

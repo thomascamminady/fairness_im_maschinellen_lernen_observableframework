@@ -60,13 +60,13 @@ const groupedData = data.reduce((acc, item) => {
         <thead>
             <tr>
                 <th></th>
-                <th>Vorhersage: zahlt zurück</th>
-                <th>Vorhersage: zahlt nicht zurück</th>
+                <th>Vorhersage: Zahlt zurück</th>
+                <th>Vorhersage: Zahlt nicht zurück</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>Daten: zahlt zurück</th>
+                <th>Daten: Zahlt zurück</th>
                 <td contenteditable="false">
                     ${groupedData['Zahlt zurück']['aboveThreshold']}
                 </td>
@@ -75,7 +75,7 @@ const groupedData = data.reduce((acc, item) => {
                 </td>
             </tr>
             <tr>
-                <th>Daten: zahlt nicht zurück</th>
+                <th>Daten: Zahlt nicht zurück</th>
                 <td contenteditable="false">
                     ${groupedData['Zahlt nicht zurück']['aboveThreshold']}
                 </td>
