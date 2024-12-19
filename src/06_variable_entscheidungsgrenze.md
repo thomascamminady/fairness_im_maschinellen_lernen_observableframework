@@ -14,7 +14,12 @@ const data = FileAttachment("data/user/distribution.csv").csv({ typed: true });
 
 Hier kannst du die Entscheidungsgrenze variieren und die aus deiner Sicht optimale Entscheidungsgrenze festlegen. 
 
+
+<div class="tip" label="Aufgabe">
 Notiere den Wert deiner Entscheidungsgrenze und begründe deine Wahl. 
+</div>
+
+
 
 Entscheidungsgrenze:
 ```js
@@ -45,7 +50,9 @@ display(
 );
 ```
 
-Unsere Vorhersage:
+
+
+Unsere Vorhersage bei einer Entscheidungsgrenze von  ${threshold}:
 
 ```js
 const groupedData = data.reduce((acc, item) => {
@@ -111,9 +118,7 @@ const recall = (
 </div>
 ```
 
-Bla Bla, true positive ist das, positive ist das Genauigkeit ist das,
-Lohn war das, default ist das, ...
-Fülle jetzt aus:
+
 
 ```html
 <div class="table-container">

@@ -11,7 +11,7 @@ In dieser App verwenden wir vergangenen Daten von zahlreichen Kreditanwärter*in
 
 Bevor du mit einem größeren Datensatz arbeitest, wirst du hier zunächst erkunden, wie die Daten aufgebaut sind und wie sie mit Hilfe von Histogrammen visualisiert werden können. In den Histogrammen repräsentiert jeder Punkt eine Person.
 
-## Aufgabe 1
+## Datensatz 1
 
 Hier ist eine Tabelle mit fiktiven Daten. 
 ```js
@@ -48,10 +48,13 @@ display(
     })
 );
 ```
-
+<div class="tip" label="Aufgabe">
 Welches der folgenden Histogramme A, B oder C repräsentiert die Daten aus der Tabelle? 
 Du kannst die Tabelle nach Namen oder Kreditscore sortieren indem du auf den Titel der jeweiligen Spalte klickst. Scrolle durch die Tabelle um alle Einträge zu sehen.
 Notiere deine Antwort. 
+
+</div>
+
 
 
 <div class="grid grid-cols-3">
@@ -114,10 +117,11 @@ height:200,width:200,  x: {label: "Score"},
 
 </div>
 
-## Aufgabe 2
+## Datensatz 2
 
+<div class="tip" label="Aufgabe">
 Hier ist eine weitere Tabelle mit fiktiven Daten. Notiere deine Antwort. 
-
+</div>
 
 ```js
 display(
@@ -202,9 +206,11 @@ height:200,width:200,  x: {label: "Score"},
 
 </div>
 
-## Aufgabe 3
+## Datensatz 3
 
+<div class="tip" label="Aufgabe">
 Hier ist eine letzte Tabelle mit fiktiven Daten. Notiere deine Antwort. 
+</div>
 
 
 ```js

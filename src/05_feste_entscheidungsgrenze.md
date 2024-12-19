@@ -105,7 +105,10 @@ Wir nutzen die folgenden Gütemaße:
     </table>
 </div>
 ```
+
+<div class="tip" label="Aufgabe">
 Berechne basierend auf der Kofusionsmatrix die Werte für die folgenden vier Gütemaße. Trage deine Ergebnisse in der Tabelle ein. 
+</div>
 
 ```html
 <div class="table-container">

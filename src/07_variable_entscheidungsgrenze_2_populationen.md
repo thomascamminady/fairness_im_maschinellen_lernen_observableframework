@@ -9,9 +9,11 @@ Der bisher verwendete Datensatz besteht aus den Daten von zwei Personengruppen. 
 
 In den folgenden beiden Histogrammen werden die Daten der beiden Personengruppen getrennt dargestellt. Die Bank kann für beide Personengruppen unterschiedliche Entscheidungsgrenzen wählen – muss sie aber nicht.
 
-Diskutiert in Gruppen, wie ihr die beiden Entscheidungsgrenzen wählen würdet, sodass sie aus eurer Sicht möglichst fair sind. 
 
-Notiert die Werte für eure Entscheidungsgrenzen und begründet eure Wahl. Beschreibt zudem, was ihr unter “fair” versteht. 
+
+<div class="tip" label="Aufgabe">
+Diskutiert in Gruppen, wie ihr die beiden Entscheidungsgrenzen wählen würdet, sodass sie aus eurer Sicht möglichst fair sind. Notiert die Werte für eure Entscheidungsgrenzen und begründet eure Wahl. Beschreibt zudem, was ihr unter “fair” versteht. 
+</div>
 
 
 ```js
