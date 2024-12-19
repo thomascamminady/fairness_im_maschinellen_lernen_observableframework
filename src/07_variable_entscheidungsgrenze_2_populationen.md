@@ -1,11 +1,18 @@
 ---
-title: Variable Entscheidungsgrenze, zwei Populationen
+title: Variable Entscheidungsgrenze, zwei Personengruppen
 style: css/custom.css
 ---
 
-# Variable Entscheidungsgrenze, zwei Populationen
+# Variable Entscheidungsgrenze, zwei Personengruppen
 
-Haha, gotcha, this was actually two populations
+Der bisher verwendete Datensatz besteht aus den Daten von zwei Personengruppen. Der Gruppe alt (älter als 30 Jahre) und der Personengruppe jung (jünger als 30 Jahre). 
+
+In den folgenden beiden Histogrammen werden die Daten der beiden Personengruppen getrennt dargestellt. Die Bank kann für beide Personengruppen unterschiedliche Entscheidungsgrenzen wählen – muss sie aber nicht.
+
+Diskutiert in Gruppen, wie ihr die beiden Entscheidungsgrenzen wählen würdet, sodass sie aus eurer Sicht möglichst fair sind. 
+
+Notiert die Werte für eure Entscheidungsgrenzen und begründet eure Wahl. Beschreibt zudem, was ihr unter “fair” versteht. 
+
 
 ```js
 const data = FileAttachment("data/user/distribution.csv").csv({ typed: true });
@@ -21,11 +28,11 @@ const scale2 = d3.scaleOrdinal(
 
 <div class="grid grid-cols-2">
   <div class="card" style="max-width: 700px;">
-    <h2>Alte Menschen</h2>
+    <h2>Entscheidungsgrenze Alte Menschen</h2>
     
 ```js
 const threshold_old = view(
-    Inputs.range([10, 100], { step: 1, label: "Cutoff Alt:" })
+    Inputs.range([10, 100], { step: 1, label: "" ,value:70})
 );
 ```
 
@@ -88,13 +95,13 @@ const recall_old = (
         <thead>
             <tr>
                 <th></th>
-                <th>Vorhersage: zahlt zurück</th>
-                <th>Vorhersage: zahlt nicht zurück</th>
+                <th>Vorhersage:<br>zahlt zurück</th>
+                <th>Vorhersage:<br>zahlt nicht zurück</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>Daten: zahlt zurück</th>
+                <th>Daten:<br>zahlt zurück</th>
                 <td contenteditable="false">
                     ${grp_old['Zahlt zurück']['aboveThreshold']}
                 </td>
@@ -103,7 +110,7 @@ const recall_old = (
                 </td>
             </tr>
             <tr>
-                <th>Daten: zahlt nicht zurück</th>
+                <th>Daten:<br>zahlt nicht zurück</th>
                 <td contenteditable="false">
                     ${grp_old['Zahlt nicht zurück']['aboveThreshold']}
                 </td>
@@ -117,30 +124,26 @@ const recall_old = (
 </div>
 ```
 
-Bla Bla, true positive ist das, positive ist das Genauigkeit ist das,
-Lohn war das, default ist das, ...
-Fülle jetzt aus:
+
 
 ```html
 <div class="table-container">
     <table>
         <thead>
             <tr>
-                <th>True positive Rate</th>
-                <th>Positive Rate</th>
-                <th>Precision</th>
-                <th>Recall</th>
+                <th>Genauigkeit</th>
+                <th>Positiv Rate</th>
+                <th>Richtig positiv</th>
                 <th>Gewinn</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="false">${n_true_positive_old}</td>
+                <td contenteditable="false">${precision_old}%</td>
                 <td contenteditable="false">
                     ${n_true_positive_old+n_false_positive_old}
                 </td>
-                <td contenteditable="false">${precision_old}%</td>
-                <td contenteditable="false">${recall_old}%</td>
+                <td contenteditable="false">${n_true_positive_old}</td>
                 <td contenteditable="false">
                     ${200 * grp_old["Zahlt zurück"]["aboveThreshold"] - 1000 *
                     grp_old["Zahlt nicht zurück"]["aboveThreshold"]}
@@ -154,11 +157,11 @@ Fülle jetzt aus:
 </div>
 
   <div class="card" style="max-width: 500px;">
-    <h2>Junge Menschen</h2>
+    <h2>Entscheidungsgrenze Junge Menschen</h2>
 
 ```js
 const threshold_young = view(
-    Inputs.range([10, 100], { step: 1, label: "Cutoff Jung:" })
+    Inputs.range([10, 100], { step: 1, label: "",value:70 })
 );
 ```
 
@@ -222,13 +225,13 @@ const recall_young = (
         <thead>
             <tr>
                 <th></th>
-                <th>Vorhersage: zahlt zurück</th>
-                <th>Vorhersage: zahlt nicht zurück</th>
+                <th>Vorhersage:<br>zahlt zurück</th>
+                <th>Vorhersage:<br>zahlt nicht zurück</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>Daten: zahlt zurück</th>
+                <th>Daten:<br>zahlt zurück</th>
                 <td contenteditable="false">
                     ${grp_young['Zahlt zurück']['aboveThreshold']}
                 </td>
@@ -237,7 +240,7 @@ const recall_young = (
                 </td>
             </tr>
             <tr>
-                <th>Daten: zahlt nicht zurück</th>
+                <th>Daten:<br>zahlt nicht zurück</th>
                 <td contenteditable="false">
                     ${grp_young['Zahlt nicht zurück']['aboveThreshold']}
                 </td>
@@ -251,30 +254,26 @@ const recall_young = (
 </div>
 ```
 
-Bla Bla, true positive ist das, positive ist das Genauigkeit ist das,
-Lohn war das, default ist das, ...
-Fülle jetzt aus:
+
 
 ```html
 <div class="table-container">
     <table>
         <thead>
             <tr>
-                <th>True positive Rate</th>
-                <th>Positive Rate</th>
-                <th>Precision</th>
-                <th>Recall</th>
+                <th>Genauigkeit</th>
+                <th>Positiv Rate</th>
+                <th>Richtig positiv</th>
                 <th>Gewinn</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="false">${n_true_positive_young}</td>
+                <td contenteditable="false">${precision_young}%</td>
                 <td contenteditable="false">
                     ${n_true_positive_young+n_false_positive_young}
                 </td>
-                <td contenteditable="false">${precision_young}%</td>
-                <td contenteditable="false">${recall_young}%</td>
+                <td contenteditable="false">${n_true_positive_young}</td>
                 <td contenteditable="false">
                     ${200 * grp_young["Zahlt zurück"]["aboveThreshold"] - 1000 *
                     grp_young["Zahlt nicht zurück"]["aboveThreshold"]}

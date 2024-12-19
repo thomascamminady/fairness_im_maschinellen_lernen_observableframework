@@ -3,25 +3,41 @@
 
 
 
-td {
-    border: 1px solid #ffffff;
-    padding: 10px;
-    text-align: center;
-    text-anchor: middle;
-}
+
 
 
 th {
     background-color: #ffffff;
+    text-align: justify;
+    /* Ensures the text is justified */
+    vertical-align: middle;
+    /* Centers text vertically */
+    padding: 10px;
+    /* Adjust padding if needed */
+    width: 400px;
+}
+
+
+
+
+td {
+    border: 1px solid #ffffff;
+    padding: 10px;
     text-align: center;
+    /* Center text horizontally */
+    vertical-align: middle;
+    /* Center text vertically */
     text-anchor: middle;
 }
 
 td[contenteditable="true"] {
     background-color: #26a3e108;
     border-color: #26a3e1;
-    /* Light yellow for editable cells */
     cursor: text;
+    text-align: center;
+    /* Center text horizontally */
+    vertical-align: middle;
+    /* Center text vertically */
 }
 
 td[contenteditable="true"]:focus {
@@ -32,6 +48,9 @@ td[contenteditable="false"] {
     background-color: #fff;
     border-color: #26a3e1;
     cursor: text;
+    text-align: center;
+    /* Ensure consistent alignment */
+    vertical-align: middle;
 }
 
 

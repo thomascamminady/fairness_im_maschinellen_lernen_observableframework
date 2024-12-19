@@ -1,33 +1,39 @@
 ---
-title: Vierfeldertafel
+title: Kreditvergabe und Gesamtgewinn
 style: css/custom.css
 ---
 
-# Vierfeldertafel
+# Kreditvergabe und Gesamtgewinn
 
-Eine Bank vergibt Kredite von 1000€. Manche Menschen bekommen einen Kredit, manche nicht. Manche Menschen zahlen den Kredit zurück, manche nicht. Wenn man zurück zahlt, zahlt man 1200€ zurück. Das ist inklusive 20% Zinsen. Wenn nicht zurück gezahlt wird, verliert die Bank 1000€.
+Eine Bank vergibt Kredite von 1000€.
 
-Hier ist eine Vierfeldertafel:
+-   Personen, die einen Kredit erhalten und zurückzahlen, zahlen den Betrag mit 20% Zinsen zurück. Das heißt, die Bank erhält 1200€ zurück.
+-   Vergibt die Bank einen Kredit an Personen, die diesen nicht zurückzahlen, macht die Bank 1000€ Verlust.
 
+
+Fülle nun die Tablle aus:
 ```html
 <div class="table-container">
     <table>
         <thead>
             <tr>
                 <th></th>
-                <th>Kredit genehmigt</th>
-                <th>Kredit abgelehnt</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>Zahlt zurück</th>
-                <td contenteditable="true"></td>
+                <th>Gewinn der Bank:<br>Kredit genehmigt und zahlt zurück</th>
                 <td contenteditable="true"></td>
             </tr>
             <tr>
-                <th>Zahlt nicht zurück</th>
+                <th>Verlust der Bank:<br>Kredit genehmigt und zahlt zurück
+</th>
                 <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <th>Gesamtgewinn bei 25 Personen die ihren Kredit zurückzahlen und 8 Personen die ihren Kredit nicht zurückzahlen
+</th>
                 <td contenteditable="true"></td>
             </tr>
             <tr></tr>
