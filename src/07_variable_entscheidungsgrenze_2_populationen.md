@@ -3,9 +3,9 @@ title: Variable Entscheidungsgrenze, zwei Personengruppen
 style: css/custom.css
 ---
 
-# Variable Entscheidungsgrenze, zwei Personengruppen
+# Variable Entscheidungsgrenzen für zwei Personengruppen
 
-Der bisher verwendete Datensatz besteht aus den Daten von zwei Personengruppen. Der Gruppe alt (älter als 30 Jahre) und der Personengruppe jung (jünger als 30 Jahre). 
+Der bisher verwendete Datensatz besteht aus den Daten von zwei Personengruppen. Der Personengruppe alt (älter als 30 Jahre) und der Gruppe jung (jünger als 30 Jahre). 
 
 In den folgenden beiden Histogrammen werden die Daten der beiden Personengruppen getrennt dargestellt. Die Bank kann für beide Personengruppen unterschiedliche Entscheidungsgrenzen wählen – muss sie aber nicht.
 
