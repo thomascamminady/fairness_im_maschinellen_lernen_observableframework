@@ -23,11 +23,11 @@ Eine Bank vergibt Kredite von 1000€.
         </thead>
         <tbody>
             <tr>
-                <th>Gewinn der Bank:<br>Kredit genehmigt und zahlt zurück</th>
+                <th>Gewinn der Bank:<br>Kredit genehmigt und Person zahlt zurück</th>
                 <td contenteditable="true"></td>
             </tr>
             <tr>
-                <th>Verlust der Bank:<br>Kredit genehmigt und zahlt zurück
+                <th>Verlust der Bank:<br>Kredit genehmigt und Person zahlt nicht zurück
 </th>
                 <td contenteditable="true"></td>
             </tr>
