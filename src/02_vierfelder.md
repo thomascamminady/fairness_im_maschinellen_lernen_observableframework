@@ -10,7 +10,7 @@ Eine Bank vergibt Kredite von 1000€.
 -   Personen, die einen Kredit erhalten und zurückzahlen, zahlen den Betrag mit 20% Zinsen zurück. Das heißt, die Bank erhält 1200€ zurück.
 -   Vergibt die Bank einen Kredit an Personen, die diesen nicht zurückzahlen, macht die Bank 1000€ Verlust.
 
-<div class="tip" label="Aufgabe">Fülle nun die folgende Tablle.</div>
+<div class="tip" label="Aufgabe">Fülle nun die folgende Tabelle aus.</div>
 
 ```html
 <div class="table-container">
