@@ -15,8 +15,6 @@ Ist die Entscheidungsgrenze wirklich gut gewählt? Zur Beantwortung dieser Frage
 Die Entscheidungsgrenze wurde zunächst fix auf 70 gesetzt. Für alle Personen mit einem Score größergleich 70 gehen wir davon aus, dass sie den Kredit zurückzahlen würden (Vorhersage: zahlt zurück). Für alle Personen mit einem Score unter 70 gehen wir davon aus, dass sie den Kredit nicht zurückzahlen würden (Vorhersage: zahlt nicht zurück). 
 Diese Vorhersagen können wir nun mit den tatsächlichen Daten vergleichen (Erinnerung: wir arbeiten mit vergangenen Daten, d.h. es ist bekannt, ob ein Kredit zurückgezahlt wurde oder nicht). 
 
-Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (zahlt zurück und zahlt nicht zurück) sind in der folgenden Tabelle dargestellt. Diese Tabelle wird auch als Konfusionsmatrix bezeichnet.
-
 ```js
 display(
     Plot.plot({
@@ -58,18 +56,11 @@ const groupedData = data.reduce((acc, item) => {
     return acc;
 }, {});
 ```
+## Bewertung des Entscheidungsmodells
+Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (zahlt zurück und zahlt nicht zurück) sind in der folgenden Tabelle dargestellt. Diese Tabelle wird auch als Konfusionsmatrix bezeichnet.
 
 
-Es gibt verschiedene Gütemaße, die dabei helfen, zu bewerten, wie gut unser Modell geeignet ist. 
-Wir nutzen die folgenden Gütemaße:
-
-- Genauigkeit: Anteil der richtigen Klassifikationen an der Gesamtzahl aller Datenpunkte
-- Positiv Rate: Anteil der positiven Vorhersagen (Vorhersage: zahlt zurück) an der Gesamtzahl aller Datenpunkte
-- Richtig positiv Rate: Anteil der richtig positiven Vorhersagen an der Anzahl aller tatsächlich positiven Datenpunkte (Daten: zahlt zurück)
-- Erzielter Gesamtgewinn der Bank.
-
-
-
+### Die Konfusionsmatrix 
 
 ```html
 <div class="table-container">
@@ -105,6 +96,15 @@ Wir nutzen die folgenden Gütemaße:
     </table>
 </div>
 ```
+
+Es gibt verschiedene Gütemaße, die dabei helfen, zu bewerten, wie gut unser Modell geeignet ist. 
+Wir nutzen die folgenden Gütemaße:
+
+- Genauigkeit: Anteil der richtigen Klassifikationen an der Gesamtzahl aller Datenpunkte
+- Positiv Rate: Anteil der positiven Vorhersagen (Vorhersage: zahlt zurück) an der Gesamtzahl aller Datenpunkte
+- Richtig positiv Rate: Anteil der richtig positiven Vorhersagen an der Anzahl aller tatsächlich positiven Datenpunkte (Daten: zahlt zurück)
+- Erzielter Gesamtgewinn der Bank.
+
 
 <div class="tip" label="Aufgabe">
 Berechne basierend auf der Kofusionsmatrix die Werte für die folgenden vier Gütemaße. Trage deine Ergebnisse in der Tabelle ein. 
