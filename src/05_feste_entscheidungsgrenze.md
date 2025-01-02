@@ -56,11 +56,11 @@ const groupedData = data.reduce((acc, item) => {
     return acc;
 }, {});
 ```
-## Bewertung des Entscheidungsmodells
+
+
+
+## Die Konfusionsmatrix 
 Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (zahlt zurück und zahlt nicht zurück) sind in der folgenden Tabelle dargestellt. Diese Tabelle wird auch als Konfusionsmatrix bezeichnet.
-
-
-### Die Konfusionsmatrix 
 
 ```html
 <div class="table-container">
@@ -96,7 +96,7 @@ Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (za
     </table>
 </div>
 ```
-
+## Bewertung des Entscheidungsmodells
 Es gibt verschiedene Gütemaße, die dabei helfen, zu bewerten, wie gut unser Modell geeignet ist. 
 Wir nutzen die folgenden Gütemaße:
 
