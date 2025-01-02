@@ -5,7 +5,7 @@ style: css/custom.css
 
 # Histogram
 
-Für Banken ist es relevant, möglichst genau vorherzusagen, ob ein neuer Kunde einen Kredit mit hoher Wahrscheinlichkeit zurückzahlt oder nicht. Im Finanzwesen wird dazu oft mit Modellen gearbeitet, die jeder Person einen Credit Score (z.B. der Schufa-Score) zuordnen. Der Credit Score gibt die Kreditwürdigkeit einer Person an. 
+Für Banken ist es relevant, möglichst genau vorherzusagen, ob ein neuer Kunde einen Kredit mit hoher Wahrscheinlichkeit zurückzahlt oder nicht. Im Finanzwesen wird dazu oft mit Modellen gearbeitet, die jeder Person einen Kreditscore (z.B. der Schufa-Score) zuordnen. Der Kreditscore gibt die Kreditwürdigkeit einer Person an. 
 
 In dieser App verwenden wir vergangenen Daten von zahlreichen Kreditanwärter*innen. Von diesen Personen ist der Kreditscore zwischen 0 (Kredit wird eher nicht zurückgezahlt) und 100 (Kredit wird sehr wahrscheinlich zurückgezahlt) bekannt. Zudem ist bekannt, ob die Personen ihren Kredit in der Vergangenheit tatsächlich zurückgezahlt haben. 
 
