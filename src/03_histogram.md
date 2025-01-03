@@ -25,11 +25,10 @@ const names2 = FileAttachment("data/user/random_user_2.csv").csv({
 const names3 = FileAttachment("data/user/random_user_3.csv").csv({
     typed: true,
 })
-```
 
-```js
-display(
-    Inputs.table(names1, {
+function createTable(data) {
+    return Inputs.table(data, {
+
         width: {
             name: 200,
             score: 200,
@@ -50,16 +49,9 @@ display(
         maxWidth: 800,
         multiple: false,
     })
-);
-```
 
-<div class="tip" label="Aufgabe">
-Welches der folgenden Histogramme A, B oder C repräsentiert die Daten aus der Tabelle? 
-Du kannst die Tabelle nach Namen oder Kreditscore sortieren indem du auf den Titel der jeweiligen Spalte klickst. Scrolle durch die Tabelle um alle Einträge zu sehen.
-Notiere deine Antwort. 
-</div>
+};
 
-```js
 function createPlot(data) {
     return Plot.plot({
 
@@ -89,6 +81,16 @@ function createPlot(data) {
 };
 ```
 
+```js
+display(createTable(names1));
+```
+
+<div class="tip" label="Aufgabe">
+Welches der folgenden Histogramme A, B oder C repräsentiert die Daten aus der Tabelle? 
+Du kannst die Tabelle nach Namen oder Kreditscore sortieren indem du auf den Titel der jeweiligen Spalte klickst. Scrolle durch die Tabelle um alle Einträge zu sehen.
+Notiere deine Antwort. 
+</div>
+
 <div class="grid grid-cols-3">
   <div class="card" style="max-width: 200px; "><h2>Option A</h2>${createPlot(names1)}; </div>
   <div class="card" style="max-width: 200px; "><h2>Option B</h2>${createPlot(names2)}; </div>
@@ -102,29 +104,7 @@ Hier ist eine weitere Tabelle mit fiktiven Daten. Notiere deine Antwort.
 </div>
 
 ```js
-display(
-    Inputs.table(names2, {
-        width: {
-            name: 200,
-            score: 200,
-            type: 200
-        },
-        columns: ["name", "score", "type"],
-        header: {
-            name: "Name",
-            score: "Kreditscore",
-            type: "Kreditwürdigkeit",
-        },
-        align: {
-            name: "left",
-            score: "left",
-            type: "left",
-        },
-        rows: 10,
-        maxWidth: 800,
-        multiple: false,
-    })
-);
+display(createTable(names2));
 ```
 
 Welches dieser Histogramme ist das richtige?
@@ -142,29 +122,7 @@ Hier ist eine letzte Tabelle mit fiktiven Daten. Notiere deine Antwort.
 </div>
 
 ```js
-display(
-    Inputs.table(names3, {
-        width: {
-            name: 200,
-            score: 200,
-            type: 200
-        },
-        columns: ["name", "score", "type"],
-        header: {
-            name: "Name",
-            score: "Kreditscore",
-            type: "Kreditwürdigkeit",
-        },
-        align: {
-            name: "left",
-            score: "left",
-            type: "left",
-        },
-        rows: 10,
-        maxWidth: 800,
-        multiple: false,
-    })
-);
+display(createTable(names3));
 ```
 
 Welches dieser Histogramme ist das richtige?
