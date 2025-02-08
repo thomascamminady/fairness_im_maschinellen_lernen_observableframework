@@ -1,6 +1,18 @@
 # Fairness im maschinellen Lernen
 
-This is an [Observable Framework](https://observablehq.com/framework/) app. To install the required dependencies, run:
+This is an [Observable Framework](https://observablehq.com/framework/) app
+
+## Docker
+
+To start the local preview server, run:
+
+```
+./start.sh
+```
+
+## Local install
+
+To install the required dependencies, run:
 
 ```
 npm install
