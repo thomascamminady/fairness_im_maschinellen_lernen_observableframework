@@ -100,10 +100,10 @@ Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (za
 Es gibt verschiedene Gütemaße, die dabei helfen, zu bewerten, wie gut unser Modell geeignet ist. 
 Wir nutzen die folgenden Gütemaße:
 
-- Genauigkeit: Anteil der richtigen Klassifikationen an der Gesamtzahl aller Datenpunkte
-- Positiv Rate: Anteil der positiven Vorhersagen (Vorhersage: zahlt zurück) an der Gesamtzahl aller Datenpunkte
-- Richtig positiv Rate: Anteil der richtig positiven Vorhersagen an der Anzahl aller tatsächlich positiven Datenpunkte (Daten: zahlt zurück)
-- Erzielter Gesamtgewinn der Bank.
+- <b>Genauigkeit:</b> Anteil der richtigen Klassifikationen an der Gesamtzahl aller Datenpunkte
+- <b>Positiv Rate:</b> Anteil der positiven Vorhersagen (Vorhersage: zahlt zurück) an der Gesamtzahl aller Datenpunkte
+- <b>Richtig positiv Rate:</b> Anteil der richtig positiven Vorhersagen an der Anzahl aller tatsächlich positiven Datenpunkte (Daten: zahlt zurück)
+- <b>Gewinn:</b> erzielter Gesamtgewinn der Bank
 
 
 <div class="tip" label="Aufgabe">
@@ -117,7 +117,7 @@ Berechne basierend auf der Kofusionsmatrix die Werte für die folgenden vier Gü
             <tr>
                 <th>Genauigkeit</th>
                 <th>Positiv Rate</th>
-                <th>Richtig positiv</th>
+                <th>Richtig-positiv-Rate</th>
                 <th>Gewinn</th>
             </tr>
         </thead>
