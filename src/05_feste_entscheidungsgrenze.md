@@ -102,7 +102,7 @@ Wir nutzen die folgenden Gütemaße:
 
 - <b>Genauigkeit:</b> Anteil der richtigen Klassifikationen an der Gesamtzahl aller Datenpunkte
 - <b>Positiv Rate:</b> Anteil der positiven Vorhersagen (Vorhersage: zahlt zurück) an der Gesamtzahl aller Datenpunkte
-- <b>Richtig positiv Rate:</b> Anteil der richtig positiven Vorhersagen an der Anzahl aller tatsächlich positiven Datenpunkte (Daten: zahlt zurück)
+- <b>Richtig-positiv-Rate:</b> Anteil der richtig positiven Vorhersagen an der Anzahl aller tatsächlich positiven Datenpunkte (Daten: zahlt zurück)
 - <b>Gewinn:</b> erzielter Gesamtgewinn der Bank
 
 
