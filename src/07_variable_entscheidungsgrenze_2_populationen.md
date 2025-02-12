@@ -50,7 +50,8 @@ width: 500,
 style: {fontSize: 18}, 
 x: { label: "Score" , domain:[10, 99]}, 
 y: {  domain:[0, 47] }, 
-color: { legend: true }, 
+color: { legend: true}, 
+opacity:{legend: true}, 
 marks: [
 Plot.dot(
 data.filter((d) => d.age === "old"), 
@@ -89,7 +90,8 @@ const n_true_positive_old = grp_old["Zahlt zurück"]["aboveThreshold"];
 const n_false_positive_old = grp_old["Zahlt nicht zurück"]["aboveThreshold"];
 const n_false_negative_old = grp_old["Zahlt zurück"]["belowThreshold"];
 const n_true_negative_old = grp_old["Zahlt nicht zurück"]["belowThreshold"];
-
+const total_old = n_true_positive_old + n_false_positive_old + n_false_negative_old + n_true_negative_old;
+const total_positive_old = n_true_positive_old + n_false_negative_old;
 const precision_old = (
     (100 * n_true_positive_old) /
     (n_true_positive_old + n_false_positive_old)
@@ -150,9 +152,9 @@ const recall_old = (
             <tr>
                 <td contenteditable="false">${precision_old}%</td>
                 <td contenteditable="false">
-                    ${n_true_positive_old+n_false_positive_old}
+                    ${( ((n_true_positive_old + n_false_positive_old) / total_old).toFixed(3) )}
                 </td>
-                <td contenteditable="false">${n_true_positive_old}</td>
+                <td contenteditable="false">${(n_true_positive_old/total_positive_old).toFixed(3)}</td>
                 <td contenteditable="false">
                     ${200 * grp_old["Zahlt zurück"]["aboveThreshold"] - 1000 *
                     grp_old["Zahlt nicht zurück"]["aboveThreshold"]}
@@ -226,6 +228,9 @@ const n_false_positive_young =
 const n_false_negative_young = grp_young["Zahlt zurück"]["belowThreshold"];
 const n_true_negative_young = grp_young["Zahlt nicht zurück"]["belowThreshold"];
 
+const total_young = n_true_positive_young + n_false_positive_young + n_false_negative_young + n_true_negative_young;
+const total_positive_young = n_true_positive_young + n_false_negative_young;
+
 const precision_young = (
     (100 * n_true_positive_young) /
     (n_true_positive_young + n_false_positive_young)
@@ -286,9 +291,9 @@ const recall_young = (
             <tr>
                 <td contenteditable="false">${precision_young}%</td>
                 <td contenteditable="false">
-                    ${n_true_positive_young+n_false_positive_young}
+                    ${( ((n_true_positive_young + n_false_positive_young) / total_young).toFixed(3) )}
                 </td>
-                <td contenteditable="false">${n_true_positive_young}</td>
+                <td contenteditable="false">${(n_true_positive_young/total_positive_young).toFixed(3)}</td>
                 <td contenteditable="false">
                     ${200 * grp_young["Zahlt zurück"]["aboveThreshold"] - 1000 *
                     grp_young["Zahlt nicht zurück"]["aboveThreshold"]}

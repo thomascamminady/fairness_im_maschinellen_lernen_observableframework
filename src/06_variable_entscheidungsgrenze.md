@@ -81,7 +81,8 @@ const n_true_positive = groupedData["Zahlt zurück"]["aboveThreshold"];
 const n_false_positive = groupedData["Zahlt nicht zurück"]["aboveThreshold"];
 const n_false_negative = groupedData["Zahlt zurück"]["belowThreshold"];
 const n_true_negative = groupedData["Zahlt nicht zurück"]["belowThreshold"];
-
+const n_total = n_true_positive + n_false_positive + n_false_negative + n_true_negative
+const n_total_true = n_true_positive + n_false_negative
 const precision = (
     (100 * n_true_positive) /
     (n_true_positive + n_false_positive)
@@ -142,9 +143,9 @@ const recall = (
             <tr>
                 <td contenteditable="false">${precision}%</td>
                 <td contenteditable="false">
-                    n= ${n_true_positive+n_false_positive}
+                    ${((n_true_positive+n_false_positive)/n_total).toFixed(3)}
                 </td>
-                <td contenteditable="false">n=${n_true_positive}</td>
+                <td contenteditable="false">${((n_true_positive)/n_total_true).toFixed(3)}</td>
                 <td contenteditable="false">
                     ${200 * groupedData["Zahlt zurück"]["aboveThreshold"] - 1000
                     * groupedData["Zahlt nicht zurück"]["aboveThreshold"]}
