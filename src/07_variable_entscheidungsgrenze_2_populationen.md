@@ -273,7 +273,7 @@ const recall_young = (
             <tr>
                 <th>Genauigkeit</th>
                 <th>Positiv Rate</th>
-                <th>Richtig positiv</th>
+                <th>Richtig-positiv-Rate</th>
                 <th>Gewinn</th>
             </tr>
         </thead>
