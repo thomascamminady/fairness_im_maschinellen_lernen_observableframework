@@ -9,15 +9,14 @@ Der bisher verwendete Datensatz besteht aus den Daten von zwei Personengruppen. 
 
 In den folgenden beiden Histogrammen werden die Daten der beiden Personengruppen getrennt dargestellt. Die Bank kann für beide Personengruppen unterschiedliche Entscheidungsgrenzen wählen – muss sie aber nicht.
 
-
-
 <div class="tip" label="Aufgabe">
 Diskutiert in Gruppen, wie ihr die beiden Entscheidungsgrenzen wählen würdet, sodass sie aus eurer Sicht möglichst fair sind. Notiert die Werte für eure Entscheidungsgrenzen und begründet eure Wahl. Beschreibt zudem, was ihr unter “fair” versteht. 
 </div>
 
-
 ```js
-const data = FileAttachment("data/user/distribution.csv").csv({ typed: true });
+const data = FileAttachment("data/user/distribution.csv").csv({
+    typed: true
+});
 const scale1 = d3.scaleOrdinal(
     ["Zahlt zurück", "Zahlt nicht zurück"],
     ["#6a3d9a", "#cab2d6"]
@@ -29,33 +28,39 @@ const scale2 = d3.scaleOrdinal(
 ```
 
 <div class="grid grid-cols-2">
-  <div class="card" style="max-width: 700px;">
+  <div class="card" style="max-width: 700px; ">
+
     <h2>Entscheidungsgrenze Alte Menschen</h2>
     
+
 ```js
 const threshold_old = view(
-    Inputs.range([10, 100], { step: 1, label: "" ,value:70})
+    Inputs.range([10, 100], {
+        step: 1,
+        label: "",
+        value: 70
+    })
 );
 ```
 
 ${Plot.plot({
-height: 500,
-width: 500,
-x: { label: "Score" },
-color: { legend: true },
+height: 500, 
+width: 500, 
+x: { label: "Score" }, 
+color: { legend: true }, 
 marks: [
 Plot.dot(
-data,
+data.filter((d) => d.age === "old"), 
 Plot.stackY2({
-x: "score",
-fill: (d) => scale1(d.type),
-sort: "type",
-fillOpacity: (d) => (d.score < threshold_old ? 0.3 : 1),
+x: "score", 
+fill: (d) => scale1(d.type), 
+sort: "type", 
+fillOpacity: (d) => (d.score < threshold_old ? 0.3 : 1), 
 })
-),
-Plot.ruleY([0]),
-Plot.ruleX([threshold_old - 0.5]),
-],
+), 
+Plot.ruleY([0]), 
+Plot.ruleX([threshold_old - 0.5]), 
+], 
 })}
 
 Unsere Vorhersage:
@@ -67,7 +72,10 @@ const grp_old = data
         const type = item.type;
         const score = item.score;
         if (!acc[type]) {
-            acc[type] = { belowThreshold: 0, aboveThreshold: 0 };
+            acc[type] = {
+                belowThreshold: 0,
+                aboveThreshold: 0
+            };
         }
         if (score < threshold_old) {
             acc[type].belowThreshold += 1;
@@ -126,8 +134,6 @@ const recall_old = (
 </div>
 ```
 
-
-
 ```html
 <div class="table-container">
     <table>
@@ -158,33 +164,38 @@ const recall_old = (
 
 </div>
 
-  <div class="card" style="max-width: 500px;">
+  <div class="card" style="max-width: 500px; ">
+
     <h2>Entscheidungsgrenze Junge Menschen</h2>
 
 ```js
 const threshold_young = view(
-    Inputs.range([10, 100], { step: 1, label: "",value:70 })
+    Inputs.range([10, 100], {
+        step: 1,
+        label: "",
+        value: 70
+    })
 );
 ```
 
 ${Plot.plot({
-height: 500,
-width: 500,
-x: { label: "Score" },
-color: { legend: true },
+height: 500, 
+width: 500, 
+x: { label: "Score" }, 
+color: { legend: true }, 
 marks: [
 Plot.dot(
-data,
+data.filter((d) => d.age === "young"), 
 Plot.stackY2({
-x: "score",
-fill: (d) => scale2(d.type),
-sort: "type",
-fillOpacity: (d) => (d.score < threshold_young ? 0.3 : 1),
+x: "score", 
+fill: (d) => scale2(d.type), 
+sort: "type", 
+fillOpacity: (d) => (d.score < threshold_young ? 0.3 : 1), 
 })
-),
-Plot.ruleY([0]),
-Plot.ruleX([threshold_young - 0.5]),
-],
+), 
+Plot.ruleY([0]), 
+Plot.ruleX([threshold_young - 0.5]), 
+], 
 })}
 
 Unsere Vorhersage:
@@ -196,7 +207,10 @@ const grp_young = data
         const type = item.type;
         const score = item.score;
         if (!acc[type]) {
-            acc[type] = { belowThreshold: 0, aboveThreshold: 0 };
+            acc[type] = {
+                belowThreshold: 0,
+                aboveThreshold: 0
+            };
         }
         if (score < threshold_young) {
             acc[type].belowThreshold += 1;
@@ -255,8 +269,6 @@ const recall_young = (
     </table>
 </div>
 ```
-
-
 
 ```html
 <div class="table-container">
