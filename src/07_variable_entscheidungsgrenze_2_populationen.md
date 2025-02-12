@@ -30,7 +30,8 @@ const scale2 = d3.scaleOrdinal(
 <div class="grid grid-cols-2">
   <div class="card" style="max-width: 700px; ">
 
-    <h2>Entscheidungsgrenze Alte Menschen</h2>
+<h2>Entscheidungsgrenze Alte Menschen</h2>
+
     
 
 ```js
@@ -46,7 +47,7 @@ const threshold_old = view(
 ${Plot.plot({
 height: 500, 
 width: 500, 
-x: { label: "Score" }, 
+x: { label: "Score" , domain:[0, 100]}, 
 color: { legend: true }, 
 marks: [
 Plot.dot(
@@ -179,7 +180,7 @@ const threshold_young = view(
 ${Plot.plot({
 height: 500, 
 width: 500, 
-x: { label: "Score" }, 
+x: { label: "Score" , domain:[0, 100] }, 
 color: { legend: true }, 
 marks: [
 Plot.dot(
