@@ -47,7 +47,9 @@ const threshold_old = view(
 ${Plot.plot({
 height: 500, 
 width: 500, 
-x: { label: "Score" , domain:[0, 100]}, 
+style: {fontSize: 18}, 
+x: { label: "Score" , domain:[10, 99]}, 
+y: {  domain:[0, 47] }, 
 color: { legend: true }, 
 marks: [
 Plot.dot(
@@ -180,7 +182,9 @@ const threshold_young = view(
 ${Plot.plot({
 height: 500, 
 width: 500, 
-x: { label: "Score" , domain:[0, 100] }, 
+style: {fontSize: 18}, 
+x: { label: "Score" , domain:[10, 99]}, 
+y: {  domain:[0, 47] }, 
 color: { legend: true }, 
 marks: [
 Plot.dot(

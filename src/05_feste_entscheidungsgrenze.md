@@ -6,7 +6,9 @@ style: css/custom.css
 # Feste Entscheidungsgrenze
 
 ```js
-const data = FileAttachment("data/user/distribution.csv").csv({ typed: true });
+const data = FileAttachment("data/user/distribution.csv").csv({
+    typed: true
+});
 const fixedThreshold = 70;
 ```
 
@@ -20,8 +22,16 @@ display(
     Plot.plot({
         height: 500,
         width: 1000,
-        x: { label: "Score" },
-        color: { legend: true, scheme: "Paired" },
+        style: {
+            fontSize: 18
+        },
+        x: {
+            label: "Score"
+        },
+        color: {
+            legend: true,
+            scheme: "Paired"
+        },
         marks: [
             Plot.dot(
                 data,
@@ -39,14 +49,15 @@ display(
 );
 ```
 
-
-
 ```js
 const groupedData = data.reduce((acc, item) => {
     const type = item.type;
     const score = item.score;
     if (!acc[type]) {
-        acc[type] = { belowThreshold: 0, aboveThreshold: 0 };
+        acc[type] = {
+            belowThreshold: 0,
+            aboveThreshold: 0
+        };
     }
     if (score < fixedThreshold) {
         acc[type].belowThreshold += 1;
@@ -57,9 +68,8 @@ const groupedData = data.reduce((acc, item) => {
 }, {});
 ```
 
-
-
 ## Die Konfusionsmatrix 
+
 Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (zahlt zurück und zahlt nicht zurück) sind in der folgenden Tabelle dargestellt. Diese Tabelle wird auch als Konfusionsmatrix bezeichnet.
 
 ```html
@@ -96,15 +106,16 @@ Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (za
     </table>
 </div>
 ```
+
 ## Bewertung des Entscheidungsmodells
+
 Es gibt verschiedene Gütemaße, die dabei helfen, zu bewerten, wie gut unser Modell geeignet ist. 
 Wir nutzen die folgenden Gütemaße:
 
-- <b>Genauigkeit:</b> Anteil der richtigen Klassifikationen an der Gesamtzahl aller Datenpunkte
-- <b>Positiv Rate:</b> Anteil der positiven Vorhersagen (Vorhersage: zahlt zurück) an der Gesamtzahl aller Datenpunkte
-- <b>Richtig-positiv-Rate:</b> Anteil der richtig positiven Vorhersagen an der Anzahl aller tatsächlich positiven Datenpunkte (Daten: zahlt zurück)
-- <b>Gewinn:</b> erzielter Gesamtgewinn der Bank
-
+* <b>Genauigkeit:</b> Anteil der richtigen Klassifikationen an der Gesamtzahl aller Datenpunkte
+* <b>Positiv Rate:</b> Anteil der positiven Vorhersagen (Vorhersage: zahlt zurück) an der Gesamtzahl aller Datenpunkte
+* <b>Richtig-positiv-Rate:</b> Anteil der richtig positiven Vorhersagen an der Anzahl aller tatsächlich positiven Datenpunkte (Daten: zahlt zurück)
+* <b>Gewinn:</b> erzielter Gesamtgewinn der Bank
 
 <div class="tip" label="Aufgabe">
 Berechne basierend auf der Kofusionsmatrix die Werte für die folgenden vier Gütemaße. Trage deine Ergebnisse in der Tabelle ein. 

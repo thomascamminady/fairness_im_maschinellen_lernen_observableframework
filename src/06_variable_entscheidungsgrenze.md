@@ -6,24 +6,24 @@ style: css/custom.css
 # Variable Entscheidungsgrenze
 
 ```js
-const data = FileAttachment("data/user/distribution.csv").csv({ typed: true });
+const data = FileAttachment("data/user/distribution.csv").csv({
+    typed: true
+});
 ```
 
-
-
-
 Hier kannst du die Entscheidungsgrenze variieren und die aus deiner Sicht optimale Entscheidungsgrenze festlegen. 
-
 
 <div class="tip" label="Aufgabe">
 Notiere den Wert deiner Entscheidungsgrenze und begründe deine Wahl. 
 </div>
 
-
-
 Entscheidungsgrenze:
+
 ```js
-const threshold = view(Inputs.range([0, 100], { step: 1, label: "" }));
+const threshold = view(Inputs.range([0, 100], {
+    step: 1,
+    label: ""
+}));
 ```
 
 ```js
@@ -31,8 +31,16 @@ display(
     Plot.plot({
         height: 500,
         width: 1000,
-        x: { label: "Score" },
-        color: { legend: true, scheme: "Paired" },
+        style: {
+            fontSize: 18
+        },
+        x: {
+            label: "Score"
+        },
+        color: {
+            legend: true,
+            scheme: "Paired"
+        },
         marks: [
             Plot.dot(
                 data,
@@ -50,8 +58,6 @@ display(
 );
 ```
 
-
-
 Unsere Vorhersage bei einer Entscheidungsgrenze von  ${threshold}:
 
 ```js
@@ -59,7 +65,10 @@ const groupedData = data.reduce((acc, item) => {
     const type = item.type;
     const score = item.score;
     if (!acc[type]) {
-        acc[type] = { belowThreshold: 0, aboveThreshold: 0 };
+        acc[type] = {
+            belowThreshold: 0,
+            aboveThreshold: 0
+        };
     }
     if (score < threshold) {
         acc[type].belowThreshold += 1;
@@ -117,8 +126,6 @@ const recall = (
     </table>
 </div>
 ```
-
-
 
 ```html
 <div class="table-container">

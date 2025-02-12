@@ -92,9 +92,9 @@ Notiere deine Antwort.
 </div>
 
 <div class="grid grid-cols-3">
-  <div class="card" style="max-width: 200px; "><h2>Option A</h2>${createPlot(names1)}; </div>
-  <div class="card" style="max-width: 200px; "><h2>Option B</h2>${createPlot(names2)}; </div>
-  <div class="card" style="max-width: 200px; "><h2>Option C</h2>${createPlot(names3)}; </div>
+  <div class="card" style="max-width: 200px; "><h2>Option A</h2>${createPlot(names1)}</div>
+  <div class="card" style="max-width: 200px; "><h2>Option B</h2>${createPlot(names2)}</div>
+  <div class="card" style="max-width: 200px; "><h2>Option C</h2>${createPlot(names3)}</div>
 </div>
 
 ## Datensatz 2
@@ -110,9 +110,9 @@ display(createTable(names2));
 Welches dieser Histogramme ist das richtige?
 
 <div class="grid grid-cols-3">
-  <div class="card" style="max-width: 200px; "><h2>Option A</h2>${createPlot(names1)}; </div>
-  <div class="card" style="max-width: 200px; "><h2>Option B</h2>${createPlot(names2)}; </div>
-  <div class="card" style="max-width: 200px; "><h2>Option C</h2>${createPlot(names3)}; </div>
+  <div class="card" style="max-width: 200px; "><h2>Option A</h2>${createPlot(names1)}</div>
+  <div class="card" style="max-width: 200px; "><h2>Option B</h2>${createPlot(names2)}</div>
+  <div class="card" style="max-width: 200px; "><h2>Option C</h2>${createPlot(names3)}</div>
 </div>
 
 ## Datensatz 3
@@ -127,7 +127,7 @@ display(createTable(names3));
 
 Welches dieser Histogramme ist das richtige?
 <div class="grid grid-cols-3">
-  <div class="card" style="max-width: 200px; "><h2>Option A</h2>${createPlot(names1)}; </div>
-  <div class="card" style="max-width: 200px; "><h2>Option B</h2>${createPlot(names2)}; </div>
-  <div class="card" style="max-width: 200px; "><h2>Option C</h2>${createPlot(names3)}; </div>
+  <div class="card" style="max-width: 200px; "><h2>Option A</h2>${createPlot(names1)}</div>
+  <div class="card" style="max-width: 200px; "><h2>Option B</h2>${createPlot(names2)} </div>
+  <div class="card" style="max-width: 200px; "><h2>Option C</h2>${createPlot(names3)} </div>
 </div>
