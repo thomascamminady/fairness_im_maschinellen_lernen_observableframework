@@ -63,8 +63,6 @@ Plot.ruleX([threshold_old - 0.5]),
 ], 
 })}
 
-Unsere Vorhersage:
-
 ```js
 const grp_old = data
     .filter((d) => d.age === "old")
@@ -166,7 +164,7 @@ const recall_old = (
 
   <div class="card" style="max-width: 500px; ">
 
-    <h2>Entscheidungsgrenze Junge Menschen</h2>
+<h2>Entscheidungsgrenze Junge Menschen</h2>
 
 ```js
 const threshold_young = view(
@@ -197,8 +195,6 @@ Plot.ruleY([0]),
 Plot.ruleX([threshold_young - 0.5]), 
 ], 
 })}
-
-Unsere Vorhersage:
 
 ```js
 const grp_young = data
