@@ -57,7 +57,7 @@ td[contenteditable="false"] {
 
 
 .table-container {
-    width: 100%;
+    width: 95%;
     max-height: 500px;
     /* Adjust height as needed */
     overflow-y: auto;

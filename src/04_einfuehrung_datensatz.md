@@ -28,7 +28,8 @@ const fig = Plot.plot({
     },
 
     x: {
-        label: "Score"
+        label: "Score",
+        domain: [0, 99]
     },
     color: {
         legend: true,

@@ -20,7 +20,7 @@ Notiere den Wert deiner Entscheidungsgrenze und begründe deine Wahl.
 Entscheidungsgrenze:
 
 ```js
-const threshold = view(Inputs.range([0, 100], {
+const threshAlt = view(Inputs.range([0, 100], {
     step: 1,
     label: ""
 }));
@@ -35,7 +35,8 @@ display(
             fontSize: 18
         },
         x: {
-            label: "Score"
+            label: "Score",
+            domain: [0, 99]
         },
         color: {
             legend: true,
@@ -48,17 +49,17 @@ display(
                     x: "score",
                     fill: "type",
                     sort: "type",
-                    fillOpacity: (d) => (d.score < threshold ? 0.3 : 1),
+                    fillOpacity: (d) => (d.score < threshAlt ? 0.3 : 1),
                 })
             ),
             Plot.ruleY([0]),
-            Plot.ruleX([threshold - 0.5]),
+            Plot.ruleX([threshAlt - 0.5]),
         ],
     })
 );
 ```
 
-Unsere Vorhersage bei einer Entscheidungsgrenze von  ${threshold}:
+Unsere Vorhersage bei einer Entscheidungsgrenze von  ${threshAlt}:
 
 ```js
 const groupedData = data.reduce((acc, item) => {
@@ -66,21 +67,21 @@ const groupedData = data.reduce((acc, item) => {
     const score = item.score;
     if (!acc[type]) {
         acc[type] = {
-            belowThreshold: 0,
-            aboveThreshold: 0
+            belowThreshAlt: 0,
+            aboveThreshAlt: 0
         };
     }
-    if (score < threshold) {
-        acc[type].belowThreshold += 1;
+    if (score < threshAlt) {
+        acc[type].belowThreshAlt += 1;
     } else {
-        acc[type].aboveThreshold += 1;
+        acc[type].aboveThreshAlt += 1;
     }
     return acc;
 }, {});
-const n_true_positive = groupedData["Zahlt zurück"]["aboveThreshold"];
-const n_false_positive = groupedData["Zahlt nicht zurück"]["aboveThreshold"];
-const n_false_negative = groupedData["Zahlt zurück"]["belowThreshold"];
-const n_true_negative = groupedData["Zahlt nicht zurück"]["belowThreshold"];
+const n_true_positive = groupedData["Zahlt zurück"]["aboveThreshAlt"];
+const n_false_positive = groupedData["Zahlt nicht zurück"]["aboveThreshAlt"];
+const n_false_negative = groupedData["Zahlt zurück"]["belowThreshAlt"];
+const n_true_negative = groupedData["Zahlt nicht zurück"]["belowThreshAlt"];
 const n_total = n_true_positive + n_false_positive + n_false_negative + n_true_negative
 const n_total_true = n_true_positive + n_false_negative
 const precision = (
@@ -107,19 +108,19 @@ const recall = (
             <tr>
                 <th>Daten:<br>zahlt zurück</th>
                 <td contenteditable="false">
-                    ${groupedData['Zahlt zurück']['aboveThreshold']}
+                    ${groupedData['Zahlt zurück']['aboveThreshAlt']}
                 </td>
                 <td contenteditable="false">
-                    ${groupedData['Zahlt zurück']['belowThreshold']}
+                    ${groupedData['Zahlt zurück']['belowThreshAlt']}
                 </td>
             </tr>
             <tr>
                 <th>Daten:<br>zahlt nicht zurück</th>
                 <td contenteditable="false">
-                    ${groupedData['Zahlt nicht zurück']['aboveThreshold']}
+                    ${groupedData['Zahlt nicht zurück']['aboveThreshAlt']}
                 </td>
                 <td contenteditable="false">
-                    ${groupedData['Zahlt nicht zurück']['belowThreshold']}
+                    ${groupedData['Zahlt nicht zurück']['belowThreshAlt']}
                 </td>
             </tr>
             <tr></tr>
@@ -147,8 +148,8 @@ const recall = (
                 </td>
                 <td contenteditable="false">${((n_true_positive)/n_total_true).toFixed(3)}</td>
                 <td contenteditable="false">
-                    ${250 * groupedData["Zahlt zurück"]["aboveThreshold"] - 1000
-                    * groupedData["Zahlt nicht zurück"]["aboveThreshold"]}
+                    ${250 * groupedData["Zahlt zurück"]["aboveThreshAlt"] - 1000
+                    * groupedData["Zahlt nicht zurück"]["aboveThreshAlt"]}
                 </td>
             </tr>
         </tbody>

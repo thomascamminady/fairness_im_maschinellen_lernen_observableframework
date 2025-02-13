@@ -37,7 +37,7 @@ A typical Framework project looks like this:
 └─ README.md
 ```
 
-**`src`** - This is the “source root” — where your source files live. Pages go here. Each page is a Markdown file. Observable Framework uses [file-based routing](https://observablehq.com/framework/project-structure#routing), which means that the name of the file controls where the page is served. You can create as many pages as you like. Use folders to organize your pages.
+**`src`** - This is the “source root” — where your source files live. Pages go here. Each page is a Markdown file. Observable Framework uses [file-based routing](https://observablehq.com/framework/project-structure#routing), which means that the name of the file controls where the page is served. You can create as many pages as you like. 
 
 **`src/index.md`** - This is the home page for your app. You can have as many additional pages as you’d like, but you should always have a home page, too.
 
@@ -51,9 +51,9 @@ A typical Framework project looks like this:
 
 | Command           | Description                                              |
 | ----------------- | -------------------------------------------------------- |
-| `npm install`            | Install or reinstall dependencies                        |
-| `npm run dev`        | Start local preview server                               |
-| `npm run build`      | Build your static site, generating `./dist`              |
-| `npm run deploy`     | Deploy your app to Observable                            |
-| `npm run clean`      | Clear the local data loader cache                        |
-| `npm run observable` | Run commands like `observable help`                      |
+| `npm install` | Install or reinstall dependencies                        |
+| `npm run dev` | Start local preview server                               |
+| `npm run build` | Build your static site, generating `./dist` |
+| `npm run deploy` | Deploy your app to Observable                            |
+| `npm run clean` | Clear the local data loader cache                        |
+| `npm run observable` | Run commands like `observable help` |

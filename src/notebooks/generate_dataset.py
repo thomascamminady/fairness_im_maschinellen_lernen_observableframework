@@ -4,39 +4,59 @@ import numpy as np
 import polars as pl
 
 # %%
-n = 1000
-std1 = 10
-mu1 = 60
+# %%
+n = 500
+std = 8
 
-std2 = 10
-mu2 = 70
+mu1_yes = 50
+mu1_not = 40
+
+mu2_yes = 60
+mu2_not = 50
+
 
 df = (
     pl.concat(
         [
             pl.DataFrame(
-                {"score": np.random.randn(n) * std1 + mu1, "age": ["young"] * n}
+                {
+                    "score": np.random.randn(n) * std + mu1_yes,
+                    "age": ["Jung"] * n,
+                    "pays_back": [True] * n,
+                }
             ),
             pl.DataFrame(
-                {"score": np.random.randn(n) * std2 + mu2, "age": ["old"] * n}
+                {
+                    "score": np.random.randn(n) * std + mu1_not,
+                    "age": ["Jung"] * n,
+                    "pays_back": [False] * n,
+                }
+            ),
+            pl.DataFrame(
+                {
+                    "score": np.random.randn(n) * std + mu2_yes,
+                    "age": ["Alt"] * n,
+                    "pays_back": [True] * n,
+                }
+            ),
+            pl.DataFrame(
+                {
+                    "score": np.random.randn(n) * std + mu2_not,
+                    "age": ["Alt"] * n,
+                    "pays_back": [False] * n,
+                }
             ),
         ]
     )
     .with_columns(
-        pays_back=pl.col("score").map_elements(
-            lambda s: True if np.random.rand() < s / 100 else False,
-            return_dtype=pl.Boolean,
-        )
-    )
-    .with_columns(score=pl.col("score").round())
-).with_columns(
-        type=pl.when(pl.col("pays_back") ==False)
+        type=pl.when(pl.col("pays_back").not_())
         .then(pl.lit("Zahlt nicht zurück"))
         .otherwise(pl.lit("Zahlt zurück"))
         .alias("status")
-    ).with_columns(pl.col("score").cast(pl.Int64)).filter(pl.col("score").is_between(0,100))
-
-
+    )
+    .with_columns(pl.col("score").cast(pl.Int64))
+    .filter(pl.col("score").is_between(0, 100))
+)
 
 df.write_csv("../data/user/distribution.csv")
 
@@ -64,6 +84,3 @@ base = alt.Chart(df).transform_window(id="rank()", groupby=["score", "age"])
 ).properties(width=600, height=400)
 
 # %%
-
-
-

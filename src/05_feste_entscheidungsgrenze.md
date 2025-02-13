@@ -9,7 +9,7 @@ style: css/custom.css
 const data = FileAttachment("data/user/distribution.csv").csv({
     typed: true
 });
-const fixedThreshold = 70;
+const fixedThreshAlt = 70;
 ```
 
 Ist die Entscheidungsgrenze wirklich gut gewählt? Zur Beantwortung dieser Frage und zur Validierung unseres Kreditvergabesystems, d. h. des Klassifikators, werden wir den Gesamtprofit sowie verschiedene statische Gütemaße nutzen. 
@@ -26,7 +26,8 @@ display(
             fontSize: 18
         },
         x: {
-            label: "Score"
+            label: "Score",
+            domain: [0, 99]
         },
         color: {
             legend: true,
@@ -39,11 +40,11 @@ display(
                     x: "score",
                     fill: "type",
                     sort: "type",
-                    fillOpacity: (d) => (d.score < fixedThreshold ? 0.3 : 1),
+                    fillOpacity: (d) => (d.score < fixedThreshAlt ? 0.3 : 1),
                 })
             ),
             Plot.ruleY([0]),
-            Plot.ruleX([fixedThreshold - 0.5]),
+            Plot.ruleX([fixedThreshAlt - 0.5]),
         ],
     })
 );
@@ -55,14 +56,14 @@ const groupedData = data.reduce((acc, item) => {
     const score = item.score;
     if (!acc[type]) {
         acc[type] = {
-            belowThreshold: 0,
-            aboveThreshold: 0
+            belowThreshAlt: 0,
+            aboveThreshAlt: 0
         };
     }
-    if (score < fixedThreshold) {
-        acc[type].belowThreshold += 1;
+    if (score < fixedThreshAlt) {
+        acc[type].belowThreshAlt += 1;
     } else {
-        acc[type].aboveThreshold += 1;
+        acc[type].aboveThreshAlt += 1;
     }
     return acc;
 }, {});
@@ -86,19 +87,19 @@ Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (za
             <tr>
                 <th>Daten:<br>Zahlt zurück</th>
                 <td contenteditable="false">
-                    ${groupedData['Zahlt zurück']['aboveThreshold']}
+                    ${groupedData['Zahlt zurück']['aboveThreshAlt']}
                 </td>
                 <td contenteditable="false">
-                    ${groupedData['Zahlt zurück']['belowThreshold']}
+                    ${groupedData['Zahlt zurück']['belowThreshAlt']}
                 </td>
             </tr>
             <tr>
                 <th>Daten:<br>Zahlt nicht zurück</th>
                 <td contenteditable="false">
-                    ${groupedData['Zahlt nicht zurück']['aboveThreshold']}
+                    ${groupedData['Zahlt nicht zurück']['aboveThreshAlt']}
                 </td>
                 <td contenteditable="false">
-                    ${groupedData['Zahlt nicht zurück']['belowThreshold']}
+                    ${groupedData['Zahlt nicht zurück']['belowThreshAlt']}
                 </td>
             </tr>
             <tr></tr>
