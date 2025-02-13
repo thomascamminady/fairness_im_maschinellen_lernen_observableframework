@@ -7,8 +7,8 @@ style: css/custom.css
 
 Eine Bank vergibt Kredite von 1000€.
 
--   Personen, die einen Kredit erhalten und zurückzahlen, zahlen den Betrag mit 20% Zinsen zurück. Das heißt, die Bank erhält 1200€ zurück.
--   Vergibt die Bank einen Kredit an Personen, die diesen nicht zurückzahlen, macht die Bank 1000€ Verlust.
+*   Personen, die einen Kredit erhalten und zurückzahlen, zahlen den Betrag mit 30% Zinsen zurück. Das heißt, die Bank erhält 1300€ zurück.
+*   Vergibt die Bank einen Kredit an Personen, die diesen nicht zurückzahlen, macht die Bank 1000€ Verlust.
 
 <div class="tip" label="Aufgabe">Fülle nun die folgende Tabelle aus.</div>
 
@@ -28,12 +28,12 @@ Eine Bank vergibt Kredite von 1000€.
             </tr>
             <tr>
                 <th>Verlust der Bank:<br>Kredit genehmigt und Person zahlt nicht zurück
-</th>
+                </th>
                 <td contenteditable="true"></td>
             </tr>
             <tr>
                 <th>Gesamtgewinn bei 25 Personen die ihren Kredit zurückzahlen und 8 Personen die ihren Kredit nicht zurückzahlen
-</th>
+                </th>
                 <td contenteditable="true"></td>
             </tr>
             <tr></tr>

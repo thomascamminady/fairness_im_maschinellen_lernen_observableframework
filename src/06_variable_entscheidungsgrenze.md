@@ -147,7 +147,7 @@ const recall = (
                 </td>
                 <td contenteditable="false">${((n_true_positive)/n_total_true).toFixed(3)}</td>
                 <td contenteditable="false">
-                    ${200 * groupedData["Zahlt zurück"]["aboveThreshold"] - 1000
+                    ${250 * groupedData["Zahlt zurück"]["aboveThreshold"] - 1000
                     * groupedData["Zahlt nicht zurück"]["aboveThreshold"]}
                 </td>
             </tr>

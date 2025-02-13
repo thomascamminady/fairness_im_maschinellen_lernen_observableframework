@@ -6,7 +6,7 @@ import polars as pl
 # %%
 n = 1000
 std1 = 10
-mu1 = 50
+mu1 = 60
 
 std2 = 10
 mu2 = 70

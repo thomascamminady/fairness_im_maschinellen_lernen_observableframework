@@ -156,7 +156,7 @@ const recall_old = (
                 </td>
                 <td contenteditable="false">${(n_true_positive_old/total_positive_old).toFixed(3)}</td>
                 <td contenteditable="false">
-                    ${200 * grp_old["Zahlt zurück"]["aboveThreshold"] - 1000 *
+                    ${250 * grp_old["Zahlt zurück"]["aboveThreshold"] - 1000 *
                     grp_old["Zahlt nicht zurück"]["aboveThreshold"]}
                 </td>
             </tr>
@@ -295,7 +295,7 @@ const recall_young = (
                 </td>
                 <td contenteditable="false">${(n_true_positive_young/total_positive_young).toFixed(3)}</td>
                 <td contenteditable="false">
-                    ${200 * grp_young["Zahlt zurück"]["aboveThreshold"] - 1000 *
+                    ${250 * grp_young["Zahlt zurück"]["aboveThreshold"] - 1000 *
                     grp_young["Zahlt nicht zurück"]["aboveThreshold"]}
                 </td>
             </tr>
