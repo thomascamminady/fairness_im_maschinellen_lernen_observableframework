@@ -5,26 +5,18 @@ style: css/custom.css
 
 # Variable Entscheidungsgrenzen für zwei Personengruppen
 
-Der bisher verwendete Datensatz besteht aus den Daten von zwei Personengruppen. Der Personengruppe alt (älter als 30 Jahre) und der Gruppe jung (jünger als 30 Jahre). 
+Der bisher verwendete Datensatz besteht aus den Daten von zwei Personengruppen. Der Personengruppe alt (älter als 30 Jahre) und der Gruppe jung (jünger als 30 Jahre).
 
 In den folgenden beiden Histogrammen werden die Daten der beiden Personengruppen getrennt dargestellt. Die Bank kann für beide Personengruppen unterschiedliche Entscheidungsgrenzen wählen – muss sie aber nicht.
 
 <div class="tip" label="Aufgabe">
-Diskutiert in Gruppen, wie ihr die beiden Entscheidungsgrenzen wählen würdet, sodass sie aus eurer Sicht möglichst fair sind. Notiert die Werte für eure Entscheidungsgrenzen und begründet eure Wahl. Beschreibt zudem, was ihr unter “fair” versteht. 
+Diskutiert in Gruppen, wie ihr die beiden Entscheidungsgrenzen wählen würdet, sodass sie aus eurer Sicht möglichst fair sind. Notiert die Werte für eure Entscheidungsgrenzen und begründet eure Wahl. Beschreibt zudem, was ihr unter “fair” versteht.
 </div>
 
 ```js
 const data = FileAttachment("data/user/distribution.csv").csv({
     typed: true
 });
-const scale1 = d3.scaleOrdinal(
-    ["Zahlt zurück", "Zahlt nicht zurück"],
-    ["#6a3d9a", "#cab2d6"]
-); // outside of Plot
-const scale2 = d3.scaleOrdinal(
-    ["Zahlt zurück", "Zahlt nicht zurück"],
-    ["#33a02c", "#b2df8a"]
-);
 ```
 
 <div class="grid grid-cols-2">
@@ -32,7 +24,7 @@ const scale2 = d3.scaleOrdinal(
 
 <h2>Entscheidungsgrenze Alte Menschen</h2>
 
-    
+
 
 ```js
 const threshAlt_Alt = view(
@@ -59,7 +51,9 @@ Plot.plot({
         domain: [0, 47]
     },
     color: {
-        legend: true
+        legend: true,
+        domain: ["Zahlt zurück", "Zahlt nicht zurück"],
+        range: ["#6a3d9a", "#cab2d6"]
     },
     opacity: {
         legend: true
@@ -69,7 +63,7 @@ Plot.plot({
             data.filter((d) => d.age === "Alt"),
             Plot.stackY2({
                 x: "score",
-                fill: (d) => scale1(d.type),
+                fill: "type",
                 sort: "type",
                 fillOpacity: (d) => (d.score < threshAlt_Alt ? 0.3 : 1),
             })
@@ -209,14 +203,16 @@ Plot.plot({
         domain: [0, 47]
     },
     color: {
-        legend: true
+        legend: true,
+        domain: ["Zahlt zurück", "Zahlt nicht zurück"],
+        range: ["#33a02c", "#b2df8a"]
     },
     marks: [
         Plot.dot(
             data.filter((d) => d.age === "Jung"),
             Plot.stackY2({
                 x: "score",
-                fill: (d) => scale2(d.type),
+                fill: "type",
                 sort: "type",
                 fillOpacity: (d) => (d.score < threshAlt_Jung ? 0.3 : 1),
             })

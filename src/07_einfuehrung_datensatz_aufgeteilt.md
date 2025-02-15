@@ -70,7 +70,6 @@ const fig = Plot.plot({
                 fill: "age",
                 sort: "type",
                 fillOpacity: (d) => (d.type == "Zahlt zurück" ? 1 : 0.3),
-
             })
         ),
         Plot.ruleY([0]),
@@ -114,7 +113,9 @@ const fig = Plot.plot({
 display(fig);
 ```
 
-Und hier sehen wir die Verteilung der alten Bewerber.
+Hier sehen wir 500 Bewerber und Bewerberinnen welche ihren Kredit zurück zahlen würden (mittlerer Kreditscore von 50), sowie 500 Bewerber und Bewerberinnen die ihren Kredit nicht zurück zahlen würden (mittlerer Kreditscore von 40).
+
+Als nächstes sehen wir die Verteilung der alten Bewerber.
 
 ```js
 const fig = Plot.plot({
@@ -149,3 +150,8 @@ const fig = Plot.plot({
 });
 display(fig);
 ```
+
+Auch hier sehen wir 500 Bewerber und Bewerberinnen welche ihren Kredit zurück zahlen würden, sowie 500 Bewerber und Bewerberinnen die ihren Kredit nicht zurück zahlen würden. Allerdings sind die mittleren Kreditscores hierbei 60 (zahlt zurück) und 50 (zahlt nicht zurück). 
+
+Wir stellen fest: Obwohl die Wahrscheinlichkeit, dass ein Kredit zurück gezahlt wird, in beiden Gruppen bei 50% liegt, hat die Gruppe der alten Bewerber einen höheren Kreditscore als die Gruppe der jungen Bewerber.
+
