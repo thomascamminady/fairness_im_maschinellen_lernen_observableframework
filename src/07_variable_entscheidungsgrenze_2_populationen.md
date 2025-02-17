@@ -24,8 +24,6 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 
 <h2>Entscheidungsgrenze Alte Menschen</h2>
 
-
-
 ```js
 const threshAlt_Alt = view(
     Inputs.range([10, 100], {
@@ -159,9 +157,9 @@ const recall_Alt = (
             <tr>
                 <td contenteditable="false">${precision_Alt}%</td>
                 <td contenteditable="false">
-                    ${( ((n_true_positive_Alt + n_false_positive_Alt) / total_Alt).toFixed(3) )}
+                    ${( (((n_true_positive_Alt + n_false_positive_Alt) / total_Alt)*100).toFixed(0) )}%
                 </td>
-                <td contenteditable="false">${(n_true_positive_Alt/total_positive_Alt).toFixed(3)}</td>
+                <td contenteditable="false">${((n_true_positive_Alt/total_positive_Alt)*100).toFixed(0)}%</td>
                 <td contenteditable="false">
                     ${250 * grp_Alt["Zahlt zurück"]["aboveThreshAlt"] - 1000 *
                     grp_Alt["Zahlt nicht zurück"]["aboveThreshAlt"]}
@@ -311,9 +309,9 @@ const recall_Jung = (
             <tr>
                 <td contenteditable="false">${precision_Jung}%</td>
                 <td contenteditable="false">
-                    ${( ((n_true_positive_Jung + n_false_positive_Jung) / total_Jung).toFixed(3) )}
+                    ${( (((n_true_positive_Jung + n_false_positive_Jung) / total_Jung)*100).toFixed(0) )}%
                 </td>
-                <td contenteditable="false">${(n_true_positive_Jung/total_positive_Jung).toFixed(3)}</td>
+                <td contenteditable="false">${((n_true_positive_Jung/total_positive_Jung)*100).toFixed(0)}%</td>
                 <td contenteditable="false">
                     ${250 * grp_Jung["Zahlt zurück"]["aboveThreshAlt"] - 1000 *
                     grp_Jung["Zahlt nicht zurück"]["aboveThreshAlt"]}

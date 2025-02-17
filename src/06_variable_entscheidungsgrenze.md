@@ -144,9 +144,9 @@ const recall = (
             <tr>
                 <td contenteditable="false">${precision}%</td>
                 <td contenteditable="false">
-                    ${((n_true_positive+n_false_positive)/n_total).toFixed(3)}
+                    ${(((n_true_positive+n_false_positive)/n_total)*100).toFixed(0)}%
                 </td>
-                <td contenteditable="false">${((n_true_positive)/n_total_true).toFixed(3)}</td>
+                <td contenteditable="false">${(((n_true_positive)/n_total_true)*100).toFixed(0)}%</td>
                 <td contenteditable="false">
                     ${250 * groupedData["Zahlt zurück"]["aboveThreshAlt"] - 1000
                     * groupedData["Zahlt nicht zurück"]["aboveThreshAlt"]}
