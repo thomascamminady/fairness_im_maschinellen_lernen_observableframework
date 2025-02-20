@@ -32,12 +32,12 @@ export function calculateMetrics(data, ageGroup, threshold) {
     const precision = (
         (100 * n_true_positive) /
         (n_true_positive + n_false_positive + 0.0000000001)
-    ).toFixed(2);
+    ).toFixed(0);
 
     const recall = (
         (100 * n_true_positive) /
         (n_true_positive + n_false_negative)
-    ).toFixed(2);
+    ).toFixed(0);
 
     const positive_rate = (((n_true_positive + n_false_positive) / total) * 100).toFixed(0);
     const true_positive_rate = (((n_true_positive) / total_positive) * 100).toFixed(0);
