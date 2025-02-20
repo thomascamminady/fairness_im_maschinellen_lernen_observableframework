@@ -147,7 +147,6 @@ Plot.plot({
                 <th>Positiv Rate</th>
                 <th>Richtig-positiv-Rate</th>
                 <th>Gewinn</th>
-                <th>Gesamt Gewinn</th>
 
             </tr>
         </thead>
@@ -157,7 +156,6 @@ Plot.plot({
                 <td contenteditable="false">${positive_rate_Alt}%</td>
                 <td contenteditable="false">${true_positive_rate_Alt}%</td>
                 <td contenteditable="false">${gewinn_Alt}€</td>
-                <td contenteditable="false">${gewinn_Alt+gewinn_Jung}€</td>
             </tr>
         </tbody>
     </table>
@@ -346,7 +344,6 @@ Plot.plot({
                 <th>Positiv Rate</th>
                 <th>Richtig-positiv-Rate</th>
                 <th>Gewinn</th>
-                <th>Gesamt Gewinn</th>
             </tr>
         </thead>
         <tbody>
@@ -355,8 +352,6 @@ Plot.plot({
                 <td contenteditable="false">${positive_rate_Jung}%</td>
                 <td contenteditable="false">${true_positive_rate_Jung}%</td>
                 <td contenteditable="false">${gewinn_Jung}€</td>
-                <td contenteditable="false">${gewinn_Alt+gewinn_Jung}€</td>
-
             </tr>
         </tbody>
     </table>
@@ -365,4 +360,4 @@ Plot.plot({
 
   </div>
 </div>
-Der Gesamtgewinn ist die Summe der Gewinne der beiden Personengruppen.
+Der Gesamtgewinn ist die Summe der Gewinne der beiden Personengruppen und lieg bei ${gewinn_Alt+gewinn_Jung}€.
