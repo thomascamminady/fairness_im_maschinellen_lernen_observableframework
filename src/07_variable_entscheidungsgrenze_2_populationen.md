@@ -162,7 +162,7 @@ const recall_Alt = (
                 <td contenteditable="false">${((n_true_positive_Alt/total_positive_Alt)*100).toFixed(0)}%</td>
                 <td contenteditable="false">
                     ${250 * grp_Alt["Zahlt zurück"]["aboveThreshAlt"] - 1000 *
-                    grp_Alt["Zahlt nicht zurück"]["aboveThreshAlt"]}
+                    grp_Alt["Zahlt nicht zurück"]["aboveThreshAlt"]}€
                 </td>
             </tr>
         </tbody>
@@ -314,7 +314,7 @@ const recall_Jung = (
                 <td contenteditable="false">${((n_true_positive_Jung/total_positive_Jung)*100).toFixed(0)}%</td>
                 <td contenteditable="false">
                     ${250 * grp_Jung["Zahlt zurück"]["aboveThreshAlt"] - 1000 *
-                    grp_Jung["Zahlt nicht zurück"]["aboveThreshAlt"]}
+                    grp_Jung["Zahlt nicht zurück"]["aboveThreshAlt"]}€
                 </td>
             </tr>
         </tbody>
