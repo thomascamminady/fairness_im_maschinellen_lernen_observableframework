@@ -3,6 +3,12 @@ title: Variable Entscheidungsgrenze, zwei Personengruppen
 style: css/custom.css
 ---
 
+```js
+import {
+    calculateMetrics
+} from "./js/calculateMetrics.js";
+```
+
 # Variable Entscheidungsgrenzen für zwei Personengruppen
 
 Der bisher verwendete Datensatz besteht aus den Daten von zwei Personengruppen. Der Personengruppe alt (älter als 30 Jahre) und der Gruppe jung (jünger als 30 Jahre).
@@ -19,6 +25,13 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 });
 ```
 
+```js
+const connected = view(Inputs.radio(["Unabhängig", "Gleiche Grenze", , "Ähnliche positiv Rate", "Ähnliche Richtig-positiv-Rate"], {
+    label: "Regler Junge Menschen",
+    value: "Unabhängig"
+}));
+```
+
 <div class="grid grid-cols-2">
   <div class="card" style="max-width: 700px; ">
 
@@ -32,6 +45,24 @@ const threshold_Alt = view(
         value: 70
     })
 );
+```
+
+```js
+// Compute metrics for "Alt" group first
+const {
+    grp: grp_Alt,
+    n_true_positive: n_true_positive_Alt,
+    n_false_positive: n_false_positive_Alt,
+    n_false_negative: n_false_negative_Alt,
+    n_true_negative: n_true_negative_Alt,
+    total: total_Alt,
+    total_positive: total_positive_Alt,
+    precision: precision_Alt,
+    recall: recall_Alt,
+    positive_rate: positive_rate_Alt,
+    true_positive_rate: true_positive_rate_Alt,
+    gewinn: gewinn_Alt
+} = calculateMetrics(data, "Alt", threshold_Alt);
 ```
 
 ```js
@@ -70,41 +101,6 @@ Plot.plot({
         Plot.ruleX([threshold_Alt - 0.5]),
     ],
 })
-```
-
-```js
-const grp_Alt = data
-    .filter((d) => d.age === "Alt")
-    .reduce((acc, item) => {
-        const type = item.type;
-        const score = item.score;
-        if (!acc[type]) {
-            acc[type] = {
-                belowthreshold: 0,
-                abovethreshold: 0
-            };
-        }
-        if (score < threshold_Alt) {
-            acc[type].belowthreshold += 1;
-        } else {
-            acc[type].abovethreshold += 1;
-        }
-        return acc;
-    }, {});
-const n_true_positive_Alt = grp_Alt["Zahlt zurück"]["abovethreshold"];
-const n_false_positive_Alt = grp_Alt["Zahlt nicht zurück"]["abovethreshold"];
-const n_false_negative_Alt = grp_Alt["Zahlt zurück"]["belowthreshold"];
-const n_true_negative_Alt = grp_Alt["Zahlt nicht zurück"]["belowthreshold"];
-const total_Alt = n_true_positive_Alt + n_false_positive_Alt + n_false_negative_Alt + n_true_negative_Alt;
-const total_positive_Alt = n_true_positive_Alt + n_false_negative_Alt;
-const precision_Alt = (
-    (100 * n_true_positive_Alt) /
-    (n_true_positive_Alt + n_false_positive_Alt)
-).toFixed(2);
-const recall_Alt = (
-    (100 * n_true_positive_Alt) /
-    (n_true_positive_Alt + n_false_negative_Alt)
-).toFixed(2);
 ```
 
 ```html
@@ -156,14 +152,9 @@ const recall_Alt = (
         <tbody>
             <tr>
                 <td contenteditable="false">${precision_Alt}%</td>
-                <td contenteditable="false">
-                    ${( (((n_true_positive_Alt + n_false_positive_Alt) / total_Alt)*100).toFixed(0) )}%
-                </td>
-                <td contenteditable="false">${((n_true_positive_Alt/total_positive_Alt)*100).toFixed(0)}%</td>
-                <td contenteditable="false">
-                    ${250 * grp_Alt["Zahlt zurück"]["abovethreshold"] - 1000 *
-                    grp_Alt["Zahlt nicht zurück"]["abovethreshold"]}€
-                </td>
+                <td contenteditable="false">${positive_rate_Alt}%</td>
+                <td contenteditable="false">${true_positive_rate_Alt}%</td>
+                <td contenteditable="false">${gewinn_Alt}€</td>
             </tr>
         </tbody>
     </table>
@@ -177,13 +168,99 @@ const recall_Alt = (
 <h2>Entscheidungsgrenze Junge Menschen</h2>
 
 ```js
+// Determine threshold for "Jung"
+let value = 70;
+if (connected === "Gleiche Grenze") {
+    value = threshold_Alt;
+} else if (connected === "Ähnliche Richtig-positiv-Rate") {
+    // Reference value from "Alt" group
+    const ref = true_positive_rate_Alt;
+    let bestThreshold = 0;
+    let minDiff = Infinity;
+
+    // Iterate through thresholds to find the best match for "Jung"
+    for (let t = 0; t <= 100; t++) {
+        const {
+            grp,
+            n_true_positive,
+            n_false_positive,
+            n_false_negative,
+            n_true_negative,
+            total,
+            total_positive,
+            precision,
+            recall,
+            positive_rate,
+            true_positive_rate,
+            gewinn
+        } = calculateMetrics(data, "Jung", t);
+        const diff = Math.abs(true_positive_rate - ref);
+        if (diff < minDiff) {
+            minDiff = diff;
+            bestThreshold = t;
+        }
+    }
+
+    value = bestThreshold;
+} else if (connected === "Ähnliche positiv Rate") {
+    // Reference value from "Alt" group
+    const ref = positive_rate_Alt;
+    let bestThreshold = 0;
+    let minDiff = Infinity;
+
+    // Iterate through thresholds to find the best match for "Jung"
+    for (let t = 0; t <= 100; t++) {
+        const {
+            grp,
+            n_true_positive,
+            n_false_positive,
+            n_false_negative,
+            n_true_negative,
+            total,
+            total_positive,
+            precision,
+            recall,
+            positive_rate,
+            true_positive_rate,
+            gewinn
+        } = calculateMetrics(data, "Jung", t);
+        const diff = Math.abs(positive_rate - ref);
+        if (diff < minDiff) {
+            minDiff = diff;
+            bestThreshold = t;
+        }
+    }
+
+    value = bestThreshold;
+
+}
+
+// Define threshold for Jung
 const threshold_Jung = view(
     Inputs.range([10, 100], {
         step: 1,
         label: "",
-        value: threshold_Jung
+        value: value
     })
 );
+```
+
+```js
+// Compute metrics for "Jung" using the corrected threshold
+const {
+    grp: grp_Jung,
+    n_true_positive: n_true_positive_Jung,
+    n_false_positive: n_false_positive_Jung,
+    n_false_negative: n_false_negative_Jung,
+    n_true_negative: n_true_negative_Jung,
+    total: total_Jung,
+    total_positive: total_positive_Jung,
+    precision: precision_Jung,
+    recall: recall_Jung,
+    positive_rate: positive_rate_Jung,
+    true_positive_rate: true_positive_rate_Jung,
+    gewinn: gewinn_Jung
+} = calculateMetrics(data, "Jung", threshold_Jung);
 ```
 
 ```js
@@ -219,44 +296,6 @@ Plot.plot({
         Plot.ruleX([threshold_Jung - 0.5]),
     ],
 })
-```
-
-```js
-const grp_Jung = data
-    .filter((d) => d.age === "Jung")
-    .reduce((acc, item) => {
-        const type = item.type;
-        const score = item.score;
-        if (!acc[type]) {
-            acc[type] = {
-                belowthreshold: 0,
-                abovethreshold: 0
-            };
-        }
-        if (score < threshold_Jung) {
-            acc[type].belowthreshold += 1;
-        } else {
-            acc[type].abovethreshold += 1;
-        }
-        return acc;
-    }, {});
-const n_true_positive_Jung = grp_Jung["Zahlt zurück"]["abovethreshold"];
-const n_false_positive_Jung =
-    grp_Jung["Zahlt nicht zurück"]["abovethreshold"];
-const n_false_negative_Jung = grp_Jung["Zahlt zurück"]["belowthreshold"];
-const n_true_negative_Jung = grp_Jung["Zahlt nicht zurück"]["belowthreshold"];
-
-const total_Jung = n_true_positive_Jung + n_false_positive_Jung + n_false_negative_Jung + n_true_negative_Jung;
-const total_positive_Jung = n_true_positive_Jung + n_false_negative_Jung;
-
-const precision_Jung = (
-    (100 * n_true_positive_Jung) /
-    (n_true_positive_Jung + n_false_positive_Jung)
-).toFixed(2);
-const recall_Jung = (
-    (100 * n_true_positive_Jung) /
-    (n_true_positive_Jung + n_false_negative_Jung)
-).toFixed(2);
 ```
 
 ```html
@@ -308,14 +347,9 @@ const recall_Jung = (
         <tbody>
             <tr>
                 <td contenteditable="false">${precision_Jung}%</td>
-                <td contenteditable="false">
-                    ${( (((n_true_positive_Jung + n_false_positive_Jung) / total_Jung)*100).toFixed(0) )}%
-                </td>
-                <td contenteditable="false">${((n_true_positive_Jung/total_positive_Jung)*100).toFixed(0)}%</td>
-                <td contenteditable="false">
-                    ${250 * grp_Jung["Zahlt zurück"]["abovethreshold"] - 1000 *
-                    grp_Jung["Zahlt nicht zurück"]["abovethreshold"]}€
-                </td>
+                <td contenteditable="false">${positive_rate_Jung}%</td>
+                <td contenteditable="false">${true_positive_rate_Jung}%</td>
+                <td contenteditable="false">${gewinn_Jung}€</td>
             </tr>
         </tbody>
     </table>

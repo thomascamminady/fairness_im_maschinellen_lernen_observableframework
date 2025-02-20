@@ -62,36 +62,26 @@ display(
 Unsere Vorhersage bei einer Entscheidungsgrenze von  ${threshAlt}:
 
 ```js
-const groupedData = data.reduce((acc, item) => {
-    const type = item.type;
-    const score = item.score;
-    if (!acc[type]) {
-        acc[type] = {
-            belowThreshAlt: 0,
-            aboveThreshAlt: 0
-        };
-    }
-    if (score < threshAlt) {
-        acc[type].belowThreshAlt += 1;
-    } else {
-        acc[type].aboveThreshAlt += 1;
-    }
-    return acc;
-}, {});
-const n_true_positive = groupedData["Zahlt zurück"]["aboveThreshAlt"];
-const n_false_positive = groupedData["Zahlt nicht zurück"]["aboveThreshAlt"];
-const n_false_negative = groupedData["Zahlt zurück"]["belowThreshAlt"];
-const n_true_negative = groupedData["Zahlt nicht zurück"]["belowThreshAlt"];
-const n_total = n_true_positive + n_false_positive + n_false_negative + n_true_negative
-const n_total_true = n_true_positive + n_false_negative
-const precision = (
-    (100 * n_true_positive) /
-    (n_true_positive + n_false_positive)
-).toFixed(2);
-const recall = (
-    (100 * n_true_positive) /
-    (n_true_positive + n_false_negative)
-).toFixed(2);
+import {
+    calculateMetrics
+} from "./js/calculateMetrics.js";
+```
+
+```js
+const {
+    grp: groupedData,
+    n_true_positive,
+    n_false_positive,
+    n_false_negative,
+    n_true_negative,
+    total: n_total,
+    total_positive: n_total_true,
+    precision,
+    recall,
+    positive_rate,
+    true_positive_rate,
+    gewinn
+} = calculateMetrics(data, "", threshAlt);
 ```
 
 ```html
@@ -108,19 +98,19 @@ const recall = (
             <tr>
                 <th>Daten:<br>zahlt zurück</th>
                 <td contenteditable="false">
-                    ${groupedData['Zahlt zurück']['aboveThreshAlt']}
+                    ${groupedData['Zahlt zurück']['abovethreshold']}
                 </td>
                 <td contenteditable="false">
-                    ${groupedData['Zahlt zurück']['belowThreshAlt']}
+                    ${groupedData['Zahlt zurück']['belowthreshold']}
                 </td>
             </tr>
             <tr>
                 <th>Daten:<br>zahlt nicht zurück</th>
                 <td contenteditable="false">
-                    ${groupedData['Zahlt nicht zurück']['aboveThreshAlt']}
+                    ${groupedData['Zahlt nicht zurück']['abovethreshold']}
                 </td>
                 <td contenteditable="false">
-                    ${groupedData['Zahlt nicht zurück']['belowThreshAlt']}
+                    ${groupedData['Zahlt nicht zurück']['belowthreshold']}
                 </td>
             </tr>
             <tr></tr>
@@ -144,12 +134,11 @@ const recall = (
             <tr>
                 <td contenteditable="false">${precision}%</td>
                 <td contenteditable="false">
-                    ${(((n_true_positive+n_false_positive)/n_total)*100).toFixed(0)}%
+                    ${positive_rate}%
                 </td>
-                <td contenteditable="false">${(((n_true_positive)/n_total_true)*100).toFixed(0)}%</td>
+                <td contenteditable="false">${true_positive_rate}%</td>
                 <td contenteditable="false">
-                    ${250 * groupedData["Zahlt zurück"]["aboveThreshAlt"] - 1000
-                    * groupedData["Zahlt nicht zurück"]["aboveThreshAlt"]}€
+                    ${gewinn}€
                 </td>
             </tr>
         </tbody>
