@@ -1,16 +1,18 @@
 # %%
-import altair as alt
 import numpy as np
+
+import altair as alt
 import polars as pl
 
 # %%
 # %%
 n = 500
-std = 8
+std1 = 8
 
 mu1_yes = 50
 mu1_not = 40
 
+std2 = 12
 mu2_yes = 60
 mu2_not = 50
 
@@ -20,28 +22,28 @@ df = (
         [
             pl.DataFrame(
                 {
-                    "score": np.random.randn(n) * std + mu1_yes,
+                    "score": np.random.randn(n) * std1 + mu1_yes,
                     "age": ["Jung"] * n,
                     "pays_back": [True] * n,
                 }
             ),
             pl.DataFrame(
                 {
-                    "score": np.random.randn(n) * std + mu1_not,
+                    "score": np.random.randn(n) * std1 + mu1_not,
                     "age": ["Jung"] * n,
                     "pays_back": [False] * n,
                 }
             ),
             pl.DataFrame(
                 {
-                    "score": np.random.randn(n) * std + mu2_yes,
+                    "score": np.random.randn(n) * std2 + mu2_yes,
                     "age": ["Alt"] * n,
                     "pays_back": [True] * n,
                 }
             ),
             pl.DataFrame(
                 {
-                    "score": np.random.randn(n) * std + mu2_not,
+                    "score": np.random.randn(n) * std2 + mu2_not,
                     "age": ["Alt"] * n,
                     "pays_back": [False] * n,
                 }
