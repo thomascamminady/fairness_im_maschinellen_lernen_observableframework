@@ -25,7 +25,7 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 <h2>Entscheidungsgrenze Alte Menschen</h2>
 
 ```js
-const threshAlt_Alt = view(
+const threshold_Alt = view(
     Inputs.range([10, 100], {
         step: 1,
         label: "",
@@ -63,11 +63,11 @@ Plot.plot({
                 x: "score",
                 fill: "type",
                 sort: "type",
-                fillOpacity: (d) => (d.score < threshAlt_Alt ? 0.3 : 1),
+                fillOpacity: (d) => (d.score < threshold_Alt ? 0.3 : 1),
             })
         ),
         Plot.ruleY([0]),
-        Plot.ruleX([threshAlt_Alt - 0.5]),
+        Plot.ruleX([threshold_Alt - 0.5]),
     ],
 })
 ```
@@ -80,21 +80,21 @@ const grp_Alt = data
         const score = item.score;
         if (!acc[type]) {
             acc[type] = {
-                belowThreshAlt: 0,
-                aboveThreshAlt: 0
+                belowthreshold: 0,
+                abovethreshold: 0
             };
         }
-        if (score < threshAlt_Alt) {
-            acc[type].belowThreshAlt += 1;
+        if (score < threshold_Alt) {
+            acc[type].belowthreshold += 1;
         } else {
-            acc[type].aboveThreshAlt += 1;
+            acc[type].abovethreshold += 1;
         }
         return acc;
     }, {});
-const n_true_positive_Alt = grp_Alt["Zahlt zurück"]["aboveThreshAlt"];
-const n_false_positive_Alt = grp_Alt["Zahlt nicht zurück"]["aboveThreshAlt"];
-const n_false_negative_Alt = grp_Alt["Zahlt zurück"]["belowThreshAlt"];
-const n_true_negative_Alt = grp_Alt["Zahlt nicht zurück"]["belowThreshAlt"];
+const n_true_positive_Alt = grp_Alt["Zahlt zurück"]["abovethreshold"];
+const n_false_positive_Alt = grp_Alt["Zahlt nicht zurück"]["abovethreshold"];
+const n_false_negative_Alt = grp_Alt["Zahlt zurück"]["belowthreshold"];
+const n_true_negative_Alt = grp_Alt["Zahlt nicht zurück"]["belowthreshold"];
 const total_Alt = n_true_positive_Alt + n_false_positive_Alt + n_false_negative_Alt + n_true_negative_Alt;
 const total_positive_Alt = n_true_positive_Alt + n_false_negative_Alt;
 const precision_Alt = (
@@ -121,19 +121,19 @@ const recall_Alt = (
             <tr>
                 <th>Daten:<br>zahlt zurück</th>
                 <td contenteditable="false">
-                    ${grp_Alt['Zahlt zurück']['aboveThreshAlt']}
+                    ${grp_Alt['Zahlt zurück']['abovethreshold']}
                 </td>
                 <td contenteditable="false">
-                    ${grp_Alt['Zahlt zurück']['belowThreshAlt']}
+                    ${grp_Alt['Zahlt zurück']['belowthreshold']}
                 </td>
             </tr>
             <tr>
                 <th>Daten:<br>zahlt nicht zurück</th>
                 <td contenteditable="false">
-                    ${grp_Alt['Zahlt nicht zurück']['aboveThreshAlt']}
+                    ${grp_Alt['Zahlt nicht zurück']['abovethreshold']}
                 </td>
                 <td contenteditable="false">
-                    ${grp_Alt['Zahlt nicht zurück']['belowThreshAlt']}
+                    ${grp_Alt['Zahlt nicht zurück']['belowthreshold']}
                 </td>
             </tr>
             <tr></tr>
@@ -161,8 +161,8 @@ const recall_Alt = (
                 </td>
                 <td contenteditable="false">${((n_true_positive_Alt/total_positive_Alt)*100).toFixed(0)}%</td>
                 <td contenteditable="false">
-                    ${250 * grp_Alt["Zahlt zurück"]["aboveThreshAlt"] - 1000 *
-                    grp_Alt["Zahlt nicht zurück"]["aboveThreshAlt"]}€
+                    ${250 * grp_Alt["Zahlt zurück"]["abovethreshold"] - 1000 *
+                    grp_Alt["Zahlt nicht zurück"]["abovethreshold"]}€
                 </td>
             </tr>
         </tbody>
@@ -177,11 +177,11 @@ const recall_Alt = (
 <h2>Entscheidungsgrenze Junge Menschen</h2>
 
 ```js
-const threshAlt_Jung = view(
+const threshold_Jung = view(
     Inputs.range([10, 100], {
         step: 1,
         label: "",
-        value: 70
+        value: threshold_Jung
     })
 );
 ```
@@ -212,11 +212,11 @@ Plot.plot({
                 x: "score",
                 fill: "type",
                 sort: "type",
-                fillOpacity: (d) => (d.score < threshAlt_Jung ? 0.3 : 1),
+                fillOpacity: (d) => (d.score < threshold_Jung ? 0.3 : 1),
             })
         ),
         Plot.ruleY([0]),
-        Plot.ruleX([threshAlt_Jung - 0.5]),
+        Plot.ruleX([threshold_Jung - 0.5]),
     ],
 })
 ```
@@ -229,22 +229,22 @@ const grp_Jung = data
         const score = item.score;
         if (!acc[type]) {
             acc[type] = {
-                belowThreshAlt: 0,
-                aboveThreshAlt: 0
+                belowthreshold: 0,
+                abovethreshold: 0
             };
         }
-        if (score < threshAlt_Jung) {
-            acc[type].belowThreshAlt += 1;
+        if (score < threshold_Jung) {
+            acc[type].belowthreshold += 1;
         } else {
-            acc[type].aboveThreshAlt += 1;
+            acc[type].abovethreshold += 1;
         }
         return acc;
     }, {});
-const n_true_positive_Jung = grp_Jung["Zahlt zurück"]["aboveThreshAlt"];
+const n_true_positive_Jung = grp_Jung["Zahlt zurück"]["abovethreshold"];
 const n_false_positive_Jung =
-    grp_Jung["Zahlt nicht zurück"]["aboveThreshAlt"];
-const n_false_negative_Jung = grp_Jung["Zahlt zurück"]["belowThreshAlt"];
-const n_true_negative_Jung = grp_Jung["Zahlt nicht zurück"]["belowThreshAlt"];
+    grp_Jung["Zahlt nicht zurück"]["abovethreshold"];
+const n_false_negative_Jung = grp_Jung["Zahlt zurück"]["belowthreshold"];
+const n_true_negative_Jung = grp_Jung["Zahlt nicht zurück"]["belowthreshold"];
 
 const total_Jung = n_true_positive_Jung + n_false_positive_Jung + n_false_negative_Jung + n_true_negative_Jung;
 const total_positive_Jung = n_true_positive_Jung + n_false_negative_Jung;
@@ -273,19 +273,19 @@ const recall_Jung = (
             <tr>
                 <th>Daten:<br>zahlt zurück</th>
                 <td contenteditable="false">
-                    ${grp_Jung['Zahlt zurück']['aboveThreshAlt']}
+                    ${grp_Jung['Zahlt zurück']['abovethreshold']}
                 </td>
                 <td contenteditable="false">
-                    ${grp_Jung['Zahlt zurück']['belowThreshAlt']}
+                    ${grp_Jung['Zahlt zurück']['belowthreshold']}
                 </td>
             </tr>
             <tr>
                 <th>Daten:<br>zahlt nicht zurück</th>
                 <td contenteditable="false">
-                    ${grp_Jung['Zahlt nicht zurück']['aboveThreshAlt']}
+                    ${grp_Jung['Zahlt nicht zurück']['abovethreshold']}
                 </td>
                 <td contenteditable="false">
-                    ${grp_Jung['Zahlt nicht zurück']['belowThreshAlt']}
+                    ${grp_Jung['Zahlt nicht zurück']['belowthreshold']}
                 </td>
             </tr>
             <tr></tr>
@@ -313,8 +313,8 @@ const recall_Jung = (
                 </td>
                 <td contenteditable="false">${((n_true_positive_Jung/total_positive_Jung)*100).toFixed(0)}%</td>
                 <td contenteditable="false">
-                    ${250 * grp_Jung["Zahlt zurück"]["aboveThreshAlt"] - 1000 *
-                    grp_Jung["Zahlt nicht zurück"]["aboveThreshAlt"]}€
+                    ${250 * grp_Jung["Zahlt zurück"]["abovethreshold"] - 1000 *
+                    grp_Jung["Zahlt nicht zurück"]["abovethreshold"]}€
                 </td>
             </tr>
         </tbody>
