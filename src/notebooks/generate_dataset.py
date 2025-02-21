@@ -6,14 +6,14 @@ import polars as pl
 # %%
 # %%
 n = 500
-std_jung = 6
+std_jung = 7
 
-mu_jung_yes = 55
+mu_jung_yes = 50
 mu_jung_not = 40
 
 std_alt = 9
 mu_alt_yes = 65
-mu_alt_not = 50
+mu_alt_not = 45
 
 
 df = (
