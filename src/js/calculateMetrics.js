@@ -39,7 +39,7 @@ export function calculateMetrics(data, ageGroup, threshold) {
         (n_true_positive + n_false_negative)
     ).toFixed(0);
 
-    const positive_rate = (((n_true_positive + n_false_positive) / total) * 100).toFixed(0);
+    const positive_rate = (((n_true_positive + n_true_negative) / total) * 100).toFixed(0);
     const true_positive_rate = (((n_true_positive) / total_positive) * 100).toFixed(0);
     const gewinn = 250 * grp["Zahlt zurück"]["abovethreshold"] - 1000 * grp["Zahlt nicht zurück"]["abovethreshold"]
     return {
