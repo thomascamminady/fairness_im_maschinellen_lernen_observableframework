@@ -1,19 +1,24 @@
 ---
-title: Kreditvergabe und Gesamtgewinn
+title: "Kreditvergabe und Gesamtgewinn"
 style: css/custom.css
 ---
 
-# Kreditvergabe und Gesamtgewinn
+```js
+const lang = "en"
+const texts = FileAttachment("translations/text_02.json").json();
+```
 
-Eine Bank vergibt Kredite von 1000€.
+# ${texts[lang].heading}
 
-*   Personen, die einen Kredit erhalten und zurückzahlen, zahlen den Betrag mit 25% Zinsen zurück. Das heißt, die Bank erhält 1250€ zurück.
-*   Vergibt die Bank einen Kredit an Personen, die diesen nicht zurückzahlen, macht die Bank 1000€ Verlust.
+${texts[lang].description}
 
-<div class="tip" label="Aufgabe">Fülle nun die folgende Tabelle aus.</div>
+```js
+html`<div class="tip" label=${texts[lang].task}>${texts[lang].tip}</div>`
+```
 
-```html
-<div class="table-container">
+```js
+html`<div class="table-container">
+
     <table>
         <thead>
             <tr>
@@ -23,21 +28,20 @@ Eine Bank vergibt Kredite von 1000€.
         </thead>
         <tbody>
             <tr>
-                <th>Gewinn der Bank:<br>Kredit genehmigt und Person zahlt zurück</th>
+                <th>${texts[lang].table.row1}</th>
                 <td contenteditable="true"></td>
             </tr>
             <tr>
-                <th>Verlust der Bank:<br>Kredit genehmigt und Person zahlt nicht zurück
-                </th>
+                <th>${texts[lang].table.row2}</th>
                 <td contenteditable="true"></td>
             </tr>
             <tr>
-                <th>Gesamtgewinn bei 25 Personen die ihren Kredit zurückzahlen und 8 Personen die ihren Kredit nicht zurückzahlen
-                </th>
+                <th>${texts[lang].table.row3}</th>
                 <td contenteditable="true"></td>
             </tr>
             <tr></tr>
         </tbody>
     </table>
-</div>
+
+</div>`
 ```

@@ -1,0 +1,42 @@
+{
+    "de": {
+        "title": "Variable Entscheidungsgrenze",
+        "style": "css/custom.css",
+        "heading": "Variable Entscheidungsgrenze",
+        "description": "Hier kannst du die Entscheidungsgrenze variieren und die aus deiner Sicht optimale Entscheidungsgrenze festlegen.",
+        "tip": "Notiere den Wert deiner Entscheidungsgrenze und begründe deine Wahl.",
+        "decisionThresholdLabel": "Entscheidungsgrenze:",
+        "ourPrediction": "Unsere Vorhersage bei einer Entscheidungsgrenze von ${threshAlt}:",
+        "predictedRepays": "Vorhersage:<br> zahlt zurück",
+        "predictedDoesNotRepay": "Vorhersage:<br> zahlt nicht zurück",
+        "actualRepays": "Daten:<br>zahlt zurück",
+        "actualDoesNotRepay": "Daten:<br>zahlt nicht zurück",
+        "evaluationTableHeaders": {
+            "accuracy": "Genauigkeit",
+            "positiveRate": "Positiv Rate",
+            "truePositiveRate": "Richtig-positiv-Rate",
+            "profit": "Gewinn"
+        },
+        "task": "Aufgabe"
+    },
+    "en": {
+        "title": "Variable Decision Threshold",
+        "style": "css/custom.css",
+        "heading": "Variable Decision Threshold",
+        "description": "Here you can vary the decision threshold and set the optimal threshold according to your view.",
+        "tip": "Record the value of your decision threshold and justify your choice.",
+        "decisionThresholdLabel": "Decision threshold:",
+        "ourPrediction": "Our prediction with a decision threshold of ${threshAlt}:",
+        "predictedRepays": "Prediction:<br> repays",
+        "predictedDoesNotRepay": "Prediction:<br> does not repay",
+        "actualRepays": "Actual:<br> repays",
+        "actualDoesNotRepay": "Actual:<br> does not repay",
+        "evaluationTableHeaders": {
+            "accuracy": "Accuracy",
+            "positiveRate": "Positive Rate",
+            "truePositiveRate": "True Positive Rate",
+            "profit": "Profit"
+        },
+        "task": "Task"
+    }
+}

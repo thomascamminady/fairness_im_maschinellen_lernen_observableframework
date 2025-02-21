@@ -1,5 +1,5 @@
 ---
-title: Variable Entscheidungsgrenze, zwei Personengruppen
+title: "${texts[lang].title}"
 style: css/custom.css
 ---
 
@@ -9,14 +9,14 @@ import {
 } from "./js/calculateMetrics.js";
 ```
 
-# Variable Entscheidungsgrenzen für zwei Personengruppen
+# ${texts[lang].heading}
 
-Der bisher verwendete Datensatz besteht aus den Daten von zwei Personengruppen. Der Personengruppe alt (älter als 30 Jahre) und der Gruppe jung (jünger als 30 Jahre).
+${texts[lang].explanation}
 
-In den folgenden beiden Histogrammen werden die Daten der beiden Personengruppen getrennt dargestellt. Die Bank kann für beide Personengruppen unterschiedliche Entscheidungsgrenzen wählen – muss sie aber nicht.
+${texts[lang].explanation2}
 
-<div class="tip" label="Aufgabe">
-Diskutiert in Gruppen, wie ihr die beiden Entscheidungsgrenzen wählen würdet, sodass sie aus eurer Sicht möglichst fair sind. Notiert die Werte für eure Entscheidungsgrenzen und begründet eure Wahl. Beschreibt zudem, was ihr unter “fair” versteht.
+<div class="tip" label="${texts[lang].task}">
+  ${texts[lang].tip}
 </div>
 
 ```js
@@ -26,16 +26,16 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 ```
 
 ```js
-const connected = view(Inputs.radio(["Unabhängig", "Gleiche Grenze", , "Ähnliche positiv Rate", "Ähnliche Richtig-positiv-Rate"], {
-    label: "Regler Junge Menschen",
-    value: "Unabhängig"
+const connected = view(Inputs.radio(texts[lang].radioOptions, {
+    label: texts[lang].youngRadioLabel,
+    value: texts[lang].radioDefault
 }));
 ```
 
 <div class="grid grid-cols-2">
   <div class="card" style="max-width: 700px; ">
 
-<h2>Entscheidungsgrenze Alte Menschen</h2>
+<h2>${texts[lang].altHeading}</h2>
 
 ```js
 const threshold_Alt = view(
@@ -94,12 +94,12 @@ Plot.plot({
                 x: "score",
                 fill: "type",
                 sort: "type",
-                fillOpacity: (d) => (d.score < threshold_Alt ? 0.3 : 1),
+                fillOpacity: (d) => (d.score < threshold_Alt ? 0.3 : 1)
             })
         ),
         Plot.ruleY([0]),
-        Plot.ruleX([threshold_Alt - 0.5]),
-    ],
+        Plot.ruleX([threshold_Alt - 0.5])
+    ]
 })
 ```
 
@@ -109,13 +109,13 @@ Plot.plot({
         <thead>
             <tr>
                 <th></th>
-                <th>Vorhersage:<br>zahlt zurück</th>
-                <th>Vorhersage:<br>zahlt nicht zurück</th>
+                <th>${texts[lang].predictedRepays}</th>
+                <th>${texts[lang].predictedDoesNotRepay}</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>Daten:<br>zahlt zurück</th>
+                <th>${texts[lang].actualRepays}</th>
                 <td contenteditable="false">
                     ${grp_Alt['Zahlt zurück']['abovethreshold']}
                 </td>
@@ -124,7 +124,7 @@ Plot.plot({
                 </td>
             </tr>
             <tr>
-                <th>Daten:<br>zahlt nicht zurück</th>
+                <th>${texts[lang].actualDoesNotRepay}</th>
                 <td contenteditable="false">
                     ${grp_Alt['Zahlt nicht zurück']['abovethreshold']}
                 </td>
@@ -143,11 +143,10 @@ Plot.plot({
     <table>
         <thead>
             <tr>
-                <th>Genauig- keit</th>
-                <th>Positiv Rate</th>
-                <th>Richtig-positiv-Rate</th>
-                <th>Gewinn</th>
-
+                <th>${texts[lang].evaluationTableHeaders.accuracy}</th>
+                <th>${texts[lang].evaluationTableHeaders.positiveRate}</th>
+                <th>${texts[lang].evaluationTableHeaders.truePositiveRate}</th>
+                <th>${texts[lang].evaluationTableHeaders.profit}</th>
             </tr>
         </thead>
         <tbody>
@@ -160,94 +159,28 @@ Plot.plot({
         </tbody>
     </table>
 </div>
-```
 
 </div>
 
-  <div class="card" style="max-width: 500px; ">
+<div class="card" style="max-width: 500px; ">
 
-<h2>Entscheidungsgrenze Junge Menschen</h2>
+    <h2>${texts[lang].jungHeading}</h2>
 
-```js
-// Determine threshold for "Jung"
-let value = 70;
-if (connected === "Gleiche Grenze") {
+    ```js
+    // Determine threshold for "Jung"
+    let value = 70;
+    if (connected === texts[lang].radioSame) {
     value = threshold_Alt;
-} else if (connected === "Ähnliche Richtig-positiv-Rate") {
+    } else if (connected === texts[lang].radioSimilarTPR) {
     // Reference value from "Alt" group
     const ref = true_positive_rate_Alt;
     let bestThreshold = 0;
     let minDiff = Infinity;
-
-    // Iterate through thresholds to find the best match for "Jung"
-    for (let t = 0; t <= 100; t++) {
-        const {
-            grp,
-            n_true_positive,
-            n_false_positive,
-            n_false_negative,
-            n_true_negative,
-            total,
-            total_positive,
-            precision,
-            recall,
-            positive_rate,
-            true_positive_rate,
-            gewinn
-        } = calculateMetrics(data, "Jung", t);
-        const diff = Math.abs(true_positive_rate - ref);
-        if (diff < minDiff) {
-            minDiff = diff;
-            bestThreshold = t;
-        }
-    }
-
-    value = bestThreshold;
-} else if (connected === "Ähnliche positiv Rate") {
-    // Reference value from "Alt" group
-    const ref = positive_rate_Alt;
-    let bestThreshold = 0;
-    let minDiff = Infinity;
-
-    // Iterate through thresholds to find the best match for "Jung"
-    for (let t = 0; t <= 100; t++) {
-        const {
-            grp,
-            n_true_positive,
-            n_false_positive,
-            n_false_negative,
-            n_true_negative,
-            total,
-            total_positive,
-            precision,
-            recall,
-            positive_rate,
-            true_positive_rate,
-            gewinn
-        } = calculateMetrics(data, "Jung", t);
-        const diff = Math.abs(positive_rate - ref);
-        if (diff < minDiff) {
-            minDiff = diff;
-            bestThreshold = t;
-        }
-    }
-
-    value = bestThreshold;
-
-}
-
-// Define threshold for Jung
-const threshold_Jung = view(
-    Inputs.range([10, 100], {
-        step: 1,
-        label: "",
-        value: value
-    })
-);
+    for (let t = 0; t <= 100; t++) { const { true_positive_rate }=calculateMetrics(data, "Jung" , t); const diff=Math.abs(true_positive_rate - ref); if (diff < minDiff) { minDiff=diff; bestThreshold=t; } } value=bestThreshold; } else if (connected===texts[lang].radioSimilarPR) { // Reference value from "Alt" group const ref=positive_rate_Alt; let bestThreshold=0; let minDiff=Infinity; for (let t=0; t <=100; t++) { const { positive_rate }=calculateMetrics(data, "Jung" , t); const diff=Math.abs(positive_rate - ref); if (diff < minDiff) { minDiff=diff; bestThreshold=t; } } value=bestThreshold; } const threshold_Jung=view( Inputs.range([10, 100], { step: 1, label: "" , value: value }) );
 ```
 
 ```js
-// Compute metrics for "Jung" using the corrected threshold
+// Compute metrics for "Jung" using the determined threshold
 const {
     grp: grp_Jung,
     n_true_positive: n_true_positive_Jung,
@@ -290,12 +223,12 @@ Plot.plot({
                 x: "score",
                 fill: "type",
                 sort: "type",
-                fillOpacity: (d) => (d.score < threshold_Jung ? 0.3 : 1),
+                fillOpacity: d => (d.score < threshold_Jung ? 0.3 : 1)
             })
         ),
         Plot.ruleY([0]),
-        Plot.ruleX([threshold_Jung - 0.5]),
-    ],
+        Plot.ruleX([threshold_Jung - 0.5])
+    ]
 })
 ```
 
@@ -305,13 +238,13 @@ Plot.plot({
         <thead>
             <tr>
                 <th></th>
-                <th>Vorhersage:<br>zahlt zurück</th>
-                <th>Vorhersage:<br>zahlt nicht zurück</th>
+                <th>${texts[lang].predictedRepays}</th>
+                <th>${texts[lang].predictedDoesNotRepay}</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>Daten:<br>zahlt zurück</th>
+                <th>${texts[lang].actualRepays}</th>
                 <td contenteditable="false">
                     ${grp_Jung['Zahlt zurück']['abovethreshold']}
                 </td>
@@ -320,7 +253,7 @@ Plot.plot({
                 </td>
             </tr>
             <tr>
-                <th>Daten:<br>zahlt nicht zurück</th>
+                <th>${texts[lang].actualDoesNotRepay}</th>
                 <td contenteditable="false">
                     ${grp_Jung['Zahlt nicht zurück']['abovethreshold']}
                 </td>
@@ -331,7 +264,6 @@ Plot.plot({
             <tr></tr>
         </tbody>
     </table>
-
 </div>
 ```
 
@@ -340,10 +272,10 @@ Plot.plot({
     <table>
         <thead>
             <tr>
-                <th>Genauig- keit</th>
-                <th>Positiv Rate</th>
-                <th>Richtig-positiv-Rate</th>
-                <th>Gewinn</th>
+                <th>${texts[lang].evaluationTableHeaders.accuracy}</th>
+                <th>${texts[lang].evaluationTableHeaders.positiveRate}</th>
+                <th>${texts[lang].evaluationTableHeaders.truePositiveRate}</th>
+                <th>${texts[lang].evaluationTableHeaders.profit}</th>
             </tr>
         </thead>
         <tbody>
@@ -360,4 +292,5 @@ Plot.plot({
 
   </div>
 </div>
-Der Gesamtgewinn ist die Summe der Gewinne der beiden Personengruppen und lieg bei ${gewinn_Alt+gewinn_Jung}€.
+
+${texts[lang].conclusion} ${gewinn_Alt + gewinn_Jung}€

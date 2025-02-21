@@ -1,21 +1,20 @@
 ---
-title: Feste Entscheidungsgrenze
+title: "${texts[lang].title}"
 style: css/custom.css
 ---
 
-# Feste Entscheidungsgrenze
-
 ```js
+const lang = "en";
+const texts = FileAttachment("translations/text_05.json").json();
 const data = FileAttachment("data/user/distribution.csv").csv({
     typed: true
 });
 const fixedThreshAlt = 70;
 ```
 
-Ist die Entscheidungsgrenze wirklich gut gewählt? Zur Beantwortung dieser Frage und zur Validierung unseres Kreditvergabesystems, d. h. des Klassifikators, werden wir den Gesamtprofit sowie verschiedene statische Gütemaße nutzen. 
+# ${texts[lang].heading}
 
-Die Entscheidungsgrenze wurde zunächst fix auf 70 gesetzt. Für alle Personen mit einem Score größergleich 70 gehen wir davon aus, dass sie den Kredit zurückzahlen würden (Vorhersage: zahlt zurück). Für alle Personen mit einem Score unter 70 gehen wir davon aus, dass sie den Kredit nicht zurückzahlen würden (Vorhersage: zahlt nicht zurück). 
-Diese Vorhersagen können wir nun mit den tatsächlichen Daten vergleichen (Erinnerung: wir arbeiten mit vergangenen Daten, d.h. es ist bekannt, ob ein Kredit zurückgezahlt wurde oder nicht). 
+${texts[lang].description}
 
 ```js
 display(
@@ -40,12 +39,12 @@ display(
                     x: "score",
                     fill: "type",
                     sort: "type",
-                    fillOpacity: (d) => (d.score < fixedThreshAlt ? 0.3 : 1),
+                    fillOpacity: d => (d.score < fixedThreshAlt ? 0.3 : 1)
                 })
             ),
             Plot.ruleY([0]),
-            Plot.ruleX([fixedThreshAlt - 0.5]),
-        ],
+            Plot.ruleX([fixedThreshAlt - 0.5])
+        ]
     })
 );
 ```
@@ -69,9 +68,9 @@ const groupedData = data.reduce((acc, item) => {
 }, {});
 ```
 
-## Die Konfusionsmatrix 
+## ${texts[lang].confusionMatrixHeading}
 
-Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (zahlt zurück und zahlt nicht zurück) sind in der folgenden Tabelle dargestellt. Diese Tabelle wird auch als Konfusionsmatrix bezeichnet.
+${texts[lang].confusionMatrixDescription}
 
 ```html
 <div class="table-container">
@@ -79,13 +78,13 @@ Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (za
         <thead>
             <tr>
                 <th></th>
-                <th>Vorhersage:<br>Zahlt zurück</th>
-                <th>Vorhersage:<br> Zahlt nicht zurück</th>
+                <th>${texts[lang].predictedPaidLabel}</th>
+                <th>${texts[lang].predictedNotPaidLabel}</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>Daten:<br>Zahlt zurück</th>
+                <th>${texts[lang].actualPaidLabel}</th>
                 <td contenteditable="false">
                     ${groupedData['Zahlt zurück']['aboveThreshAlt']}
                 </td>
@@ -94,7 +93,7 @@ Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (za
                 </td>
             </tr>
             <tr>
-                <th>Daten:<br>Zahlt nicht zurück</th>
+                <th>${texts[lang].actualNotPaidLabel}</th>
                 <td contenteditable="false">
                     ${groupedData['Zahlt nicht zurück']['aboveThreshAlt']}
                 </td>
@@ -108,39 +107,38 @@ Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (za
 </div>
 ```
 
-## Bewertung des Entscheidungsmodells
+## ${texts[lang].evaluationHeading}
 
-Es gibt verschiedene Gütemaße, die dabei helfen, zu bewerten, wie gut unser Modell geeignet ist. 
-Wir nutzen die folgenden Gütemaße:
+${texts[lang].evaluationDescription}
 
-* <b>Genauigkeit:</b> Anteil der richtigen Klassifikationen an der Gesamtzahl aller Datenpunkte
-* <b>Positiv Rate:</b> Anteil der positiven Vorhersagen (Vorhersage: zahlt zurück) an der Gesamtzahl aller Datenpunkte
-* <b>Richtig-positiv-Rate:</b> Anteil der richtig positiven Vorhersagen an der Anzahl aller tatsächlich positiven Datenpunkte (Daten: zahlt zurück)
-* <b>Gewinn:</b> erzielter Gesamtgewinn der Bank
+<ul>
+  ${texts[lang].metrics.map(metric => `<li>${metric}</li>` ).join('')}
+</ul>
 
-<div class="tip" label="Aufgabe">
-Berechne basierend auf der Kofusionsmatrix die Werte für die folgenden vier Gütemaße. Trage deine Ergebnisse in der Tabelle ein. 
+<div class="tip" label="${texts[lang].task}">
+${texts[lang].evaluationTask}
 </div>
 
 ```html
 <div class="table-container">
-    <table>
-        <thead>
-            <tr>
-                <th>Genauigkeit</th>
-                <th>Positiv Rate</th>
-                <th>Richtig-positiv-Rate</th>
-                <th>Gewinn</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td contenteditable="true"></td>
-                <td contenteditable="true"></td>
-                <td contenteditable="true"></td>
-                <td contenteditable="true"></td>
-            </tr>
-        </tbody>
-    </table>
+  <table>
+
+    <thead>
+      <tr>
+        <th>${texts[lang].evaluationTableHeaders.accuracy}</th>
+        <th>${texts[lang].evaluationTableHeaders.positiveRate}</th>
+        <th>${texts[lang].evaluationTableHeaders.truePositiveRate}</th>
+        <th>${texts[lang].evaluationTableHeaders.profit}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+    </tbody>
+
+  </table>
 </div>
-```

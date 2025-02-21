@@ -1,23 +1,25 @@
 ---
-title: Variable Entscheidungsgrenze
+title: "${texts[lang].title}"
 style: css/custom.css
 ---
 
-# Variable Entscheidungsgrenze
-
 ```js
+const lang = "en";
+const texts = FileAttachment("translations/text_06.json").json();
 const data = FileAttachment("data/user/distribution.csv").csv({
     typed: true
 });
 ```
 
-Hier kannst du die Entscheidungsgrenze variieren und die aus deiner Sicht optimale Entscheidungsgrenze festlegen. 
+# ${texts[lang].heading}
 
-<div class="tip" label="Aufgabe">
-Notiere den Wert deiner Entscheidungsgrenze und begründe deine Wahl. 
+${texts[lang].description}
+
+<div class="tip" label="${texts[lang].task}">
+  ${texts[lang].tip}
 </div>
 
-Entscheidungsgrenze:
+${texts[lang].decisionThresholdLabel}
 
 ```js
 const threshAlt = view(Inputs.range([0, 100], {
@@ -49,17 +51,17 @@ display(
                     x: "score",
                     fill: "type",
                     sort: "type",
-                    fillOpacity: (d) => (d.score < threshAlt ? 0.3 : 1),
+                    fillOpacity: d => (d.score < threshAlt ? 0.3 : 1)
                 })
             ),
             Plot.ruleY([0]),
-            Plot.ruleX([threshAlt - 0.5]),
-        ],
+            Plot.ruleX([threshAlt - 0.5])
+        ]
     })
 );
 ```
 
-Unsere Vorhersage bei einer Entscheidungsgrenze von  ${threshAlt}:
+${texts[lang].ourPrediction}
 
 ```js
 import {
@@ -90,13 +92,13 @@ const {
         <thead>
             <tr>
                 <th></th>
-                <th>Vorhersage:<br> zahlt zurück</th>
-                <th>Vorhersage:<br> zahlt nicht zurück</th>
+                <th>${texts[lang].predictedRepays}</th>
+                <th>${texts[lang].predictedDoesNotRepay}</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>Daten:<br>zahlt zurück</th>
+                <th>${texts[lang].actualRepays}</th>
                 <td contenteditable="false">
                     ${groupedData['Zahlt zurück']['abovethreshold']}
                 </td>
@@ -105,7 +107,7 @@ const {
                 </td>
             </tr>
             <tr>
-                <th>Daten:<br>zahlt nicht zurück</th>
+                <th>${texts[lang].actualDoesNotRepay}</th>
                 <td contenteditable="false">
                     ${groupedData['Zahlt nicht zurück']['abovethreshold']}
                 </td>
@@ -121,27 +123,24 @@ const {
 
 ```html
 <div class="table-container">
+
     <table>
         <thead>
             <tr>
-                <th>Genauigkeit</th>
-                <th>Positiv Rate</th>
-                <th>Richtig-positiv-Rate</th>
-                <th>Gewinn</th>
+                <th>${texts[lang].evaluationTableHeaders.accuracy}</th>
+                <th>${texts[lang].evaluationTableHeaders.positiveRate}</th>
+                <th>${texts[lang].evaluationTableHeaders.truePositiveRate}</th>
+                <th>${texts[lang].evaluationTableHeaders.profit}</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td contenteditable="false">${precision}%</td>
-                <td contenteditable="false">
-                    ${positive_rate}%
-                </td>
+                <td contenteditable="false">${positive_rate}%</td>
                 <td contenteditable="false">${true_positive_rate}%</td>
-                <td contenteditable="false">
-                    ${gewinn}€
-                </td>
+                <td contenteditable="false">${gewinn}€</td>
             </tr>
         </tbody>
     </table>
+
 </div>
-```

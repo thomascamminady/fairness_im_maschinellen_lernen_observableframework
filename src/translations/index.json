@@ -1,0 +1,14 @@
+{
+    "de": {
+        "title": "Fairness im maschinellen Lernen",
+        "style": "css/custom.css",
+        "heading": "Fairness im maschinellen Lernen",
+        "description": "Bei der Vergabe von Krediten sind Finanzinstitute daran interessiert, möglichst nur den Kunden einen Kredit zu geben, die diesen auch tatsächlich zurückzahlen. Vergibt eine Bank einen Kredit, an eine Person, die ihn verzinst zurück zahlt, verdient sie daran. Vergibt sie hingegen einen Kredit an jemanden, der ihn nicht zurückgezahlt, macht sie Verluste.\n\nIn dieser App kannst du verschiedene Strategien entwickeln und ausprobieren, um Kredite möglichst „fair“ an verschiedene Personengruppen zu verteilen.\n\nDazu erkundest du zunächst die zugrundeliegenden Daten, entwickelst ein Entscheidungssystem zur Vergabe von Krediten, bewertest dieses und setzt anschließend verschiedene Fairness-Strategien um."
+    },
+    "en": {
+        "title": "Fairness in Machine Learning",
+        "style": "css/custom.css",
+        "heading": "Fairness in Machine Learning",
+        "description": "When granting loans, financial institutions are interested in giving loans only to customers who actually repay them. If a bank gives a loan to a person who repays it with interest, it profits from it. On the other hand, if it gives a loan to someone who does not repay it, it incurs losses.\n\nIn this app, you can develop and test various strategies to distribute loans as 'fairly' as possible among different groups.\n\nFirst, you will explore the underlying data, develop a decision system for granting loans, evaluate it, and then implement various fairness strategies."
+    }
+}

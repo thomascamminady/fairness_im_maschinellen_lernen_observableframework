@@ -1,0 +1,62 @@
+{
+    "de": {
+        "title": "Variable Entscheidungsgrenze, zwei Personengruppen",
+        "style": "css/custom.css",
+        "heading": "Variable Entscheidungsgrenzen für zwei Personengruppen",
+        "explanation": "Der bisher verwendete Datensatz besteht aus den Daten von zwei Personengruppen. Der Personengruppe alt (älter als 30 Jahre) und der Gruppe jung (jünger als 30 Jahre).",
+        "explanation2": "In den folgenden beiden Histogrammen werden die Daten der beiden Personengruppen getrennt dargestellt. Die Bank kann für beide Personengruppen unterschiedliche Entscheidungsgrenzen wählen – muss sie aber nicht.",
+        "tip": "Diskutiert in Gruppen, wie ihr die beiden Entscheidungsgrenzen wählen würdet, sodass sie aus eurer Sicht möglichst fair sind. Notiert die Werte für eure Entscheidungsgrenzen und begründet eure Wahl. Beschreibt zudem, was ihr unter „fair“ versteht.",
+        "task": "Aufgabe",
+        "radioOptions": [
+            "Unabhängig",
+            "Gleiche Grenze",
+            "Ähnliche positiv Rate",
+            "Ähnliche Richtig-positiv-Rate"
+        ],
+        "youngRadioLabel": "Regler Junge Menschen",
+        "radioDefault": "Unabhängig",
+        "altHeading": "Entscheidungsgrenze Alte Menschen",
+        "jungHeading": "Entscheidungsgrenze Junge Menschen",
+        "predictedRepays": "Vorhersage:<br>zahlt zurück",
+        "predictedDoesNotRepay": "Vorhersage:<br>zahlt nicht zurück",
+        "actualRepays": "Daten:<br>zahlt zurück",
+        "actualDoesNotRepay": "Daten:<br>zahlt nicht zurück",
+        "evaluationTableHeaders": {
+            "accuracy": "Genauigkeit",
+            "positiveRate": "Positiv Rate",
+            "truePositiveRate": "Richtig-positiv-Rate",
+            "profit": "Gewinn"
+        },
+        "conclusion": "Der Gesamtgewinn ist die Summe der Gewinne der beiden Personengruppen und liegt bei"
+    },
+    "en": {
+        "title": "Variable Decision Threshold, Two Groups",
+        "style": "css/custom.css",
+        "heading": "Variable Decision Thresholds for Two Groups",
+        "explanation": "The dataset used so far consists of data from two groups: the 'old' group (older than 30 years) and the 'young' group (younger than 30 years).",
+        "explanation2": "In the following two histograms, the data of the two groups are displayed separately. The bank can choose different decision thresholds for both groups – though it need not.",
+        "tip": "Discuss in groups how you would choose the two decision thresholds so that they are as fair as possible from your perspective. Record the values for your thresholds and justify your choice. Also, describe what you understand by 'fair'.",
+        "task": "Task",
+        "radioOptions": [
+            "Independent",
+            "Same Threshold",
+            "Similar Positive Rate",
+            "Similar True Positive Rate"
+        ],
+        "youngRadioLabel": "Young People Controller",
+        "radioDefault": "Independent",
+        "altHeading": "Decision Threshold for Older People",
+        "jungHeading": "Decision Threshold for Young People",
+        "predictedRepays": "Prediction:<br> repays",
+        "predictedDoesNotRepay": "Prediction:<br> does not repay",
+        "actualRepays": "Actual:<br> repays",
+        "actualDoesNotRepay": "Actual:<br> does not repay",
+        "evaluationTableHeaders": {
+            "accuracy": "Accuracy",
+            "positiveRate": "Positive Rate",
+            "truePositiveRate": "True Positive Rate",
+            "profit": "Profit"
+        },
+        "conclusion": "The total profit is the sum of the profits of both groups and is"
+    }
+}

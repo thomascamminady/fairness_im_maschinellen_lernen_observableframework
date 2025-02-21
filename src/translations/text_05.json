@@ -1,0 +1,58 @@
+{
+    "de": {
+        "title": "Feste Entscheidungsgrenze",
+        "style": "css/custom.css",
+        "heading": "Feste Entscheidungsgrenze",
+        "description": "Ist die Entscheidungsgrenze wirklich gut gewählt? Zur Beantwortung dieser Frage und zur Validierung unseres Kreditvergabesystems, d. h. des Klassifikators, werden wir den Gesamtprofit sowie verschiedene statische Gütemaße nutzen.\n\nDie Entscheidungsgrenze wurde zunächst fix auf 70 gesetzt. Für alle Personen mit einem Score größergleich 70 gehen wir davon aus, dass sie den Kredit zurückzahlen würden (Vorhersage: zahlt zurück). Für alle Personen mit einem Score unter 70 gehen wir davon aus, dass sie den Kredit nicht zurückzahlen würden (Vorhersage: zahlt nicht zurück). Diese Vorhersagen können wir nun mit den tatsächlichen Daten vergleichen (Erinnerung: wir arbeiten mit vergangenen Daten, d.h. es ist bekannt, ob ein Kredit zurückgezahlt wurde oder nicht).",
+        "confusionMatrixHeading": "Die Konfusionsmatrix",
+        "confusionMatrixDescription": "Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (zahlt zurück und zahlt nicht zurück) sind in der folgenden Tabelle dargestellt. Diese Tabelle wird auch als Konfusionsmatrix bezeichnet.",
+        "actualPaidLabel": "Daten:<br>Zahlt zurück",
+        "actualNotPaidLabel": "Daten:<br>Zahlt nicht zurück",
+        "predictedPaidLabel": "Vorhersage:<br>Zahlt zurück",
+        "predictedNotPaidLabel": "Vorhersage:<br>Zahlt nicht zurück",
+        "evaluationHeading": "Bewertung des Entscheidungsmodells",
+        "evaluationDescription": "Es gibt verschiedene Gütemaße, die dabei helfen, zu bewerten, wie gut unser Modell geeignet ist. Wir nutzen die folgenden Gütemaße:",
+        "metrics": [
+            "<b>Genauigkeit:</b> Anteil der richtigen Klassifikationen an der Gesamtzahl aller Datenpunkte",
+            "<b>Positiv Rate:</b> Anteil der positiven Vorhersagen (Vorhersage: zahlt zurück) an der Gesamtzahl aller Datenpunkte",
+            "<b>Richtig-positiv-Rate:</b> Anteil der richtig positiven Vorhersagen an der Anzahl aller tatsächlich positiven Datenpunkte (Daten: zahlt zurück)",
+            "<b>Gewinn:</b> erzielter Gesamtgewinn der Bank"
+        ],
+        "evaluationTask": "Berechne basierend auf der Konfusionsmatrix die Werte für die folgenden vier Gütemaße. Trage deine Ergebnisse in der Tabelle ein.",
+        "evaluationTableHeaders": {
+            "accuracy": "Genauigkeit",
+            "positiveRate": "Positiv Rate",
+            "truePositiveRate": "Richtig-positiv-Rate",
+            "profit": "Gewinn"
+        },
+        "task": "Aufgabe"
+    },
+    "en": {
+        "title": "Fixed Decision Threshold",
+        "style": "css/custom.css",
+        "heading": "Fixed Decision Threshold",
+        "description": "Is the decision threshold really well chosen? To answer this question and validate our loan granting system—that is, the classifier—we will use total profit as well as various static performance metrics.\n\nThe decision threshold was initially fixed at 70. For all individuals with a score of 70 or above, we assume that they would repay the loan (Prediction: repays). For all individuals with a score below 70, we assume that they would not repay the loan (Prediction: does not repay). We can now compare these predictions with the actual data (remember: we are working with historical data, so it is known whether a loan was repaid or not).",
+        "confusionMatrixHeading": "The Confusion Matrix",
+        "confusionMatrixDescription": "The number of correct and incorrect predictions for both groups (repays and does not repay) are shown in the table below. This table is also known as the confusion matrix.",
+        "actualPaidLabel": "Actual:<br>Repays",
+        "actualNotPaidLabel": "Actual:<br>Does not repay",
+        "predictedPaidLabel": "Prediction:<br>Repays",
+        "predictedNotPaidLabel": "Prediction:<br>Does not repay",
+        "evaluationHeading": "Evaluation of the Decision Model",
+        "evaluationDescription": "There are various performance metrics that help evaluate how well our model performs. We use the following metrics:",
+        "metrics": [
+            "<b>Accuracy:</b> Proportion of correct classifications out of all data points",
+            "<b>Positive Rate:</b> Proportion of positive predictions (Prediction: repays) out of all data points",
+            "<b>True Positive Rate:</b> Proportion of correctly predicted positives out of all actual positive data points (Actual: repays)",
+            "<b>Profit:</b> Total profit achieved by the bank"
+        ],
+        "evaluationTask": "Based on the confusion matrix, calculate the values for the following four performance metrics. Enter your results in the table.",
+        "evaluationTableHeaders": {
+            "accuracy": "Accuracy",
+            "positiveRate": "Positive Rate",
+            "truePositiveRate": "True Positive Rate",
+            "profit": "Profit"
+        },
+        "task": "Task"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "de": {
+        "task": "Aufgabe",
+        "title": "Kreditvergabe und Gesamtgewinn",
+        "style": "css/custom.css",
+        "heading": "Kreditvergabe und Gesamtgewinn",
+        "description": "Eine Bank vergibt Kredite von 1000€.\n Personen, die einen Kredit erhalten und zurückzahlen, zahlen den Betrag mit 25% Zinsen zurück. Das heißt, die Bank erhält 1250€ zurück. Vergibt die Bank einen Kredit an Personen, die diesen nicht zurückzahlen, macht die Bank 1000€ Verlust.",
+        "tip": "Fülle nun die folgende Tabelle aus.",
+        "table": {
+            "row1": "Gewinn der Bank: Kredit genehmigt und Person zahlt zurück",
+            "row2": "Verlust der Bank: Kredit genehmigt und Person zahlt nicht zurück",
+            "row3": "Gesamtgewinn bei 25 Personen die ihren Kredit zurückzahlen und 8 Personen die ihren Kredit nicht zurückzahlen"
+        }
+    },
+    "en": {
+        "task": "Task",
+        "title": "Loan Issuance and Total Profit",
+        "style": "css/custom.css",
+        "heading": "Loan Issuance and Total Profit",
+        "description": "A bank issues loans of €1000.\n People who receive a loan and repay it, repay the amount with 25% interest. That means the bank receives €1250 in return. If the bank issues a loan to people who do not repay, the bank incurs a loss of €1000.",
+        "tip": "Fill in the following table.",
+        "table": {
+            "row1": "Bank's profit: Loan approved and person repays",
+            "row2": "Bank's loss: Loan approved and person does not repay",
+            "row3": "Total profit with 25 people repaying their loan and 8 people not repaying"
+        }
+    }
+}

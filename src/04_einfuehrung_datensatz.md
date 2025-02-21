@@ -1,22 +1,22 @@
 ---
-title: Datensatz
+title: "${texts[lang].title}"
 style: css/custom.css
 ---
 
-# Datensatz
-
 ```js
+const lang = "en"
+const texts = FileAttachment("translations/text_04.json").json();
 const data = FileAttachment("data/user/distribution.csv").csv({
     typed: true
 });
 ```
 
-Ab sofort arbeiten wir mit einem größeren Datensatz. Dieser besteht aus Daten von 2000 Personen. 
-Der Datensatz ist in dem folgenden Histrogramm dargestellt. 
+# ${texts[lang].heading}
 
-<div class="tip" label="Aufgabe">
-Ab welchem Kreditscore würdest du einen Kredit vergeben? 
-Begründe deine Antwort basierend auf dem dargestellten Datensatz.
+${texts[lang].description}
+
+<div class="tip" label="${texts[lang].task}">
+${texts[lang].tip}
 </div>
 
 ```js
@@ -26,7 +26,6 @@ const fig = Plot.plot({
     style: {
         fontSize: 18
     },
-
     x: {
         label: "Score",
         domain: [0, 99]
@@ -41,11 +40,11 @@ const fig = Plot.plot({
             Plot.stackY2({
                 x: "score",
                 fill: "type",
-                sort: "type",
+                sort: "type"
             })
         ),
-        Plot.ruleY([0]),
-    ],
+        Plot.ruleY([0])
+    ]
 });
 display(fig);
 ```

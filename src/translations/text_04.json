@@ -1,0 +1,18 @@
+{
+    "de": {
+        "title": "Datensatz",
+        "style": "css/custom.css",
+        "heading": "Datensatz",
+        "description": "Ab sofort arbeiten wir mit einem größeren Datensatz. Dieser besteht aus Daten von 2000 Personen. Der Datensatz ist in dem folgenden Histogramm dargestellt.",
+        "task": "Aufgabe",
+        "tip": "Ab welchem Kreditscore würdest du einen Kredit vergeben? Begründe deine Antwort basierend auf dem dargestellten Datensatz."
+    },
+    "en": {
+        "title": "Dataset",
+        "style": "css/custom.css",
+        "heading": "Dataset",
+        "description": "From now on, we work with a larger dataset. This dataset consists of data from 2000 individuals. The dataset is displayed in the following histogram.",
+        "task": "Task",
+        "tip": "At what credit score would you grant a loan? Provide a reason for your answer based on the displayed dataset."
+    }
+}

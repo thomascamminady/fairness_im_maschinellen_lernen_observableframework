@@ -1,0 +1,26 @@
+{
+    "de": {
+        "title": "Datensatz aufgeteilt",
+        "style": "css/custom.css",
+        "heading": "Was finden wir wirklich in unseren Daten?",
+        "intro": "Bisher haben wir unseren Datensatz eingefärbt basierend auf der Frage, ob eine Person den beantragten Kredit zurückzahlen wird.",
+        "applicantClasses": "Was wir allerdings verschwiegen haben: In unserem Datensatz waren zwei diskrete Klassen von Bewerbern vertreten. Zum einen haben wir Bewerber im jungen Alter (grün), zum anderen sehen wir Bewerber im hohen Alter (lila).",
+        "youngDistributionHeading": "Verteilung der jungen Bewerber",
+        "youngDistributionDescription": "Hier sehen wir 500 Bewerber und Bewerberinnen, welche ihren Kredit zurückzahlen würden (mittlerer Kreditscore von 55), sowie 500 Bewerber und Bewerberinnen, die ihren Kredit nicht zurückzahlen würden (mittlerer Kreditscore von 40).",
+        "oldDistributionHeading": "Verteilung der alten Bewerber",
+        "oldDistributionDescription": "Auch hier sehen wir 500 Bewerber und Bewerberinnen, welche ihren Kredit zurückzahlen würden, sowie 500 Bewerber und Bewerberinnen, die ihren Kredit nicht zurückzahlen würden. Allerdings sind die mittleren Kreditscores hierbei 65 (zahlt zurück) und 50 (zahlt nicht zurück).",
+        "conclusion": "Wir stellen fest: Obwohl die Wahrscheinlichkeit, dass ein Kredit zurückgezahlt wird, in beiden Gruppen bei 50% liegt, hat die Gruppe der alten Bewerber einen höheren Kreditscore als die Gruppe der jungen Bewerber."
+    },
+    "en": {
+        "title": "Dataset Partitioned",
+        "style": "css/custom.css",
+        "heading": "What Do We Really Find in Our Data?",
+        "intro": "So far, we have colored our dataset based on the question of whether an individual will repay the requested loan.",
+        "applicantClasses": "However, what we have not mentioned: Our dataset contained two distinct classes of applicants. On one hand, we have young applicants (green), and on the other, older applicants (purple).",
+        "youngDistributionHeading": "Distribution of Young Applicants",
+        "youngDistributionDescription": "Here we see 500 applicants who would repay their loan (average credit score of 55) and 500 applicants who would not repay their loan (average credit score of 40).",
+        "oldDistributionHeading": "Distribution of Older Applicants",
+        "oldDistributionDescription": "Similarly, we see 500 applicants who would repay their loan and 500 applicants who would not repay their loan. However, the average credit scores are 65 (repays) and 50 (does not repay), respectively.",
+        "conclusion": "We observe that although the probability of a loan being repaid is 50% in both groups, the group of older applicants has a higher credit score than the group of young applicants."
+    }
+}
