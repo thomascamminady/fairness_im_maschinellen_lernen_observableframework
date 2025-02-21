@@ -74,7 +74,7 @@ Plot.plot({
     },
     x: {
         label: "Score",
-        domain: [15, 89]
+        domain: [10, 99]
     },
     y: {
         domain: [0, 47]
@@ -273,7 +273,7 @@ Plot.plot({
     },
     x: {
         label: "Score",
-        domain: [15, 89]
+        domain: [10, 99]
     },
     y: {
         domain: [0, 47]
