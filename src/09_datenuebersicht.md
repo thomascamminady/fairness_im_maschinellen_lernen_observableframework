@@ -33,9 +33,14 @@ const df = df_alt.concat(df_jung)
 ```js 
 
 Plot.plot({
+marginLeft:100, 
 
     color:{legend:true},
+    x:{label:"Grenze"},
+    y:{label:"Wert in %"},
 
+  
+  facet:{label:"Altersgruppe"}, 
   marks: [
 
     Plot.lineY(df.filter((d)=>d.metric!="gewinn"), {x:"threshold",  y: "value", marker: true, stroke: "metric",fy:"ageGroup"}),
@@ -49,12 +54,16 @@ Plot.plot({
 ```js 
 
 Plot.plot({
-
+marginLeft:100,
     color:{legend:true},
+    x:{label:"Grenze"},
+        y:{label:"Gewinn in €"},
+
+  facet:{label:"Altersgruppe"}, 
 
   marks: [
 
-    Plot.lineY(df.filter((d)=>d.metric=="gewinn"), {x:"threshold",  y: "value", marker: true, stroke: "metric",fy:"ageGroup"}),
+    Plot.lineY(df.filter((d)=>d.metric=="gewinn"), {x:"threshold",  y: "value", marker: true, fy:"ageGroup"}),
     Plot.ruleY([0]),
     
   ]
