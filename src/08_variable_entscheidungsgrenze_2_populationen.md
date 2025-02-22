@@ -14,7 +14,7 @@ Der bisher verwendete Datensatz besteht aus den Daten von zwei Personengruppen. 
 In den folgenden beiden Histogrammen werden die Daten der beiden Personengruppen getrennt dargestellt. Die Bank kann für beide Personengruppen unterschiedliche Entscheidungsgrenzen wählen – muss sie aber nicht.
 
 <div class="tip" label="Aufgabe">
-Diskutiert in Gruppen, wie ihr die beiden Entscheidungsgrenzen wählen würdet, sodass sie aus eurer Sicht möglichst fair sind. Notiert die Werte für eure Entscheidungsgrenzen und begründet eure Wahl. Beschreibt zudem, was ihr unter “fair” versteht.
+Diskutiert in Gruppen, wie ihr die beiden Entscheidungsgrenzen wählen würdet, sodass sie aus eurer Sicht möglichst fair sind. Notiert die Werte für eure Entscheidungsgrenzen und begründet eure Wahl. Beschreibt zudem, was ihr unter "fair" versteht.
 </div>
 
 ```js
@@ -77,7 +77,7 @@ const {
 ```js
 display(
   Plot.plot({
-    height: 500,
+    height: 300,
     width: 500,
     style: {
       fontSize: 16,
@@ -87,12 +87,13 @@ display(
       domain: [10, 99],
     },
     y: {
-      domain: [0, 47],
+      domain: [0, 20],
+      label: "Anzahl"
     },
     color: {
       legend: true,
-      domain: ["Zahlt zurück", "Zahlt nicht zurück"],
-      range: ["#6a3d9a", "#cab2d6"],
+      domain: ["Zahlt nicht zurück", "Zahlt zurück"],
+      range: ["#cab2d6", "#6a3d9a"],
     },
     opacity: {
       legend: true,
@@ -103,7 +104,11 @@ display(
         Plot.stackY2({
           x: "score",
           fill: "type",
-          sort: "type",
+          sort: {
+            value: "type",
+            reverse: false
+          },
+          reverse: true,
           fillOpacity: (d) => (d.score < threshold_Alt ? 0.3 : 1),
         })
       ),
@@ -281,7 +286,7 @@ const {
 ```js
 display(
   Plot.plot({
-    height: 500,
+    height: 300,
     width: 500,
     style: {
       fontSize: 16,
@@ -291,12 +296,13 @@ display(
       domain: [10, 99],
     },
     y: {
-      domain: [0, 47],
+      domain: [0, 20],
+      label: "Anzahl"
     },
     color: {
       legend: true,
-      domain: ["Zahlt zurück", "Zahlt nicht zurück"],
-      range: ["#33a02c", "#b2df8a"],
+      domain: ["Zahlt nicht zurück", "Zahlt zurück"],
+      range: ["#b2df8a", "#33a02c"],
     },
     marks: [
       Plot.dot(
@@ -304,7 +310,11 @@ display(
         Plot.stackY2({
           x: "score",
           fill: "type",
-          sort: "type",
+          sort: {
+            value: "type",
+            reverse: false
+          },
+          reverse: true,
           fillOpacity: (d) => (d.score < threshold_Jung ? 0.3 : 1),
         })
       ),
@@ -372,7 +382,3 @@ display(
   </table>
 </div>
 ```
-
-  </div>
-</div>
-Der Gesamtgewinn ist die Summe der Gewinne der beiden Personengruppen und lieg bei ${gewinn_Alt+gewinn_Jung}€.
