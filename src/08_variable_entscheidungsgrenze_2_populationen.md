@@ -77,7 +77,7 @@ const {
 ```js
 display(
   Plot.plot({
-    height: 300,
+    height: 200,
     width: 500,
     style: {
       fontSize: 16,
@@ -87,7 +87,7 @@ display(
       domain: [10, 99],
     },
     y: {
-      domain: [0, 20],
+      domain: [0, 10],
       label: "Anzahl"
     },
     color: {
@@ -286,7 +286,7 @@ const {
 ```js
 display(
   Plot.plot({
-    height: 300,
+    height: 200,
     width: 500,
     style: {
       fontSize: 16,
@@ -296,7 +296,7 @@ display(
       domain: [10, 99],
     },
     y: {
-      domain: [0, 20],
+      domain: [0, 10],
       label: "Anzahl"
     },
     color: {
@@ -381,4 +381,10 @@ display(
     </tbody>
   </table>
 </div>
+```
+
+
+
+```html
+Der Gesamtgewinn der Bank beträgt ${gewinn_Alt + gewinn_Jung}€.
 ```

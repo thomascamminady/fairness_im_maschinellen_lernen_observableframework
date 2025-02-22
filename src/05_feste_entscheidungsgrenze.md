@@ -20,8 +20,8 @@ Diese Vorhersagen können wir nun mit den tatsächlichen Daten vergleichen (Erin
 ```js
 display(
   Plot.plot({
-    height: 500,
-    width: 1000,
+    width: 600,
+    height: 200,
     style: {
       fontSize: 18,
     },
@@ -41,6 +41,11 @@ display(
           fill: "type",
           sort: "type",
           fillOpacity: (d) => (d.score < fixedThreshAlt ? 0.3 : 1),
+          sort: {
+            value: "type", 
+            reverse: false 
+          },
+          reverse: true
         })
       ),
       Plot.ruleY([0]),

@@ -15,8 +15,8 @@ Bisher haben wir unseren Datensatz eingefärbt basierend auf der Frage, ob eine 
 
 ```js
 const fig = Plot.plot({
-  width: 1000,
-  height: 500,
+  width: 600,
+  height: 200,
   style: {
     fontSize: 18,
   },
@@ -35,6 +35,11 @@ const fig = Plot.plot({
         x: "score",
         fill: "type",
         sort: "type",
+                sort: {
+          value: "type", 
+          reverse: false 
+        },
+        reverse: true
       })
     ),
     Plot.ruleY([0]),
@@ -47,8 +52,8 @@ Was wir allerdings verschwiegen haben: In unserem Datensatz waren zwei diskrete 
 
 ```js
 const fig = Plot.plot({
-  width: 1000,
-  height: 500,
+  width: 600,
+  height: 200,
   style: {
     fontSize: 18,
   },
@@ -70,6 +75,11 @@ const fig = Plot.plot({
         fill: "age",
         sort: "type",
         fillOpacity: (d) => (d.type == "Zahlt zurück" ? 1 : 0.3),
+                sort: {
+          value: "type", 
+          reverse: false 
+        },
+        reverse: true
       })
     ),
     Plot.ruleY([0]),
@@ -82,8 +92,8 @@ Wir können die beiden Verteilungen auch separat betrachten. Hier ist die Vertei
 
 ```js
 const fig = Plot.plot({
-  width: 1000,
-  height: 250,
+  width: 600,
+  height: 200,
   style: {
     fontSize: 18,
   },
@@ -92,7 +102,9 @@ const fig = Plot.plot({
     label: "Score",
     domain: [0, 99],
   },
-
+  y : {
+    domain: [0, 10]
+  },
   color: {
     legend: true,
     domain: ["Zahlt zurück", "Zahlt nicht zurück"],
@@ -105,6 +117,11 @@ const fig = Plot.plot({
         x: "score",
         fill: "type",
         sort: "type",
+                sort: {
+          value: "type", 
+          reverse: false 
+        },
+        reverse: true
       })
     ),
     Plot.ruleY([0]),
@@ -119,8 +136,8 @@ Als nächstes sehen wir die Verteilung der alten Bewerber.
 
 ```js
 const fig = Plot.plot({
-  width: 1000,
-  height: 250,
+  width: 600,
+  height: 200,
   style: {
     fontSize: 18,
   },
@@ -128,6 +145,9 @@ const fig = Plot.plot({
   x: {
     label: "Score",
     domain: [0, 99],
+  },
+  y : {
+    domain: [0, 10]
   },
 
   color: {
@@ -142,6 +162,11 @@ const fig = Plot.plot({
         x: "score",
         fill: "type",
         sort: "type",
+        sort: {
+          value: "type", 
+          reverse: false 
+        },
+        reverse: true
       })
     ),
     Plot.ruleY([0]),
