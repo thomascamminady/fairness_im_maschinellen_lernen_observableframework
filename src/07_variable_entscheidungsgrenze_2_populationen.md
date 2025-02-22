@@ -61,7 +61,8 @@ const {
     recall: recall_Alt,
     positive_rate: positive_rate_Alt,
     true_positive_rate: true_positive_rate_Alt,
-    gewinn: gewinn_Alt
+    gewinn: gewinn_Alt,
+    accuracy: accuracy_Alt
 } = calculateMetrics(data, "Alt", threshold_Alt);
 ```
 
@@ -152,7 +153,7 @@ Plot.plot({
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="false">${precision_Alt}%</td>
+                <td contenteditable="false">${accuracy_Alt}%</td>
                 <td contenteditable="false">${positive_rate_Alt}%</td>
                 <td contenteditable="false">${true_positive_rate_Alt}%</td>
                 <td contenteditable="false">${gewinn_Alt}€</td>
@@ -194,6 +195,7 @@ if (connected === "Gleiche Grenze") {
             positive_rate,
             true_positive_rate,
             gewinn
+            accuracy
         } = calculateMetrics(data, "Jung", t);
         const diff = Math.abs(true_positive_rate - ref);
         if (diff < minDiff) {
@@ -223,7 +225,8 @@ if (connected === "Gleiche Grenze") {
             recall,
             positive_rate,
             true_positive_rate,
-            gewinn
+            gewinn,
+            accuracy_Alt
         } = calculateMetrics(data, "Jung", t);
         const diff = Math.abs(positive_rate - ref);
         if (diff < minDiff) {
@@ -261,6 +264,7 @@ const {
     positive_rate: positive_rate_Jung,
     true_positive_rate: true_positive_rate_Jung,
     gewinn: gewinn_Jung
+    accuracy: accuracy_Jung
 } = calculateMetrics(data, "Jung", threshold_Jung);
 ```
 
@@ -348,7 +352,7 @@ Plot.plot({
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="false">${precision_Jung}%</td>
+                <td contenteditable="false">${accuracy_Jung}%</td>
                 <td contenteditable="false">${positive_rate_Jung}%</td>
                 <td contenteditable="false">${true_positive_rate_Jung}%</td>
                 <td contenteditable="false">${gewinn_Jung}€</td>

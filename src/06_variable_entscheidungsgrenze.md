@@ -80,7 +80,8 @@ const {
     recall,
     positive_rate,
     true_positive_rate,
-    gewinn
+    gewinn,
+    accuracy
 } = calculateMetrics(data, "", threshAlt);
 ```
 
@@ -132,7 +133,7 @@ const {
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="false">${precision}%</td>
+                <td contenteditable="false">${accuracy}%</td>
                 <td contenteditable="false">
                     ${positive_rate}%
                 </td>
