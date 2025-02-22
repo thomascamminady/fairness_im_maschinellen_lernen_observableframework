@@ -38,9 +38,25 @@ Plot.plot({
 
   marks: [
 
-    Plot.lineY(df, {x:"threshold",  y: "value", marker: true, stroke: "metric",fy:"ageGroup"}),
+    Plot.lineY(df.filter((d)=>d.metric!="gewinn"), {x:"threshold",  y: "value", marker: true, stroke: "metric",fy:"ageGroup"}),
     Plot.ruleY([0]),
 
+  ]
+})
+
+```
+
+```js 
+
+Plot.plot({
+
+    color:{legend:true},
+
+  marks: [
+
+    Plot.lineY(df.filter((d)=>d.metric=="gewinn"), {x:"threshold",  y: "value", marker: true, stroke: "metric",fy:"ageGroup"}),
+    Plot.ruleY([0]),
+    
   ]
 })
 ```

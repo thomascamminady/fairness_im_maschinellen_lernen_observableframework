@@ -103,10 +103,11 @@ export function calculateAllMetrics(data, ageGroup) {
         "recall",
         "positive_rate",
         "true_positive_rate",
-        "accuracy"]
+        "accuracy",
+        "gewinn"]
     return df.select(["precision",
         "recall",
         "positive_rate",
         "true_positive_rate",
-        "accuracy", "threshold", "ageGroup"]).fold(columns, { as: ["metric", "value"] })
+        "accuracy", "threshold", "ageGroup", "gewinn"]).fold(columns, { as: ["metric", "value"] })
 }
