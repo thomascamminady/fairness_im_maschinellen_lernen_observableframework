@@ -7,11 +7,11 @@ style: css/custom.css
 
 ```js
 const data = FileAttachment("data/user/distribution.csv").csv({
-    typed: true
+  typed: true,
 });
 ```
 
-Hier kannst du die Entscheidungsgrenze variieren und die aus deiner Sicht optimale Entscheidungsgrenze festlegen. 
+Hier kannst du die Entscheidungsgrenze variieren und die aus deiner Sicht optimale Entscheidungsgrenze festlegen.
 
 <div class="tip" label="Aufgabe">
 Notiere den Wert deiner Entscheidungsgrenze und begründe deine Wahl. 
@@ -20,129 +20,131 @@ Notiere den Wert deiner Entscheidungsgrenze und begründe deine Wahl.
 Entscheidungsgrenze:
 
 ```js
-const threshAlt = view(Inputs.range([0, 100], {
+const threshAlt = view(
+  Inputs.range([0, 100], {
     step: 1,
-    label: ""
-}));
+    label: "",
+  })
+);
 ```
 
 ```js
 display(
-    Plot.plot({
-        height: 500,
-        width: 1000,
-        style: {
-            fontSize: 18
-        },
-        x: {
-            label: "Score",
-            domain: [0, 99]
-        },
-        color: {
-            legend: true,
-            scheme: "Paired"
-        },
-        marks: [
-            Plot.dot(
-                data,
-                Plot.stackY2({
-                    x: "score",
-                    fill: "type",
-                    sort: "type",
-                    fillOpacity: (d) => (d.score < threshAlt ? 0.3 : 1),
-                })
-            ),
-            Plot.ruleY([0]),
-            Plot.ruleX([threshAlt - 0.5]),
-        ],
-    })
+  Plot.plot({
+    height: 500,
+    width: 1000,
+    style: {
+      fontSize: 18,
+    },
+    x: {
+      label: "Score",
+      domain: [0, 99],
+    },
+    color: {
+      legend: true,
+      scheme: "Paired",
+    },
+    marks: [
+      Plot.dot(
+        data,
+        Plot.stackY2({
+          x: "score",
+          fill: "type",
+          sort: "type",
+          fillOpacity: (d) => (d.score < threshAlt ? 0.3 : 1),
+        })
+      ),
+      Plot.ruleY([0]),
+      Plot.ruleX([threshAlt - 0.5]),
+    ],
+  })
 );
 ```
 
-Unsere Vorhersage bei einer Entscheidungsgrenze von  ${threshAlt}:
+Unsere Vorhersage bei einer Entscheidungsgrenze von ${threshAlt}:
 
 ```js
-import {
-    calculateMetrics
-} from "./js/calculateMetrics.js";
+import { calculateMetrics } from "./js/calculateMetrics.js";
 ```
 
 ```js
 const {
-    grp: groupedData,
-    n_true_positive,
-    n_false_positive,
-    n_false_negative,
-    n_true_negative,
-    total: n_total,
-    total_positive: n_total_true,
-    precision,
-    recall,
-    positive_rate,
-    true_positive_rate,
-    gewinn,
-    accuracy
+  grp: groupedData,
+  n_true_positive,
+  n_false_positive,
+  n_false_negative,
+  n_true_negative,
+  total: n_total,
+  total_positive: n_total_true,
+  precision,
+  recall,
+  positive_rate,
+  true_positive_rate,
+  gewinn,
+  accuracy,
 } = calculateMetrics(data, "", threshAlt);
 ```
 
 ```html
 <div class="table-container">
-    <table>
-        <thead>
-            <tr>
-                <th></th>
-                <th>Vorhersage:<br> zahlt zurück</th>
-                <th>Vorhersage:<br> zahlt nicht zurück</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>Daten:<br>zahlt zurück</th>
-                <td contenteditable="false">
-                    ${groupedData['Zahlt zurück']['abovethreshold']}
-                </td>
-                <td contenteditable="false">
-                    ${groupedData['Zahlt zurück']['belowthreshold']}
-                </td>
-            </tr>
-            <tr>
-                <th>Daten:<br>zahlt nicht zurück</th>
-                <td contenteditable="false">
-                    ${groupedData['Zahlt nicht zurück']['abovethreshold']}
-                </td>
-                <td contenteditable="false">
-                    ${groupedData['Zahlt nicht zurück']['belowthreshold']}
-                </td>
-            </tr>
-            <tr></tr>
-        </tbody>
-    </table>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>
+          Vorhersage:<br />
+          zahlt zurück
+        </th>
+        <th>
+          Vorhersage:<br />
+          zahlt nicht zurück
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Daten:<br />zahlt zurück</th>
+        <td contenteditable="false">
+          ${groupedData['Zahlt zurück']['abovethreshold']}
+        </td>
+        <td contenteditable="false">
+          ${groupedData['Zahlt zurück']['belowthreshold']}
+        </td>
+      </tr>
+      <tr>
+        <th>Daten:<br />zahlt nicht zurück</th>
+        <td contenteditable="false">
+          ${groupedData['Zahlt nicht zurück']['abovethreshold']}
+        </td>
+        <td contenteditable="false">
+          ${groupedData['Zahlt nicht zurück']['belowthreshold']}
+        </td>
+      </tr>
+      <tr></tr>
+    </tbody>
+  </table>
 </div>
 ```
 
 ```html
 <div class="table-container">
-    <table>
-        <thead>
-            <tr>
-                <th>Genauigkeit</th>
-                <th>Positiv Rate</th>
-                <th>Richtig-positiv-Rate</th>
-                <th>Gewinn</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td contenteditable="false">${accuracy}%</td>
-                <td contenteditable="false">
-                    ${positive_rate}%
-                </td>
-                <td contenteditable="false">${true_positive_rate}%</td>
-                <td contenteditable="false">
-                    ${gewinn}€
-                </td>
-            </tr>
-        </tbody>
-    </table>
+  <table>
+    <thead>
+      <tr>
+        <th>Genauigkeit</th>
+        <th>Positiv Rate</th>
+        <th>Richtig-positiv-Rate</th>
+        <th>Gewinn</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td contenteditable="false">${accuracy}%</td>
+        <td contenteditable="false">${positive_rate}%</td>
+        <td contenteditable="false">${true_positive_rate}%</td>
+        <td contenteditable="false">${gewinn}€</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 ```
