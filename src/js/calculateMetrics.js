@@ -1,3 +1,5 @@
+import * as aq from "npm:arquero";
+
 export function calculateMetrics(data, ageGroup, threshold) {
     let filteredData = data
     if (ageGroup != "") {
@@ -29,22 +31,13 @@ export function calculateMetrics(data, ageGroup, threshold) {
     const total = n_true_positive + n_false_positive + n_false_negative + n_true_negative;
     const total_positive = n_true_positive + n_false_negative;
 
-    const precision = (
-        (100 * n_true_positive) /
-        (n_true_positive + n_false_positive + 0.0000000001)
-    ).toFixed(0);
-
-    const recall = (
-        (100 * n_true_positive) /
-        (n_true_positive + n_false_negative)
-    ).toFixed(0);
-    const accuracy = (
-        100 * (n_true_positive + n_true_negative) / total
-    ).toFixed(0);
-
-    const positive_rate = (((n_true_positive + n_true_negative) / total) * 100).toFixed(0);
-    const true_positive_rate = (((n_true_positive) / total_positive) * 100).toFixed(0);
-    const gewinn = 250 * grp["Zahlt zurück"]["abovethreshold"] - 1000 * grp["Zahlt nicht zurück"]["abovethreshold"]
+    const eps = 1e-9;
+    const precision = Math.round(((n_true_positive + eps) / (n_true_positive + n_false_positive + eps)) * 100);
+    const recall = Math.round((n_true_positive / (n_true_positive + n_false_negative)) * 100);
+    const accuracy = Math.round(((n_true_positive + n_true_negative) / (n_true_positive + n_false_positive + n_false_negative + n_true_negative)) * 100);
+    const positive_rate = Math.round(((n_true_positive + n_false_positive) / (n_true_positive + n_false_positive + n_false_negative + n_true_negative)) * 100);
+    const true_positive_rate = recall;
+    const gewinn = 250 * n_true_positive - 1000 * n_false_positive
     return {
         grp,
         n_true_positive,
@@ -60,4 +53,60 @@ export function calculateMetrics(data, ageGroup, threshold) {
         gewinn,
         accuracy
     };
+}
+
+
+
+export function calculateAllMetrics(data, ageGroup) {
+    // thresholds are all numbers from 0 to 100
+    let thresholds = Array.from({ length: 101 }, (_, i) => i);
+
+    let metrics = thresholds.map((threshold) => calculateMetrics(data, ageGroup, threshold))
+
+    //drop the grp key
+    metrics = metrics.map((m) => {
+        delete m.grp
+        return m
+    })
+
+    // from list of objects to to object of lists
+    metrics = metrics.reduce((acc, item) => {
+        Object.keys(item).forEach((key) => {
+            if (!acc[key]) {
+                acc[key] = []
+            }
+            acc[key].push(item[key])
+        })
+        return acc
+    }
+        , {})
+
+    // cast  entries in all lists to numbers if possible
+    Object.keys(metrics).forEach((key) => {
+        metrics[key] = metrics[key].map((v) => {
+            if (isNaN(v)) {
+                return v
+            } else {
+                return Number(v)
+            }
+        })
+    })
+
+    // add one row that is the threshold
+    metrics["threshold"] = thresholds
+    metrics["ageGroup"] = Array.from({ length: 101 }, (_, i) => ageGroup);
+    let df = aq.table(metrics)
+
+    // get all columns other than threshold and ageGroup
+    // let columns = df.columnNames().filter((c) => c != "threshold" && c != "ageGroup")
+    let columns = ["precision",
+        "recall",
+        "positive_rate",
+        "true_positive_rate",
+        "accuracy"]
+    return df.select(["precision",
+        "recall",
+        "positive_rate",
+        "true_positive_rate",
+        "accuracy", "threshold", "ageGroup"]).fold(columns, { as: ["metric", "value"] })
 }
