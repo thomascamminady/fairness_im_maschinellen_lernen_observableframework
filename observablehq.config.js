@@ -10,7 +10,7 @@ export default {
     {
       name: "English",
       pages: [
-        {name: "Introduction", path: "/"},
+        {name: "Introduction", path: "/en_index"},
         {name: "Credit Lending", path: "/en_02_vierfelder"},
         {name: "Histogram", path: "/en_03_histogram"},
         {name: "Dataset", path: "/en_04_einfuehrung_datensatz"},
