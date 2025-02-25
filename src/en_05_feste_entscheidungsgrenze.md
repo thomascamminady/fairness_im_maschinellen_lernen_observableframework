@@ -38,6 +38,9 @@ display(
       label: "Score",
       domain: [0, 99],
     },
+    y: {
+      label: "Count",
+    },
     color: {
       legend: true,
       scheme: "Paired",

@@ -19,9 +19,9 @@ data.forEach(d => {
     d.type = "Does not repay";
   }
   if (d.age === "Jung") {
-    d.age = "Young";
+    d.age = "Green Population";
   } else if (d.age === "Alt") {
-    d.age = "Old"; 
+    d.age = "Purple Population"; 
   }
 });
 ```
@@ -38,6 +38,9 @@ const fig = Plot.plot({
   x: {
     label: "Score",
     domain: [0, 99],
+  },
+  y: {
+    label: "Count"
   },
   color: {
     legend: true,
@@ -63,7 +66,7 @@ const fig = Plot.plot({
 display(fig);
 ```
 
-However, what we haven't mentioned: Our dataset contained two discrete classes of applicants. On one hand, we have young applicants (green), and on the other hand, we see older applicants (purple).
+However, what we haven't mentioned: Our dataset contained two discrete populations of applicants. On one hand, we have Green Population (green), and on the other hand, we see Purple Population (purple).
 
 ```js
 const fig = Plot.plot({
@@ -76,9 +79,12 @@ const fig = Plot.plot({
     label: "Score",
     domain: [0, 99],
   },
+  y: {
+    label: "Count"
+  },
   color: {
     legend: true,
-    domain: ["Young", "Old"],
+    domain: ["Green Population", "Purple Population"],
     range: ["#33a02c", "#6a3d9a"],
   },
   marks: [
@@ -101,7 +107,7 @@ const fig = Plot.plot({
 display(fig);
 ```
 
-We can also look at both distributions separately. Here is the distribution of young applicants.
+We can also look at both distributions separately. Here is the distribution of Green Population.
 
 ```js
 const fig = Plot.plot({
@@ -115,6 +121,7 @@ const fig = Plot.plot({
     domain: [0, 99],
   },
   y: {
+    label: "Count",
     domain: [0, 10]
   },
   color: {
@@ -124,7 +131,7 @@ const fig = Plot.plot({
   },
   marks: [
     Plot.dot(
-      data.filter((d) => d.age === "Young"),
+      data.filter((d) => d.age === "Green Population"),
       Plot.stackY2({
         x: "score",
         fill: "type",
@@ -143,7 +150,7 @@ display(fig);
 
 Here we see 500 applicants who would repay their loan (average credit score of 55), and 500 applicants who would not repay their loan (average credit score of 40).
 
-Next, we see the distribution of older applicants.
+Next, we see the distribution of Purple Population.
 
 ```js
 const fig = Plot.plot({
@@ -157,6 +164,7 @@ const fig = Plot.plot({
     domain: [0, 99],
   },
   y: {
+    label: "Count",
     domain: [0, 10]
   },
   color: {
@@ -166,7 +174,7 @@ const fig = Plot.plot({
   },
   marks: [
     Plot.dot(
-      data.filter((d) => d.age === "Old"),
+      data.filter((d) => d.age === "Purple Population"),
       Plot.stackY2({
         x: "score",
         fill: "type",
@@ -185,4 +193,4 @@ display(fig);
 
 Here too, we see 500 applicants who would repay their loan, and 500 applicants who would not repay their loan. However, the average credit scores here are 65 (will repay) and 50 (won't repay).
 
-We observe: Although the probability of a loan being repaid is 50% in both groups, the group of older applicants has a higher credit score than the group of younger applicants.
+We observe: Although the probability of a loan being repaid is 50% in both groups, Purple Population has a higher credit score than Green Population.

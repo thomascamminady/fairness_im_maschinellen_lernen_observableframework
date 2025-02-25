@@ -8,7 +8,7 @@ import { calculateMetrics } from "./js/calculateMetrics.js";
 
 # Variable Decision Boundaries for Two Population Groups
 
-The dataset used so far consists of data from two population groups: the old group (older than 30 years) and the young group (younger than 30 years).
+The dataset used so far consists of data from two population groups: the Purple Population and the Green Population.
 
 In the following two histograms, the data of both population groups are shown separately. The bank can choose different decision boundaries for both population groups - but doesn't have to.
 
@@ -28,9 +28,9 @@ data.forEach(d => {
     d.type_en = "Does not repay";
   }
   if (d.age === "Jung") {
-    d.age_en = "Young";
+    d.age_en = "Green Population";
   } else if (d.age === "Alt") {
-    d.age_en = "Old"; 
+    d.age_en = "Purple Population"; 
   }
 });
 ```
@@ -45,7 +45,7 @@ const connected = view(
       "Equal Opportunity",
     ],
     {
-      label: "Young People Controls",
+      label: "Green Population Controls",
       value: "Independent",
     }
   )
@@ -55,7 +55,7 @@ const connected = view(
 <div class="grid grid-cols-2">
   <div class="card" style="max-width: 700px; ">
 
-<h2>Decision Boundary Old People</h2>
+<h2>Decision Boundary Purple Population</h2>
 
 ```js
 const threshold_Alt = view(
@@ -113,7 +113,7 @@ display(
     },
     marks: [
       Plot.dot(
-        data.filter((d) => d.age_en === "Old"),
+        data.filter((d) => d.age_en === "Purple Population"),
         Plot.stackY2({
           x: "score",
           fill: "type_en",
@@ -194,7 +194,7 @@ display(
 
   <div class="card" style="max-width: 500px; ">
 
-<h2>Decision Boundary Young People</h2>
+<h2>Decision Boundary Green Population</h2>
 
 ```js
 // Update the threshold logic to use English values
@@ -323,7 +323,7 @@ display(
     },
     marks: [
       Plot.dot(
-        data.filter((d) => d.age_en === "Young"),
+        data.filter((d) => d.age_en === "Green Population"),
         Plot.stackY2({
           x: "score",
           fill: "type_en",

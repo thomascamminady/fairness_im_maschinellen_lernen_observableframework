@@ -38,7 +38,7 @@ A bank issues loans of ${total_credit}€.
         <th>
           Bank's loss:<br />Credit approved and person doesn't repay
         </th>
-        <td contenteditable="true" data-correct="${profit_approved_no_payback}" onkeypress="return event.charCode >= 48 && event.charCode <= 57 || event.charCode === 45"></td>
+        <td contenteditable="true" data-correct="-1000" onkeypress="return event.charCode >= 48 && event.charCode <= 57 || event.charCode === 45"></td>
       </tr>
       <tr>
         <th>
