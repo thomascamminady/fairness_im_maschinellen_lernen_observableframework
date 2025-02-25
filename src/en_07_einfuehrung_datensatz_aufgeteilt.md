@@ -24,6 +24,18 @@ data.forEach(d => {
     d.age = "Purple Population"; 
   }
 });
+
+// Calculate averages for each group
+const greenRepay = data.filter(d => d.age === "Green Population" && d.type === "Repays");
+const greenNoRepay = data.filter(d => d.age === "Green Population" && d.type === "Does not repay");
+const purpleRepay = data.filter(d => d.age === "Purple Population" && d.type === "Repays");
+const purpleNoRepay = data.filter(d => d.age === "Purple Population" && d.type === "Does not repay");
+
+const avgGreenRepay = Math.round(greenRepay.reduce((sum, d) => sum + d.score, 0) / greenRepay.length);
+const avgGreenNoRepay = Math.round(greenNoRepay.reduce((sum, d) => sum + d.score, 0) / greenNoRepay.length);
+const avgPurpleRepay = Math.round(purpleRepay.reduce((sum, d) => sum + d.score, 0) / purpleRepay.length);
+const avgPurpleNoRepay = Math.round(purpleNoRepay.reduce((sum, d) => sum + d.score, 0) / purpleNoRepay.length);
+
 ```
 
 So far, we have colored our dataset based on whether a person will repay their requested loan.
@@ -148,7 +160,7 @@ const fig = Plot.plot({
 display(fig);
 ```
 
-Here we see 500 applicants who would repay their loan (average credit score of 55), and 500 applicants who would not repay their loan (average credit score of 40).
+Here we see ${greenRepay.length} applicants who would repay their loan (average credit score of ${avgGreenRepay}), and ${greenNoRepay.length} applicants who would not repay their loan (average credit score of ${avgGreenNoRepay}).
 
 Next, we see the distribution of Purple Population.
 
@@ -191,6 +203,6 @@ const fig = Plot.plot({
 display(fig);
 ```
 
-Here too, we see 500 applicants who would repay their loan, and 500 applicants who would not repay their loan. However, the average credit scores here are 65 (will repay) and 50 (won't repay).
+Here too, we see ${purpleRepay.length} applicants who would repay their loan, and ${purpleNoRepay.length} applicants who would not repay their loan. However, the average credit scores here are ${avgPurpleRepay} (will repay) and ${avgPurpleNoRepay} (won't repay).
 
 We observe: Although the probability of a loan being repaid is 50% in both groups, Purple Population has a higher credit score than Green Population.

@@ -40,9 +40,9 @@ const connected = view(
   Inputs.radio(
     [
       "Independent",
-      "Group Unaware",
-      "Demographic Parity",
-      "Equal Opportunity",
+      "Same Threshold",
+      "Same Positive Rate",
+      "Same True Positive Rate",
     ],
     {
       label: "Green Population Controls",
