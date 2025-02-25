@@ -199,9 +199,9 @@ display(
 ```js
 // Update the threshold logic to use English values
 let value = 70;
-if (connected === "Group Unaware") {
+if (connected === "Same Threshold") {
   value = threshold_Alt;
-} else if (connected === "Equal Opportunity") {
+} else if (connected === "Same True Positive Rate") {
   // Reference value from "Alt" group
   const ref = true_positive_rate_Alt;
   let bestThreshold = 0;
@@ -232,7 +232,7 @@ if (connected === "Group Unaware") {
   }
 
   value = bestThreshold;
-} else if (connected === "Demographic Parity") {
+} else if (connected === "Same Positive Rate") {
   // Reference value from "Alt" group
   const ref = positive_rate_Alt;
   let bestThreshold = 0;
