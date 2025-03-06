@@ -11,7 +11,8 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 });
 ```
 
-Bisher haben wir unseren Datensatz eingefärbt basierend auf der Frage, ob eine Person den beantragten Kredit zurückzahlen wird.
+Bisher sind wir davon ausgegangen, dass unser Datensatz aus einer Bevölkerungsgruppe bestand. 
+Die Datenpunkte innerhalb dieser Gruppe haben wir nach Zahlungsfähigkeit eingefärbt.
 
 ```js
 const fig = Plot.plot({
@@ -48,47 +49,8 @@ const fig = Plot.plot({
 display(fig);
 ```
 
-Was wir allerdings verschwiegen haben: In unserem Datensatz waren zwei diskrete Klassen von Bewerben vertreten. Zum einen haben wir Bewerber im jungen Alter (grün), zum anderen sehen wir Bewerber im hohen Alter (lila).
-
-```js
-const fig = Plot.plot({
-  width: 600,
-  height: 200,
-  style: {
-    fontSize: 18,
-  },
-
-  x: {
-    label: "Score",
-    domain: [0, 99],
-  },
-  color: {
-    legend: true,
-    domain: ["Jung", "Alt"],
-    range: ["#33a02c", "#6a3d9a"],
-  },
-  marks: [
-    Plot.dot(
-      data,
-      Plot.stackY2({
-        x: "score",
-        fill: "age",
-        sort: "type",
-        fillOpacity: (d) => (d.type == "Zahlt zurück" ? 1 : 0.3),
-                sort: {
-          value: "type", 
-          reverse: false 
-        },
-        reverse: true
-      })
-    ),
-    Plot.ruleY([0]),
-  ],
-});
-display(fig);
-```
-
-Wir können die beiden Verteilungen auch separat betrachten. Hier ist die Verteilung der jungen Bewerber.
+Was wir allerdings bisher verschwiegen haben: Unser Datensatz waren zwei Gruppen von Bewerber/innen vertreten. Zum einen haben wir Bewerber der Population grün, zum anderen  Bewerber/innen der Population lila.
+Wir können die beiden Verteilungen nun separat betrachten. Hier ist die Verteilung der grünen Bewerber/innen:
 
 ```js
 const fig = Plot.plot({
@@ -130,9 +92,9 @@ const fig = Plot.plot({
 display(fig);
 ```
 
-Hier sehen wir 500 Bewerber und Bewerberinnen welche ihren Kredit zurück zahlen würden (mittlerer Kreditscore von 55), sowie 500 Bewerber und Bewerberinnen die ihren Kredit nicht zurück zahlen würden (mittlerer Kreditscore von 40).
+Hier sehen wir 100 Bewerber/innen, die ihren Kredit zurück zahlen würden (mittlerer Kreditscore von 55), sowie 100 Bewerber/innen, die ihren Kredit nicht zurück zahlen würden (mittlerer Kreditscore von 40).
 
-Als nächstes sehen wir die Verteilung der alten Bewerber.
+Als nächstes sehen wir die Verteilung der violetten Population.
 
 ```js
 const fig = Plot.plot({
@@ -175,6 +137,7 @@ const fig = Plot.plot({
 display(fig);
 ```
 
-Auch hier sehen wir 500 Bewerber und Bewerberinnen welche ihren Kredit zurück zahlen würden, sowie 500 Bewerber und Bewerberinnen die ihren Kredit nicht zurück zahlen würden. Allerdings sind die mittleren Kreditscores hierbei 65 (zahlt zurück) und 50 (zahlt nicht zurück).
+Auch hier sehen wir 100 Bewerber/innen, die ihren Kredit zurück zahlen würden, sowie 100 Bewerber/innen, die ihren Kredit nicht zurück zahlen würden. Allerdings liegen die mittleren Kreditscores hier bei 65 (zahlt zurück) und 50 (zahlt nicht zurück).
+Wir stellen fest: Obwohl die Wahrscheinlichkeit, dass ein Kredit zurück gezahlt wird, in beiden Gruppen bei 50% liegt, hat die violette Gruppe einen höheren mittleren Kreditscore als die grüne Gruppe.
 
-Wir stellen fest: Obwohl die Wahrscheinlichkeit, dass ein Kredit zurück gezahlt wird, in beiden Gruppen bei 50% liegt, hat die Gruppe der alten Bewerber einen höheren Kreditscore als die Gruppe der jungen Bewerber.
+Wie sollten wir die Entscheidungsgrenze nun wählen, damit sie für beide Personengruppen möglichst fair ist?
