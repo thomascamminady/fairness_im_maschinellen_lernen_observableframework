@@ -132,9 +132,25 @@ const fig_right = Plot.plot({
     Plot.ruleY([0]),
   ],
 });
+```
+
+
+<img src="img/fairness_grafik.png" alt="Verteilung der beiden Personengruppen" />
+<div class="grid grid-cols-2">
+  <div class="card" style="max-width: 700px; ">
+
+```js
 display(fig_left);
+```
+  </div>
+  <div class="card" style="max-width: 700px; ">
+
+```js
 display(fig_right);
 ```
+
+  </div>
+</div>
 
 Es stellt sich nun die Frage, ob die Entscheidungsgrenze für beide Personengruppen fair gewählt wurde.
 
