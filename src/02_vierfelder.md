@@ -7,20 +7,29 @@ style: css/custom.css
 
 ```js
 const total_credit = 1000;
-const interest_rate = 0.25;
-const loss = total_credit;
+const interest_rate = 0.3;
+const loss = 700;
+
+const num_people = 250 + 80;
+const num_people_no_payback = 80;
+const num_people_payback = num_people - num_people_no_payback;
 
 const profit_approved_payback = total_credit * interest_rate;
-const profit_approved_no_payback = -loss;
+const profit_approved_no_payback = loss;
+
+// Calculate values for the table
+const total_profit = num_people_payback * profit_approved_payback - num_people_no_payback * profit_approved_no_payback;
 ```
 
 Eine Bank vergibt Kredite von ${total_credit}€.
 
 - Personen, die einen Kredit erhalten und zurückzahlen, zahlen den Betrag mit ${100*interest_rate} \% Zinsen zurück. Das heißt, die Bank erhält ${total_credit + total_credit * interest_rate}€ zurück.
-- Vergibt die Bank einen Kredit an Personen, die diesen nicht zurückzahlen, macht die Bank ${loss}€ Verlust.
+- Vergibt die Bank einen Kredit an Personen, die diesen nicht oder nur teilweise zurückzahlen, macht die Bank im Durchschnitt ${loss}€ Verlust.
 
 <div class="tip" label="Aufgabe">Fülle nun die folgende Tabelle aus.</div>
 
+```js
+html`
 <div class="table-container">
   <table id="creditTable">
     <thead>
@@ -32,7 +41,7 @@ Eine Bank vergibt Kredite von ${total_credit}€.
     <tbody>
       <tr>
         <th>Gewinn der Bank:<br />Kredit genehmigt und Person zahlt zurück</th>
-        <td contenteditable="true" data-correct=250 onkeypress="return event.charCode >= 48 && event.charCode <= 57 || event.charCode === 45"></td>
+        <td contenteditable="true" data-correct="${profit_approved_payback}" onkeypress="return event.charCode >= 48 && event.charCode <= 57 || event.charCode === 45"></td>
       </tr>
       <tr>
         <th>
@@ -42,14 +51,15 @@ Eine Bank vergibt Kredite von ${total_credit}€.
       </tr>
       <tr>
         <th>
-          Gesamtgewinn bei 25 Personen die ihren Kredit zurückzahlen und 8
-          Personen die ihren Kredit nicht zurückzahlen
+          Gesamtgewinn bei ${num_people_payback} Personen die ihren Kredit zurückzahlen und ${num_people_no_payback} Personen die ihren Kredit nicht zurückzahlen
         </th>
-        <td contenteditable="true" data-correct="23750" onkeypress="return event.charCode >= 48 && event.charCode <= 57 || event.charCode === 45"></td>
+        <td contenteditable="true" data-correct="${total_profit}" onkeypress="return event.charCode >= 48 && event.charCode <= 57 || event.charCode === 45"></td>
       </tr>
     </tbody>
   </table>
 </div>
+`
+```
 
 <button id="validateButton" class="btn btn-primary">Ergebnis überprüfen</button>
 
