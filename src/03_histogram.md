@@ -85,7 +85,7 @@ function createPlot(data) {
 display(createTable(names1));
 ```
 
-<div class="tip" label="Aufgabe">
+<div class="tip" label="Aufgabe 1">
 Welches der folgenden Punktdiagramme A, B oder C repräsentiert die Daten aus der Tabelle? Du kannst die Tabelle nach Namen, Kreditscore oder Zahlungsfähigkeit sortieren, indem du auf den Titel der jeweiligen Spalte klickst. Scrolle durch die Tabelle, um alle Einträge zu sehen. Notiere deine Antwort.
 </div>
 
@@ -103,7 +103,7 @@ Hier siehst du eine weitere Tabelle.
 display(createTable(names2));
 ```
 
-<div class="tip" label="Aufgabe">
+<div class="tip" label="Aufgabe 2">
  Welches Punktdiagramm repräsentiert die Daten in der Tabelle? Notiere deine Antwort.
 </div>
 
@@ -121,7 +121,7 @@ Hier siehst du eine weitere Tabelle.
 display(createTable(names3));
 ```
 
-<div class="tip" label="Aufgabe">
+<div class="tip" label="Aufgabe 3">
 Welches Punktdiagramm repräsentiert die Daten in der Tabelle? Notiere deine Antwort.
 </div>
 

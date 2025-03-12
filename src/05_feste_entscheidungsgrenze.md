@@ -1,9 +1,9 @@
 ---
-title: Feste Entscheidungsgrenze
+title: Statistische Gütemaße
 style: css/custom.css
 ---
 
-# Feste Entscheidungsgrenze
+# Statistische Gütemaße
 
 ```js
 const data = FileAttachment("data/user/distribution.csv").csv({

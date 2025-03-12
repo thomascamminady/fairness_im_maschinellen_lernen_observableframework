@@ -10,24 +10,13 @@ const data = await FileAttachment("data/user/distribution.csv").csv({
   typed: true,
 });
 const numberOfPersons = data.length;
+
+// Count the number of people who repay and don't repay
+const repayCount = data.filter(d => d.type === "Zahlt zurück").length;
+const noRepayCount = data.filter(d => d.type === "Zahlt nicht zurück").length;
 ```
 
-Ab sofort arbeiten wir mit einem größeren Datensatz. Dieser besteht aus Daten von ${numberOfPersons} Personen. Von diesen sind TODO Personen zahlungsfähig und TODO Personen nicht zahlungsfähig.
-
-<div class="tip" label="Aufgabe">
-Ab welchem Kreditscore würdest du einen Kredit vergeben? Notiere den Wert deiner Entscheidungsgrenze und begründe deine Wahl. 
-</div>
-
-```js
-const data = FileAttachment("data/user/distribution.csv").csv({
-  typed: true,
-});
-```
-
-Hier kannst du die Entscheidungsgrenze variieren und die aus deiner Sicht optimale Entscheidungsgrenze festlegen.
-
-
-Entscheidungsgrenze:
+Ab sofort arbeiten wir mit einem größeren Datensatz. Dieser besteht aus Daten von ${numberOfPersons} Personen. Davon sind ${repayCount} Personen zahlungsfähig ("zahlt zurück") und ${noRepayCount} Personen nicht zahlungsfähig ("zahlt nicht zurück").
 
 ```js
 const threshAlt = view(
@@ -50,9 +39,13 @@ display(
       label: "Score",
       domain: [0, 99],
     },
+    y: {
+      label: "Anzahl",
+    },
     color: {
       legend: true,
       scheme: "Paired",
+      domain: ["Zahlt nicht zurück", "Zahlt zurück"]
     },
     marks: [
       Plot.dot(
@@ -60,13 +53,12 @@ display(
         Plot.stackY2({
           x: "score",
           fill: "type",
-          sort: "type",
           fillOpacity: (d) => (d.score < threshAlt ? 0.3 : 1),
-                  sort: {
-          value: "type", 
-          reverse: false 
-        },
-        reverse: true
+          sort: {
+            value: "type", 
+            reverse: false 
+          },
+          reverse: true
         })
       ),
       Plot.ruleY([0]),
@@ -75,5 +67,18 @@ display(
   })
 );
 ```
+
+<div class="tip" label="Aufgabe 1">
+Wie muss die Entscheidungsgrenze gewählt werden, damit ausschließlich Personen einen Kredit erhalten, die auch zurückzahlen können?
+</div>
+
+<div class="tip" label="Aufgabe 2">
+Wie muss die Entscheidungsgrenze gewählt werden, damit alle Personen einen Kredit erhalten, die auch zurückzahlen können?
+</div>
+
+<div class="tip" label="Aufgabe 3">
+Ab welchem Kreditscore würdest du einen Kredit vergeben? Begründe deine Antwort basierend auf dem dargestellten Datensatz. 
+</div>
+
 
 
