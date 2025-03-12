@@ -1,5 +1,5 @@
 ---
-title: Variable Entscheidungsgrenze, zwei Personengruppen
+title: Faire Entscheidungsgrenzen!?
 style: css/custom.css
 ---
 
@@ -7,14 +7,31 @@ style: css/custom.css
 import { calculateMetrics } from "./js/calculateMetrics.js";
 ```
 
-# Variable Entscheidungsgrenzen für zwei Personengruppen
+# Faire Entscheidungsgrenzen!?
 
-Der bisher verwendete Datensatz besteht aus den Daten von zwei Personengruppen. Der Personengruppe alt (älter als 30 Jahre) und der Gruppe jung (jünger als 30 Jahre).
+In den folgenden beiden Diagrammen werden die Daten der beiden Bevölkerungsgruppen getrennt dargestellt. Die Bank kann für beide Personengruppen unterschiedliche Entscheidungsgrenzen wählen – muss sie aber nicht.
 
-In den folgenden beiden Histogrammen werden die Daten der beiden Personengruppen getrennt dargestellt. Die Bank kann für beide Personengruppen unterschiedliche Entscheidungsgrenzen wählen – muss sie aber nicht.
+<div class="tip" label="Aufgabe 1 (Diskussion)">
+<p>
+Diskutiert in Gruppen, ob ihr unterschiedliche Entscheidungsgrenzen wählen würdet oder nur eine, die für beide Gruppen gilt. 
+Ziel sollte sein, dass keine Gruppe von Menschen ungerecht behandelt oder systematisch benachteiligt wird.
+</p>
 
-<div class="tip" label="Aufgabe">
-Diskutiert in Gruppen, wie ihr die beiden Entscheidungsgrenzen wählen würdet, sodass sie aus eurer Sicht möglichst fair sind. Notiert die Werte für eure Entscheidungsgrenzen und begründet eure Wahl. Beschreibt zudem, was ihr unter "fair" versteht.
+<p>
+Diskutiert, was aus eurer Sicht faire Entscheidungsgrenzen für die beiden Personengruppen sind. Berücksichtigt dabei, dass auch die Bank mit ihrem Gewinn zufrieden sein sollte.
+</p>
+</div>
+
+<div class="tip" label="Aufgabe 2">
+Notiert die Grenzen, die ihr für die beiden Personengruppen wählt. Notiert zudem eure zugehörigen Argumente, warum diese Grenzen fair für beide Gruppen sind.
+</div>
+
+<div class="tip" label="Aufgabe 3">
+<ol type="a">
+  <li>Welche statistischen Gütemaße habt ihr genutzt, um eure Entscheidungsgrenzen festzulegen? </li>
+  <li>Wieso habt ihr genau diese als relevant ausgewählt? </li>
+  <li>Wie seid ihr basierend auf diesen Gütemaßen zur Festlegung eurer Entscheidungsgrenzen gekommen?</li>
+</ol>
 </div>
 
 ```js
@@ -29,8 +46,8 @@ const connected = view(
     [
       "Unabhängig",
       "Gleiche Grenze",
-      "Ähnliche positiv Rate",
-      "Ähnliche Richtig-positiv-Rate",
+      "Gleiche positiv Rate",
+      "Gleiche Richtig-positiv-Rate",
     ],
     {
       label: "Regler Junge Menschen",
@@ -43,7 +60,7 @@ const connected = view(
 <div class="grid grid-cols-2">
   <div class="card" style="max-width: 700px; ">
 
-<h2>Entscheidungsgrenze Alte Menschen</h2>
+<h2>Entscheidungsgrenze Grünhausen</h2>
 
 ```js
 const threshold_Alt = view(
@@ -181,14 +198,14 @@ display(
 
   <div class="card" style="max-width: 500px; ">
 
-<h2>Entscheidungsgrenze Junge Menschen</h2>
+<h2>Entscheidungsgrenze Grünhausen</h2>
 
 ```js
 // Determine threshold for "Jung"
 let value = 70;
 if (connected === "Gleiche Grenze") {
   value = threshold_Alt;
-} else if (connected === "Ähnliche Richtig-positiv-Rate") {
+} else if (connected === "Gleiche Richtig-positiv-Rate") {
   // Reference value from "Alt" group
   const ref = true_positive_rate_Alt;
   let bestThreshold = 0;
@@ -219,7 +236,7 @@ if (connected === "Gleiche Grenze") {
   }
 
   value = bestThreshold;
-} else if (connected === "Ähnliche positiv Rate") {
+} else if (connected === "Gleiche positiv Rate") {
   // Reference value from "Alt" group
   const ref = positive_rate_Alt;
   let bestThreshold = 0;
@@ -383,8 +400,9 @@ display(
 </div>
 ```
 
-
+</div>
 
 ```html
+<p>
 Der Gesamtgewinn der Bank beträgt ${gewinn_Alt + gewinn_Jung}€.
-```
+</p>

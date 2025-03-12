@@ -12,10 +12,12 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 const fixedThreshAlt = 70;
 ```
 
-Ist die Entscheidungsgrenze wirklich gut gewählt? Zur Beantwortung dieser Frage und zur Validierung unseres Kreditvergabesystems, d. h. des Klassifikators, werden wir den Gesamtprofit sowie verschiedene statische Gütemaße nutzen.
+Ist die Entscheidungsgrenze wirklich gut gewählt? Zur Beantwortung dieser Frage und zur Validierung des Kreditvergabesystems werden wir den Gesamtprofit sowie verschiedene statische Gütemaße nutzen.
 
-Die Entscheidungsgrenze wurde zunächst fix auf 70 gesetzt. Für alle Personen mit einem Score größergleich 70 gehen wir davon aus, dass sie den Kredit zurückzahlen würden (Vorhersage: zahlt zurück). Für alle Personen mit einem Score unter 70 gehen wir davon aus, dass sie den Kredit nicht zurückzahlen würden (Vorhersage: zahlt nicht zurück).
-Diese Vorhersagen können wir nun mit den tatsächlichen Daten vergleichen (Erinnerung: wir arbeiten mit vergangenen Daten, d.h. es ist bekannt, ob ein Kredit zurückgezahlt wurde oder nicht).
+Die Entscheidungsgrenze wurde zunächst fest auf 70 gesetzt. Für alle Personen mit einem Score größer oder gleich 70 gehen wir davon aus, dass sie den Kredit zurückzahlen würden (Vorhersage: zahlt zurück). Für alle Personen mit einem Score unter 70 gehen wir davon aus, dass sie den Kredit nicht zurückzahlen würden (Vorhersage: zahlt nicht zurück). Diese Vorhersagen können wir nun mit den tatsächlichen Daten vergleichen. 
+
+Erinnerung: Wir arbeiten mit Daten von Personen, bei denen bekannt ist, ob sie ihren Kredit in der Vergangenheit zurückgezahlt haben und damit zahlungsfähig waren.
+
 
 ```js
 display(
@@ -76,7 +78,7 @@ const groupedData = data.reduce((acc, item) => {
 
 ## Die Konfusionsmatrix
 
-Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (zahlt zurück und zahlt nicht zurück) sind in der folgenden Tabelle dargestellt. Diese Tabelle wird auch als Konfusionsmatrix bezeichnet.
+Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (“zahlt zurück” und “zahlt nicht zurück”) sind in der folgenden Tabelle dargestellt. Diese Tabelle wird auch als Konfusionsmatrix bezeichnet.
 
 ```html
 <div class="table-container">
@@ -116,18 +118,36 @@ Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (za
 </div>
 ```
 
+
+<div class="tip" label="Aufgabe 1">
+Wie viele Personen erhalten bei einer Entscheidungsgrenze von 70 insgesamt einen Kredit?
+</div>
+
+<div class="answer-container">
+  <input class="answer-field" rows="3" placeholder="Deine Antwort zu Aufgabe 1..."></textarea>
+</div>
+
+<div class="tip" label="Aufgabe 2">
+Wie viele Personen erhalten bei einer Entscheidungsgrenze von 70 einen Kredit, obwohl sie diesen nicht zurück zahlen können?
+</div>
+
+<div class="answer-container">
+  <input class="answer-field" rows="3" placeholder="Deine Antwort zu Aufgabe 2..."></textarea>
+</div>
+
+
 ## Bewertung des Entscheidungsmodells
+Es gibt verschiedene Gütemaße, die wir zur Bewertung unseres Modells verwenden können:
 
-Es gibt verschiedene Gütemaße, die dabei helfen, zu bewerten, wie gut unser Modell geeignet ist.
-Wir nutzen die folgenden Gütemaße:
+- <b>Genauigkeit:</b> Die Genauigkeit gibt den prozentualen Anteil der richtigen Vorhersagen an der Gesamtzahl aller Datenpunkte an.
+- <b>Positiv Rate:</b> Die positiv Rate gibt den prozentualen Anteil der positiven Vorhersagen (Vorhersage: zahlt zurück) an der Gesamtzahl aller Datenpunkte an.
+- <b>Richtig-positiv-Rate:</b> Die Richtig-positiv-Rate gibt den prozentualen Anteil der richtig positiven Vorhersagen (richtig als "zahlt zurück" vorhergesagt) an der Anzahl aller tatsächlich positiven Datenpunkte (Daten: zahlt zurück) an.
+- <b>Gewinn:</b> Erzielter Gesamtgewinn der Bank
 
-- <b>Genauigkeit:</b> Anteil der richtigen Klassifikationen an der Gesamtzahl aller Datenpunkte
-- <b>Positiv Rate:</b> Anteil der positiven Vorhersagen (Vorhersage: zahlt zurück) an der Gesamtzahl aller Datenpunkte
-- <b>Richtig-positiv-Rate:</b> Anteil der richtig positiven Vorhersagen an der Anzahl aller tatsächlich positiven Datenpunkte (Daten: zahlt zurück)
-- <b>Gewinn:</b> erzielter Gesamtgewinn der Bank
 
-<div class="tip" label="Aufgabe">
-Berechne basierend auf der Kofusionsmatrix die Werte für die folgenden vier Gütemaße. Trage deine Ergebnisse in der Tabelle ein. 
+
+<div class="tip" label="Aufgabe 3">
+Berechne die Werte der vier Gütemaße. Nutze dazu die Werte in der Konfusionsmatrix. Trage deine Ergebnisse in der folgenden Tabelle ein.
 </div>
 
 ```html
@@ -152,3 +172,20 @@ Berechne basierend auf der Kofusionsmatrix die Werte für die folgenden vier Gü
   </table>
 </div>
 ```
+
+<div class="tip" label="Aufgabe 4">
+Wieviel Prozent der Personen, die zahlungsfähig sind, erhalten auch tatsächlich einen Kredit?
+</div>
+
+<div class="answer-container">
+  <input class="answer-field" rows="3" placeholder="Deine Antwort zu Aufgabe 4..."></textarea>
+</div>
+
+<div class="tip" label="Aufgabe 5">
+Wieviel Prozent der Personen im Datensatz erhalten einen Kredit? 
+</div>
+
+<div class="answer-container">
+  <input class="answer-field" rows="3" placeholder="Deine Antwort zu Aufgabe 5..."></textarea>
+</div>
+

@@ -72,13 +72,27 @@ display(
 Wie muss die Entscheidungsgrenze gewählt werden, damit ausschließlich Personen einen Kredit erhalten, die auch zurückzahlen können?
 </div>
 
+<div class="answer-container">
+  <input class="answer-field" rows="3" placeholder="Deine Antwort zu Aufgabe 1..."></textarea>
+</div>
+
 <div class="tip" label="Aufgabe 2">
 Wie muss die Entscheidungsgrenze gewählt werden, damit alle Personen einen Kredit erhalten, die auch zurückzahlen können?
+</div>
+
+<div class="answer-container">
+  <input class="answer-field" rows="3" placeholder="Deine Antwort zu Aufgabe 2..."></textarea>
 </div>
 
 <div class="tip" label="Aufgabe 3">
 Ab welchem Kreditscore würdest du einen Kredit vergeben? Begründe deine Antwort basierend auf dem dargestellten Datensatz. 
 </div>
+
+<div class="answer-container">
+  <input class="answer-field" rows="5" placeholder="Deine Antwort zu Aufgabe 3..."></textarea>
+</div>
+
+
 
 
 

@@ -81,3 +81,17 @@ td[contenteditable="false"] {
     cursor: pointer;
     background-color: #f4f4f4;
 }
+
+.answer-container {
+  margin-bottom: 20px;
+}
+.answer-field {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: inherit;
+  resize: none;
+  overflow: auto;
+}

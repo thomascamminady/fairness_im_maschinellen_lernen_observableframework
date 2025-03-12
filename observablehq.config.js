@@ -10,27 +10,27 @@ export default {
     {
       name: "English",
       pages: [
-        {name: "Introduction", path: "/en_index"},
-        {name: "Credit Lending", path: "/en_02_vierfelder"},
+        {name: "Fairness in Machine Learning", path: "/en_index"},
+        {name: "Credit Lending Example", path: "/en_02_vierfelder"},
         {name: "Histogram", path: "/en_03_histogram"},
         {name: "Dataset", path: "/en_04_einfuehrung_datensatz"},
         {name: "Fixed Decision Boundary", path: "/en_05_feste_entscheidungsgrenze"},
         {name: "Variable Decision Boundary", path: "/en_06_variable_entscheidungsgrenze"},
         {name: "Split Dataset", path: "/en_07_einfuehrung_datensatz_aufgeteilt"},
-        {name: "Two Populations", path: "/en_08_variable_entscheidungsgrenze_2_populationen"}
+        {name: "Variable Decision Boundary, Two Population Groups", path: "/en_08_variable_entscheidungsgrenze_2_populationen"}
       ]
     },
     {
       name: "Deutsch",
       pages: [
-        {name: "Einführung", path: "/index"},
-        {name: "Kreditvergabe", path: "/02_vierfelder"},
-        {name: "Histogramm", path: "/03_histogram"},
+        {name: "Fairness im maschinellen Lernen", path: "/index"},
+        {name: "Beispiel zur Kreditvergabe", path: "/02_vierfelder"},
+        {name: "Daten verstehen", path: "/03_histogram"},
         {name: "Datensatz", path: "/04_einfuehrung_datensatz"},
-        {name: "Feste Entscheidungsgrenze", path: "/05_feste_entscheidungsgrenze"},
+        {name: "Statistische Gütemaße", path: "/05_feste_entscheidungsgrenze"},
         {name: "Variable Entscheidungsgrenze", path: "/06_variable_entscheidungsgrenze"},
-        {name: "Aufgeteilter Datensatz", path: "/07_einfuehrung_datensatz_aufgeteilt"},
-        {name: "Zwei Populationsgruppen", path: "/08_variable_entscheidungsgrenze_2_populationen"}
+        {name: "Zwei Personengruppen", path: "/07_einfuehrung_datensatz_aufgeteilt"},
+        {name: "Faire Entscheidungsgrenzen!?", path: "/08_variable_entscheidungsgrenze_2_populationen"}
       ]
     }
   ],
@@ -44,7 +44,7 @@ export default {
   // Some additional configuration options and their defaults:
   theme: "default", // try "light", "dark", "slate", etc.
   // header: "", // what to show in the header (HTML)
-  footer: "Copyright © 2024, Sarah Schönbrodt, Steffen Schneider, Thomas Camminady",
+  footer: "Copyright © 2024-2025, Sarah Schönbrodt, Steffen Schneider, Thomas Camminady",
   sidebar: true, // whether to show the sidebar
   toc: true, // whether to show the table of contents
   pager: true, // whether to show previous & next links in the footer

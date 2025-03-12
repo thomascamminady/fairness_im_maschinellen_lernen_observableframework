@@ -1,9 +1,11 @@
 ---
-title: Datensatz aufgeteilt
+title: Zwei Personengruppen
 style: css/custom.css
 ---
 
-# Was finden wir wirklich in unseren Daten?
+# Zwei Personengruppen
+
+## Was finden wir wirklich in unseren Daten?
 
 ```js
 const data = FileAttachment("data/user/distribution.csv").csv({
@@ -11,8 +13,7 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 });
 ```
 
-Bisher sind wir davon ausgegangen, dass unser Datensatz aus einer Bevölkerungsgruppe bestand. 
-Die Datenpunkte innerhalb dieser Gruppe haben wir nach Zahlungsfähigkeit eingefärbt.
+Bisher haben wir die 400 Personen in unserem Datensatz lediglich danach unterschieden, ob sie in zahlungsfähig sind (dunkelblau) oder nicht (hellblau).
 
 ```js
 const fig = Plot.plot({
@@ -49,11 +50,15 @@ const fig = Plot.plot({
 display(fig);
 ```
 
-Was wir allerdings bisher verschwiegen haben: Unser Datensatz waren zwei Gruppen von Bewerber/innen vertreten. Zum einen haben wir Bewerber der Population grün, zum anderen  Bewerber/innen der Population lila.
-Wir können die beiden Verteilungen nun separat betrachten. Hier ist die Verteilung der grünen Bewerber/innen:
+Unser Datensatz besteht jedoch tatsächlich aus zwei Bevölkerungsruppen, die sich in einem wesentlichen Merkmal unterscheiden. Dieses Merkmal könnte beispielsweise das Geschlecht, die ethnische Herkunft oder das Alter  (alt vs. jung) sein. In unserem Datenbeispiel unterscheiden wir die Personen nach ihrer fiktiven Herkunft aus “Grünhausen” und “Pinklandia”.
+
+In beiden Bevölkerungsgruppen gibt es 100 Personen, die zahlungsfähig sind, und 100 Personen, die nicht zahlungsfähig sind. Damit ist es in beiden Populationen gleich wahrscheinlich, dass eine Person zahlungsfähig ist. 
+
+Die Anwendung des Credit Score Berechnungsmodells liefert jedoch deutlich unterschiedliche Verteilungen der beiden Personengruppen. Dies wird in den beiden folgenden Grafiken ersichtlich. 
+
 
 ```js
-const fig = Plot.plot({
+const fig_left = Plot.plot({
   width: 600,
   height: 200,
   style: {
@@ -89,15 +94,8 @@ const fig = Plot.plot({
     Plot.ruleY([0]),
   ],
 });
-display(fig);
-```
 
-Hier sehen wir 100 Bewerber/innen, die ihren Kredit zurück zahlen würden (mittlerer Kreditscore von 55), sowie 100 Bewerber/innen, die ihren Kredit nicht zurück zahlen würden (mittlerer Kreditscore von 40).
-
-Als nächstes sehen wir die Verteilung der violetten Population.
-
-```js
-const fig = Plot.plot({
+const fig_right = Plot.plot({
   width: 600,
   height: 200,
   style: {
@@ -134,10 +132,19 @@ const fig = Plot.plot({
     Plot.ruleY([0]),
   ],
 });
-display(fig);
+display(fig_left);
+display(fig_right);
 ```
 
-Auch hier sehen wir 100 Bewerber/innen, die ihren Kredit zurück zahlen würden, sowie 100 Bewerber/innen, die ihren Kredit nicht zurück zahlen würden. Allerdings liegen die mittleren Kreditscores hier bei 65 (zahlt zurück) und 50 (zahlt nicht zurück).
-Wir stellen fest: Obwohl die Wahrscheinlichkeit, dass ein Kredit zurück gezahlt wird, in beiden Gruppen bei 50% liegt, hat die violette Gruppe einen höheren mittleren Kreditscore als die grüne Gruppe.
+Es stellt sich nun die Frage, ob die Entscheidungsgrenze für beide Personengruppen fair gewählt wurde.
 
-Wie sollten wir die Entscheidungsgrenze nun wählen, damit sie für beide Personengruppen möglichst fair ist?
+<div class="tip" label="Aufgabe">
+Die Bank entscheidet sich, deine "optimale" Entscheidungsgrenze aus der vorherigen Aufgabe für beide Personengruppen zu verwenden. 
+<ol type="a">
+  <li>Finde möglichst viele Kritikpunkte an diesem Modell.</li>
+  <li>Argumentiere aus Sicht der Bank, wieso das ein gutes Modell ist.</li>
+</ol>
+</div>
+
+
+
