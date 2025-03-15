@@ -15,7 +15,8 @@ Bevor wir mit einem größeren Datensatz arbeiten, wirst du zunächst die Strukt
 
 ## Datensatz 1
 
-Hier siehst du eine Tabelle mit fiktiven Daten. 
+Hier siehst du eine Tabelle mit fiktiven, aber realistischen Daten. 
+
 
 ```js
 const names1 = FileAttachment("data/user/random_user_1.csv").csv({
