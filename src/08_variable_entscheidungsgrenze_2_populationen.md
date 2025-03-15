@@ -46,7 +46,7 @@ const connected = view(
     [
       "Unabhängig",
       "Gleiche Grenze",
-      "Gleiche positiv Rate",
+      "Gleiche Positivrate",
       "Gleiche Richtig-positiv-Rate",
     ],
     {
@@ -177,7 +177,7 @@ display(
     <thead>
       <tr>
         <th>Genauig- keit</th>
-        <th>Positiv Rate</th>
+        <th>Positivrate</th>
         <th>Richtig-positiv-Rate</th>
         <th>Gewinn</th>
       </tr>
@@ -383,7 +383,7 @@ display(
     <thead>
       <tr>
         <th>Genauig- keit</th>
-        <th>Positiv Rate</th>
+        <th>Positivrate</th>
         <th>Richtig-positiv-Rate</th>
         <th>Gewinn</th>
       </tr>
