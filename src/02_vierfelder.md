@@ -21,7 +21,7 @@ const profit_approved_no_payback = loss;
 const total_profit = num_people_payback * profit_approved_payback - num_people_no_payback * profit_approved_no_payback;
 ```
 
-Eine Bank vergibt Kredite von ${total_credit}€.
+Das ist unsere Ausgangssituation: Eine Bank vergibt Kredite von ${total_credit}€.
 
 - Personen, die einen Kredit erhalten und zurückzahlen, zahlen den Betrag mit ${100*interest_rate} \% Zinsen zurück. Das heißt, die Bank erhält ${total_credit + total_credit * interest_rate}€ zurück.
 - Vergibt die Bank einen Kredit an Personen, die diesen nicht oder nur teilweise zurückzahlen, macht die Bank im Durchschnitt ${loss}€ Verlust.
