@@ -5,11 +5,12 @@ style: css/custom.css
 
 # Daten verstehen
 
-Für Banken ist es relevant, möglichst genau vorherzusagen, ob ein neuer Kunde einen Kredit mit hoher Wahrscheinlichkeit zurückzahlt oder nicht. Im Finanzwesen wird dazu oft mit mathematischen Modellen gearbeitet, die jeder Person einen Kreditscore (z. B. der Schufa-Score) zuordnen. Der Kreditscore dient dann als Maß für die Kreditwürdigkeit einer Person.
 
-In dieser App verwenden wir vergangene Daten von zahlreichen Kreditanwärter*innen. Für diese Personen wurde der Kreditscore zwischen 0 (Kredit wird eher nicht zurückgezahlt) und 100 (Kredit wird sehr wahrscheinlich zurückgezahlt) berechnet. Zudem ist bekannt, ob die Personen ihren Kredit in der Vergangenheit tatsächlich zurückgezahlt haben oder nicht.
+Für Banken ist es relevant, möglichst genau vorherzusagen, ob ein neuer Kunde einen Kredit mit hoher Wahrscheinlichkeit zurückzahlt oder nicht. Im Finanzwesen wird dazu oft mit mathematischen Modellen gearbeitet, die jeder Person einen Kreditscore (z. B. der Schufa-Score) zuordnen. Wir gehen davon aus, dass zur Berechnung des Kreditscores verlässliche Daten verarbeitet wurden und nehmen den Kreditscore als ein sinnvolles Maß für die Kreditwürdigkeit einer Person an.
 
-Bevor wir mit einem größeren Datensatz arbeiten, wirst du hier zunächst erkunden, wie die Daten aufgebaut sind und wie sie mit Hilfe von Punktdiagrammen visualisiert werden können. In den Diagrammen repräsentiert jeder Punkt eine Person.
+In diesem Lernmodul verwenden wir fiktive Daten von zahlreichen Kreditanwärter*innen, die aber genau so in der Vergangenheit hätten zustande kommen können. Für diese Personen wurde der Kreditscore zwischen 0 (Kredit wird eher nicht zurückgezahlt) und 100 (Kredit wird sehr wahrscheinlich zurückgezahlt) berechnet. Außerdem ist bekannt, ob jede dieser Personen ihren Kredit in der Vergangenheit tatsächlich zurückgezahlt hat oder nicht.
+
+Bevor wir mit einem größeren Datensatz arbeiten, wirst du zunächst die Struktur der Daten erkunden und wie sie mit Hilfe von Punktdiagrammen visualisiert werden können. In den Diagrammen repräsentiert jeder Punkt eine Person.
 
 
 ## Datensatz 1
