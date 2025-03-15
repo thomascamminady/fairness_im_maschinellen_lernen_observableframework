@@ -12,11 +12,13 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 const fixedThreshAlt = 70;
 ```
 
+
 Ist die Entscheidungsgrenze wirklich gut gewählt? Zur Beantwortung dieser Frage und zur Validierung des Kreditvergabesystems werden wir den Gesamtprofit sowie verschiedene statische Gütemaße nutzen.
 
-Die Entscheidungsgrenze wurde zunächst fest auf 70 gesetzt. Für alle Personen mit einem Score größer oder gleich 70 gehen wir davon aus, dass sie den Kredit zurückzahlen würden (Vorhersage: zahlt zurück). Für alle Personen mit einem Score unter 70 gehen wir davon aus, dass sie den Kredit nicht zurückzahlen würden (Vorhersage: zahlt nicht zurück). Diese Vorhersagen können wir nun mit den tatsächlichen Daten vergleichen. 
+Die Entscheidungsgrenze nutzen wir zur Vorhersage. Hat eine Person einen Kreditscore größer oder gleich unserer Entscheidungsgrenze, so sagen wir voraus, dass diese Person den Kredit zurückzahlen wird. Bei einem Kreditscore kleiner als unsere Entscheidungsgrenze sagen wir voraus, dass diese Person den Kredit nicht zurückzahlen wird.
+Die Entscheidungsgrenze wurde zunächst fest auf 70 gesetzt. Für alle Personen mit einem Score größer oder gleich 70 gehen wir davon aus, dass sie den Kredit zurückzahlen werden (Vorhersage: zahlt zurück). Für alle Personen mit einem Score unter 70 gehen wir davon aus, dass sie den Kredit nicht zurückzahlen werden (Vorhersage: zahlt nicht zurück). Diese Vorhersagen können wir nun mit den vorliegenden Daten vergleichen. 
 
-Erinnerung: Wir arbeiten mit Daten von Personen, bei denen bekannt ist, ob sie ihren Kredit in der Vergangenheit zurückgezahlt haben und damit zahlungsfähig waren.
+Erinnerung: Wir arbeiten mit Daten von Personen, bei denen bekannt ist, ob sie in der Vergangenheit zahlungsfähig waren und nutzen dies zum Abgleich mit unserer Vorhersage.
 
 
 ```js
