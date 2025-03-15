@@ -60,7 +60,7 @@ const connected = view(
 <div class="grid grid-cols-2">
   <div class="card" style="max-width: 700px; ">
 
-<h2>Entscheidungsgrenze Grünhausen</h2>
+<h2>Entscheidungsgrenze Pinklandia</h2>
 
 ```js
 const threshold_Alt = view(
