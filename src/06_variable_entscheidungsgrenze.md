@@ -11,7 +11,7 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 });
 ```
 
-Hier kannst du die Entscheidungsgrenze variieren und die aus deiner Sicht optimale Entscheidungsgrenze festlegen.
+Jetzt kannst du die Entscheidungsgrenze variieren und die aus deiner Sicht optimale Entscheidungsgrenze festlegen.
 
 <div class="tip" label="Aufgabe">
 Welcher Wert stellt aus deiner Sicht eine optimale Entscheidungsgrenze dar? Notiere den Wert und begründe deine Wahl.
@@ -137,7 +137,7 @@ const {
     <thead>
       <tr>
         <th>Genauigkeit</th>
-        <th>Positiv Rate</th>
+        <th>Positivrate</th>
         <th>Richtig-positiv-Rate</th>
         <th>Gewinn</th>
       </tr>
