@@ -13,7 +13,7 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 });
 ```
 
-Bisher haben wir die 400 Personen in unserem Datensatz lediglich danach unterschieden, ob sie in zahlungsfähig sind (dunkelblau) oder nicht (hellblau).
+Bisher haben wir die 400 Personen in unserem Datensatz lediglich danach unterschieden, ob sie zahlungsfähig sind (dunkelblau) oder nicht (hellblau).
 
 ```js
 const fig = Plot.plot({
@@ -50,11 +50,11 @@ const fig = Plot.plot({
 display(fig);
 ```
 
-Unser Datensatz besteht jedoch tatsächlich aus zwei Bevölkerungsruppen, die sich in einem wesentlichen Merkmal unterscheiden. Dieses Merkmal könnte beispielsweise das Geschlecht, die ethnische Herkunft oder das Alter  (alt vs. jung) sein. In unserem Datenbeispiel unterscheiden wir die Personen nach ihrer fiktiven Herkunft aus “Grünhausen” und “Pinklandia”.
+Wir wissen allerdings noch mehr. Unser Datensatz besteht tatsächlich aus zwei Bevölkerungsgruppen, die sich in einem wesentlichen Merkmal unterscheiden. Dieses Merkmal könnte beispielsweise das Geschlecht, die ethnische Herkunft oder das Alter (alt vs. jung) sein. In unserem Datenbeispiel unterscheiden wir die Personen nach ihrer fiktiven Herkunft aus “Grünhausen” und “Pinklandia”.
 
-In beiden Bevölkerungsgruppen gibt es 100 Personen, die zahlungsfähig sind, und 100 Personen, die nicht zahlungsfähig sind. Damit ist es in beiden Populationen gleich wahrscheinlich, dass eine Person zahlungsfähig ist. 
+In beiden Bevölkerungsgruppen gibt es je 100 Personen, die zahlungsfähig sind, und 100 Personen, die nicht zahlungsfähig sind. Damit ist es in beiden Populationen gleichwahrscheinlich, dass eine Person zahlungsfähig ist. 
 
-Die Anwendung des Credit Score Berechnungsmodells liefert jedoch deutlich unterschiedliche Verteilungen der beiden Personengruppen. Dies wird in den beiden folgenden Grafiken ersichtlich. 
+Die Anwendung des Kreditscore-Modells liefert jedoch deutlich unterschiedliche Verteilungen für die beiden Personengruppen. Dies wird in den folgenden Grafiken ersichtlich. 
 
 
 ```js
@@ -152,7 +152,6 @@ display(fig_right);
   </div>
 </div>
 
-Es stellt sich nun die Frage, ob die Entscheidungsgrenze für beide Personengruppen fair gewählt wurde.
 
 <div class="tip" label="Aufgabe">
 Die Bank entscheidet sich, deine "optimale" Entscheidungsgrenze aus der vorherigen Aufgabe für beide Personengruppen zu verwenden. 
