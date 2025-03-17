@@ -3,7 +3,7 @@ title: Datensatz
 style: css/custom.css
 ---
 
-# Datensatz
+# Der Datensatz
 
 ```js
 const data = await FileAttachment("data/user/distribution.csv").csv({
