@@ -23,14 +23,14 @@ export default {
     {
       name: "Deutsch",
       pages: [
-        {name: "Fairness im maschinellen Lernen", path: "/index"},
-        {name: "Beispiel zur Kreditvergabe", path: "/02_vierfelder"},
-        {name: "Daten verstehen", path: "/03_histogram"},
-        {name: "Datensatz", path: "/04_einfuehrung_datensatz"},
-        {name: "Statistische Gütemaße", path: "/05_feste_entscheidungsgrenze"},
-        {name: "Variable Entscheidungsgrenze", path: "/06_variable_entscheidungsgrenze"},
-        {name: "Zwei Personengruppen", path: "/07_einfuehrung_datensatz_aufgeteilt"},
-        {name: "Faire Entscheidungsgrenzen!?", path: "/08_variable_entscheidungsgrenze_2_populationen"}
+        {name: "Einleitung: Faire Kreditvergabe", path: "/index"},
+        {name: "I. Kreditvergabe und Gesamtgewinn", path: "/02_vierfelder"},
+        {name: "II. Die Daten verstehen", path: "/03_histogram"},
+        {name: "III. Der Datensatz", path: "/04_einfuehrung_datensatz"},
+        {name: "IV. Statistische Gütemaße", path: "/05_feste_entscheidungsgrenze"},
+        {name: "V. Variable Entscheidungsgrenze", path: "/06_variable_entscheidungsgrenze"},
+        {name: "VI. Zwei Personengruppen", path: "/07_einfuehrung_datensatz_aufgeteilt"},
+        {name: "VII. Faire Entscheidungsgrenzen!?", path: "/08_variable_entscheidungsgrenze_2_populationen"}
       ]
     }
   ],
