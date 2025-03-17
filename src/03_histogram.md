@@ -33,19 +33,19 @@ function createTable(data) {
   return Inputs.table(data, {
     width: {
       name: 200,
-      score: 200,
       type: 200,
+      score: 200,
     },
-    columns: ["name", "score", "type"],
+    columns: ["name", "type", "score"],
     header: {
       name: "Name",
-      score: "Kreditscore",
       type: "Zahlungsfähigkeit in Vergangenheit",
+      score: "Kreditscore",
     },
     align: {
       name: "left",
-      score: "left",
       type: "left",
+      score: "left",
     },
     rows: 10,
     maxWidth: 800,

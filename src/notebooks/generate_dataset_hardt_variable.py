@@ -27,7 +27,10 @@ def make_normal_items(category: int, pays_back: bool, n: int, mean: float, std: 
 
         # Create m items with this exact score value:
         for _ in range(m):
-          items.append({"category": category, "pays_back": pays_back, "score": score})
+            items.append({"category": category, "pays_back": pays_back, "score": score})
+        
+    for _ in range(2):
+        items.append({"category": category, "pays_back": pays_back, "score": mean})
 
     return items
 

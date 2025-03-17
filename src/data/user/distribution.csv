@@ -97,6 +97,8 @@ score,age,pays_back,type
 81.81818181818183,Alt,true,Zahlt zurück
 83.83838383838385,Alt,true,Zahlt zurück
 85.85858585858587,Alt,true,Zahlt zurück
+63.0,Alt,true,Zahlt zurück
+63.0,Alt,true,Zahlt zurück
 24.242424242424242,Alt,false,Zahlt nicht zurück
 26.262626262626263,Alt,false,Zahlt nicht zurück
 28.282828282828284,Alt,false,Zahlt nicht zurück
@@ -195,6 +197,8 @@ score,age,pays_back,type
 65.65656565656566,Alt,false,Zahlt nicht zurück
 67.67676767676768,Alt,false,Zahlt nicht zurück
 70.70707070707071,Alt,false,Zahlt nicht zurück
+47.0,Alt,false,Zahlt nicht zurück
+47.0,Alt,false,Zahlt nicht zurück
 33.333333333333336,Jung,true,Zahlt zurück
 36.36363636363637,Jung,true,Zahlt zurück
 38.38383838383839,Jung,true,Zahlt zurück
@@ -293,6 +297,8 @@ score,age,pays_back,type
 75.75757575757576,Jung,true,Zahlt zurück
 77.77777777777779,Jung,true,Zahlt zurück
 79.7979797979798,Jung,true,Zahlt zurück
+57.0,Jung,true,Zahlt zurück
+57.0,Jung,true,Zahlt zurück
 10.101010101010102,Jung,false,Zahlt nicht zurück
 12.121212121212121,Jung,false,Zahlt nicht zurück
 14.141414141414142,Jung,false,Zahlt nicht zurück
@@ -391,3 +397,5 @@ score,age,pays_back,type
 51.515151515151516,Jung,false,Zahlt nicht zurück
 53.535353535353536,Jung,false,Zahlt nicht zurück
 56.56565656565657,Jung,false,Zahlt nicht zurück
+33.0,Jung,false,Zahlt nicht zurück
+33.0,Jung,false,Zahlt nicht zurück

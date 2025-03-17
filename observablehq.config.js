@@ -7,32 +7,14 @@ export default {
   // all pages will be listed in alphabetical order. Listing pages explicitly
   // lets you organize them into sections and have unlisted pages.
   pages: [
-    {
-      name: "English",
-      pages: [
-        {name: "Fairness in Machine Learning", path: "/en_index"},
-        {name: "Credit Lending Example", path: "/en_02_vierfelder"},
-        {name: "Histogram", path: "/en_03_histogram"},
-        {name: "Dataset", path: "/en_04_einfuehrung_datensatz"},
-        {name: "Fixed Decision Boundary", path: "/en_05_feste_entscheidungsgrenze"},
-        {name: "Variable Decision Boundary", path: "/en_06_variable_entscheidungsgrenze"},
-        {name: "Split Dataset", path: "/en_07_einfuehrung_datensatz_aufgeteilt"},
-        {name: "Variable Decision Boundary, Two Population Groups", path: "/en_08_variable_entscheidungsgrenze_2_populationen"}
-      ]
-    },
-    {
-      name: "Deutsch",
-      pages: [
-        {name: "Einleitung: Faire Kreditvergabe", path: "/index"},
-        {name: "I. Kreditvergabe und Gesamtgewinn", path: "/02_vierfelder"},
-        {name: "II. Die Daten verstehen", path: "/03_histogram"},
-        {name: "III. Der Datensatz", path: "/04_einfuehrung_datensatz"},
-        {name: "IV. Statistische Gütemaße", path: "/05_feste_entscheidungsgrenze"},
-        {name: "V. Variable Entscheidungsgrenze", path: "/06_variable_entscheidungsgrenze"},
-        {name: "VI. Zwei Personengruppen", path: "/07_einfuehrung_datensatz_aufgeteilt"},
-        {name: "VII. Faire Entscheidungsgrenzen!?", path: "/08_variable_entscheidungsgrenze_2_populationen"}
-      ]
-    }
+    {name: "Einleitung: Faire Kreditvergabe", path: "/index"},
+    {name: "I. Kreditvergabe und Gesamtgewinn", path: "/02_vierfelder"},
+    {name: "II. Die Daten verstehen", path: "/03_histogram"},
+    {name: "III. Der Datensatz", path: "/04_einfuehrung_datensatz"},
+    {name: "IV. Statistische Gütemaße", path: "/05_feste_entscheidungsgrenze"},
+    {name: "V. Variable Entscheidungsgrenze", path: "/06_variable_entscheidungsgrenze"},
+    {name: "VI. Zwei Personengruppen", path: "/07_einfuehrung_datensatz_aufgeteilt"},
+    {name: "VII. Faire Entscheidungsgrenzen!?", path: "/08_variable_entscheidungsgrenze_2_populationen"}
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:
@@ -49,7 +31,7 @@ export default {
   toc: true, // whether to show the table of contents
   pager: true, // whether to show previous & next links in the footer
   // output: "dist", // path to the output root for build
-  search: true, // activate search
+  search: false, // activate search
   linkify: true, // convert URLs in Markdown to links
   // typographer: false, // smart quotes and other typographic improvements
   // preserveExtension: false, // drop .html from URLs
