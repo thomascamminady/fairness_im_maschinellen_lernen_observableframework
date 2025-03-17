@@ -3,7 +3,7 @@ title: Daten verstehen
 style: css/custom.css
 ---
 
-# Daten verstehen
+# Die Daten verstehen
 
 
 Für Banken ist es relevant, möglichst genau vorherzusagen, ob ein neuer Kunde einen Kredit mit hoher Wahrscheinlichkeit zurückzahlt oder nicht. Im Finanzwesen wird dazu oft mit mathematischen Modellen gearbeitet, die jeder Person einen Kreditscore (z. B. der Schufa-Score) zuordnen. Wir gehen davon aus, dass zur Berechnung des Kreditscores verlässliche Daten verarbeitet wurden und nehmen den Kreditscore als ein sinnvolles Maß für die Kreditwürdigkeit einer Person an.
