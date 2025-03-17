@@ -11,3 +11,7 @@ Gleichzeitig sind Banken dazu verpflichtet, unterschiedliche Personengruppen hin
 
 Jeder, der einen Kredit beantragt, möchte diesen unabhängig von solchen geschützten Merkmalen oder Zugehörigkeiten erhalten. In diesem Lernmodul kannst du verschiedene Strategien entwickeln und ausprobieren, um Kredite möglichst “fair” an verschiedene Personengruppen zu verteilen. Dazu erkundest du zunächst die zugrundeliegenden Daten, entwickelst ein Entscheidungssystem zur Vergabe von Krediten, bewertest dieses und setzt anschließend verschiedene Fairness-Strategien um.
 
+
+<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+
+<i class="fa-solid fa-comments"></i>
