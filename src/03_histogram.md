@@ -40,7 +40,7 @@ function createTable(data) {
     header: {
       name: "Name",
       score: "Kreditscore",
-      type: "Zahlungsfähigkeit",
+      type: "Zahlungsfähigkeit in der Vergangenheit",
     },
     align: {
       name: "left",
