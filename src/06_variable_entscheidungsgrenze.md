@@ -14,6 +14,7 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 Jetzt kannst du die Entscheidungsgrenze variieren und die aus deiner Sicht optimale Entscheidungsgrenze festlegen.
 
 <div class="tip" label="Aufgabe">
+   <i class="fas fa-pencil-alt"></i>
 Welcher Wert stellt aus deiner Sicht eine optimale Entscheidungsgrenze dar? Notiere den Wert und begründe deine Wahl.
 </div>
 
