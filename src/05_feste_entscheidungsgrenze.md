@@ -123,7 +123,7 @@ Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (�
 
 
 VERSUCH: 
-
+```html
 <div class="table-container">
   <table>
     <thead>
@@ -139,7 +139,7 @@ VERSUCH:
     <tbody>
       <tr>
         <th>Daten:<br />Zahlt zurück</th>
-        <td contenteditable="false" style="background-color: green; color: white;">
+        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.5); color: white;">
           ${groupedData['Zahlt zurück']['aboveThreshAlt']}
         </td>
         <td contenteditable="false">
@@ -151,7 +151,7 @@ VERSUCH:
         <td contenteditable="false">
           ${groupedData['Zahlt nicht zurück']['aboveThreshAlt']}
         </td>
-        <td contenteditable="false" style="background-color: green; color: white;">
+        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.5); color: white;">
           ${groupedData['Zahlt nicht zurück']['belowThreshAlt']}
         </td>
       </tr>
@@ -160,7 +160,7 @@ VERSUCH:
   </table>
 </div>
 
-
+```
 
 
 
