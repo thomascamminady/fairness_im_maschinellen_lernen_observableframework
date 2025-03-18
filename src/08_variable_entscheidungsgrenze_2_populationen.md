@@ -210,9 +210,9 @@ display(
 ```js
 // Determine threshold for "Jung"
 let value = 70;
-if (connected === "Gleiche Grenze") {
+if (connected === "Gleiche Entscheidungsgrenzen") {
   value = threshold_Alt;
-} else if (connected === "Gleiche Richtig-positiv-Rate") {
+} else if (connected === "Gleiche Richtig-positiv-Raten") {
   // Reference value from "Alt" group
   const ref = true_positive_rate_Alt;
   let bestThreshold = 0;
@@ -243,7 +243,7 @@ if (connected === "Gleiche Grenze") {
   }
 
   value = bestThreshold;
-} else if (connected === "Gleiche positiv Rate") {
+} else if (connected === "Gleiche Positivraten") {
   // Reference value from "Alt" group
   const ref = positive_rate_Alt;
   let bestThreshold = 0;
