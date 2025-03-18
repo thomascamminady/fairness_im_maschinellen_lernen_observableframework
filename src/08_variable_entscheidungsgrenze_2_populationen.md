@@ -9,11 +9,6 @@ import { calculateMetrics } from "./js/calculateMetrics.js";
 
 # Faire Entscheidungsgrenzen!?
 
-<div class="tip" label="Aufgabe">
-  <i class="fas fa-pencil-alt"></i>
-  Fülle nun die folgende Tabelle aus.
-</div>
-
 <!-- Include Font Awesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
@@ -33,10 +28,12 @@ Diskutiert, was aus eurer Sicht faire Entscheidungsgrenzen für die beiden Perso
 
 
 <div class="tip" label="Aufgabe 2">
-Notiert die Grenzen, die ihr für die beiden Personengruppen wählt. Notiert zudem eure zugehörigen Argumente, warum diese Grenzen fair für beide Gruppen sind.
+ <i class="fas fa-pencil-alt"></i>
+  Notiert die Grenzen, die ihr für die beiden Personengruppen wählt. Notiert zudem eure zugehörigen Argumente, warum diese Grenzen fair für beide Gruppen sind.
 </div>
 
 <div class="tip" label="Aufgabe 3">
+   <i class="fas fa-pencil-alt"></i>
 <ol type="a">
   <li>Welche statistischen Gütemaße habt ihr genutzt, um eure Entscheidungsgrenzen festzulegen? </li>
   <li>Wieso habt ihr genau diese als relevant ausgewählt? </li>
