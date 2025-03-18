@@ -71,7 +71,7 @@ const fig_left = Plot.plot({
 
   x: {
     label: "Score",
-    domain: [10, 99],
+    domain: [0, 99],
   },
   y : {
     domain: [0, 10]
@@ -108,7 +108,7 @@ const fig_right = Plot.plot({
 
   x: {
     label: "Score",
-    domain: [10, 99],
+    domain: [0, 99],
   },
   y : {
     domain: [0, 10]
