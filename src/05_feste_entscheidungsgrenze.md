@@ -83,6 +83,8 @@ const groupedData = data.reduce((acc, item) => {
 Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (“zahlt zurück” und “zahlt nicht zurück”) sind in der folgenden Tabelle dargestellt. Diese Tabelle wird auch als Konfusionsmatrix bezeichnet.
 
 
+
+
 ```html
 <div class="table-container">
   <table>
@@ -99,47 +101,7 @@ Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (�
     <tbody>
       <tr>
         <th>Daten:<br />Zahlt zurück</th>
-        <td contenteditable="false">
-          ${groupedData['Zahlt zurück']['aboveThreshAlt']}
-        </td>
-        <td contenteditable="false">
-          ${groupedData['Zahlt zurück']['belowThreshAlt']}
-        </td>
-      </tr>
-      <tr>
-        <th>Daten:<br />Zahlt nicht zurück</th>
-        <td contenteditable="false">
-          ${groupedData['Zahlt nicht zurück']['aboveThreshAlt']}
-        </td>
-        <td contenteditable="false">
-          ${groupedData['Zahlt nicht zurück']['belowThreshAlt']}
-        </td>
-      </tr>
-      <tr></tr>
-    </tbody>
-  </table>
-</div>
-```
-
-
-VERSUCH: 
-```html
-<div class="table-container">
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th>Vorhersage:<br />Zahlt zurück</th>
-        <th>
-          Vorhersage:<br />
-          Zahlt nicht zurück
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Daten:<br />Zahlt zurück</th>
-        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.5); color: white;">
+        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.6); color: black;">
           ${groupedData['Zahlt zurück']['aboveThreshAlt']}
         </td>
         <td contenteditable="false">
