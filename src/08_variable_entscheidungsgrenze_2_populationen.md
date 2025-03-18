@@ -51,13 +51,13 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 const connected = view(
   Inputs.radio(
     [
-      "Unabhängig",
-      "Gleiche Grenze",
-      "Gleiche Positivrate",
-      "Gleiche Richtig-positiv-Rate",
+      "Unabhängig von Pinklandia",
+      "Gleiche Entscheidungsgrenzen",
+      "Gleiche Positivraten",
+      "Gleiche Richtig-positiv-Raten",
     ],
     {
-      label: "Regler Junge Menschen",
+      label: "Einstellung des Sliders von Grünhausen",
       value: "Unabhängig",
     }
   )
