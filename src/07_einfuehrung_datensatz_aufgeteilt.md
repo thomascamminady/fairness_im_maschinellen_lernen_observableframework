@@ -154,7 +154,8 @@ display(fig_right);
 
 
 <div class="tip" label="Aufgabe">
-Die Bank entscheidet sich, deine "optimale" Entscheidungsgrenze aus der vorherigen Aufgabe für beide Personengruppen zu verwenden. 
+ <i class="fas fa-pencil-alt"></i>
+  Die Bank entscheidet sich, deine "optimale" Entscheidungsgrenze aus der vorherigen Aufgabe für beide Personengruppen zu verwenden. 
 <ol type="a">
   <li>Finde möglichst viele Kritikpunkte an diesem Modell.</li>
   <li>Argumentiere aus Sicht der Bank, wieso das ein gutes Modell ist.</li>
