@@ -85,6 +85,7 @@ Wie muss die Entscheidungsgrenze gewählt werden, damit alle Personen einen Kred
 </div>
 
 <div class="tip" label="Aufgabe 3">
+   <i class="fas fa-pencil-alt"></i>
 Ab welchem Kreditscore würdest du einen Kredit vergeben? Begründe deine Antwort basierend auf dem dargestellten Datensatz. 
 </div>
  
