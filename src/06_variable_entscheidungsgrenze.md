@@ -114,7 +114,7 @@ const {
     <tbody>
       <tr>
         <th>Daten:<br />zahlt zurück</th>
-        <td contenteditable="false">
+        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.35); color: black;">
           ${groupedData['Zahlt zurück']['abovethreshold']}
         </td>
         <td contenteditable="false">
@@ -123,10 +123,10 @@ const {
       </tr>
       <tr>
         <th>Daten:<br />zahlt nicht zurück</th>
-        <td contenteditable="false">
+        <td contenteditable="false"> 
           ${groupedData['Zahlt nicht zurück']['abovethreshold']}
         </td>
-        <td contenteditable="false">
+        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.35); color: black;">
           ${groupedData['Zahlt nicht zurück']['belowthreshold']}
         </td>
       </tr>
@@ -135,6 +135,8 @@ const {
   </table>
 </div>
 ```
+
+
 
 ```html
 <div class="table-container">
