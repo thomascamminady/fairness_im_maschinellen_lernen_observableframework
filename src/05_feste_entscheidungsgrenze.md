@@ -101,7 +101,7 @@ Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (�
     <tbody>
       <tr>
         <th>Daten:<br />Zahlt zurück</th>
-        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.6); color: black;">
+        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.4); color: black;">
           ${groupedData['Zahlt zurück']['aboveThreshAlt']}
         </td>
         <td contenteditable="false">
@@ -113,7 +113,7 @@ Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (�
         <td contenteditable="false">
           ${groupedData['Zahlt nicht zurück']['aboveThreshAlt']}
         </td>
-        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.5); color: white;">
+        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.4); color: black;">
           ${groupedData['Zahlt nicht zurück']['belowThreshAlt']}
         </td>
       </tr>
