@@ -5,6 +5,10 @@ style: css/custom.css
 
 # Der Datensatz
 
+<!-- Include Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
 ```js
 const data = await FileAttachment("data/user/distribution.csv").csv({
   typed: true,
