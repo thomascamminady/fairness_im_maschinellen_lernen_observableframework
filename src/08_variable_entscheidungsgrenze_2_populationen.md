@@ -23,6 +23,9 @@ Diskutiert, was aus eurer Sicht faire Entscheidungsgrenzen für die beiden Perso
 </div>
 
 <div class="tip" label="Aufgabe 2">
+   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.502 1.5L14.5 0L8 6.5L1.5 0L0.5 1.5L6.5 8L0.5 14.5L1.5 16L8 9.5L14.5 16L15.5 14.5L10.5 8L15.5 1.5Z" fill="#000" />
+  </svg>
 Notiert die Grenzen, die ihr für die beiden Personengruppen wählt. Notiert zudem eure zugehörigen Argumente, warum diese Grenzen fair für beide Gruppen sind.
 </div>
 
