@@ -17,7 +17,7 @@ In den folgenden beiden Diagrammen werden die Daten der beiden Bevölkerungsgrup
 
 <div class="tip" label="Aufgabe 1 (Diskussion)">
 <p>
-Diskutiert in Gruppen, ob ihr unterschiedliche Entscheidungsgrenzen wählen würdet oder nur eine, die für beide Gruppen gilt. 
+ <i class="fas fa-comments"></i> Diskutiert in Gruppen, ob ihr unterschiedliche Entscheidungsgrenzen wählen würdet oder nur eine, die für beide Gruppen gilt. 
 Ziel sollte sein, dass keine Gruppe von Menschen ungerecht behandelt oder systematisch benachteiligt wird.
 </p>
 
@@ -33,7 +33,7 @@ Diskutiert, was aus eurer Sicht faire Entscheidungsgrenzen für die beiden Perso
 </div>
 
 <div class="tip" label="Aufgabe 3">
-   <i class="fas fa-pencil-alt"></i>
+   <i class="fas fa-pencil-alt"></i> Notiere deine Antworten zu folgenden Fragen auf dem Antwortblatt.
 <ol type="a">
   <li>Welche statistischen Gütemaße habt ihr genutzt, um eure Entscheidungsgrenzen festzulegen? </li>
   <li>Wieso habt ihr genau diese als relevant ausgewählt? </li>
