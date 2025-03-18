@@ -122,6 +122,48 @@ Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (�
 ```
 
 
+VERSUCH: 
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Vorhersage:<br />Zahlt zurück</th>
+        <th>
+          Vorhersage:<br />
+          Zahlt nicht zurück
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Daten:<br />Zahlt zurück</th>
+        <td contenteditable="false" style="background-color: green; color: white;">
+          ${groupedData['Zahlt zurück']['aboveThreshAlt']}
+        </td>
+        <td contenteditable="false">
+          ${groupedData['Zahlt zurück']['belowThreshAlt']}
+        </td>
+      </tr>
+      <tr>
+        <th>Daten:<br />Zahlt nicht zurück</th>
+        <td contenteditable="false">
+          ${groupedData['Zahlt nicht zurück']['aboveThreshAlt']}
+        </td>
+        <td contenteditable="false" style="background-color: green; color: white;">
+          ${groupedData['Zahlt nicht zurück']['belowThreshAlt']}
+        </td>
+      </tr>
+      <tr></tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
 <div class="tip" label="Aufgabe 1">
 Wie viele Personen erhalten bei einer Entscheidungsgrenze von 70 insgesamt einen Kredit?
 </div>
