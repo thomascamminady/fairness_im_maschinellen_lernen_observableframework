@@ -108,7 +108,7 @@ display(
     },
     x: {
       label: "Score",
-      domain: [0, 99],
+      domain: [10, 99],
     },
     y: {
       domain: [0, 10],
@@ -317,7 +317,7 @@ display(
     },
     x: {
       label: "Score",
-      domain: [0, 99],
+      domain: [10, 99],
     },
     y: {
       domain: [0, 10],
