@@ -156,7 +156,7 @@ display(
     <tbody>
       <tr>
         <th>Daten:<br />zahlt zurück</th>
-        <td contenteditable="false">
+        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.35); color: black;">
           ${grp_Alt['Zahlt zurück']['abovethreshold']}
         </td>
         <td contenteditable="false">
@@ -168,7 +168,7 @@ display(
         <td contenteditable="false">
           ${grp_Alt['Zahlt nicht zurück']['abovethreshold']}
         </td>
-        <td contenteditable="false">
+        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.35); color: black;">
           ${grp_Alt['Zahlt nicht zurück']['belowthreshold']}
         </td>
       </tr>
@@ -362,7 +362,7 @@ display(
     <tbody>
       <tr>
         <th>Daten:<br />zahlt zurück</th>
-        <td contenteditable="false">
+        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.35); color: black;">
           ${grp_Jung['Zahlt zurück']['abovethreshold']}
         </td>
         <td contenteditable="false">
@@ -374,7 +374,7 @@ display(
         <td contenteditable="false">
           ${grp_Jung['Zahlt nicht zurück']['abovethreshold']}
         </td>
-        <td contenteditable="false">
+        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.35); color: black;">
           ${grp_Jung['Zahlt nicht zurück']['belowthreshold']}
         </td>
       </tr>
