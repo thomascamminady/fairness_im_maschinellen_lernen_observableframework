@@ -150,7 +150,7 @@ Es gibt verschiedene Gütemaße, die wir zur Bewertung unseres Modells verwenden
 - <b>Genauigkeit:</b> Die Genauigkeit gibt den prozentualen Anteil der richtigen Vorhersagen an der Gesamtzahl aller Datenpunkte an.
 - <b>Positivrate:</b> Die Positivrate gibt den prozentualen Anteil der positiven Vorhersagen (Vorhersage: zahlt zurück) an der Gesamtzahl aller Datenpunkte an.
 - <b>Richtig-positiv-Rate:</b> Die Richtig-positiv-Rate gibt den prozentualen Anteil der richtig positiven Vorhersagen (richtig als "zahlt zurück" vorhergesagt) an der Anzahl aller tatsächlich positiven Datenpunkte (Daten: zahlt zurück) an.
-- <b>Gewinn:</b> Erzielter Gesamtgewinn der Bank
+- <b>Gewinn:</b> Erzielter Gesamtgewinn der Bank (Erinnerung: die Bank erhält 300€ für jeden zurückgezahlten Kredit und verliert 700€ für jeden nicht zurückgezahlten Kredit).
 
 
 
