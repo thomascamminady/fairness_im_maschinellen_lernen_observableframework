@@ -24,7 +24,7 @@ const total_profit = num_people_payback * profit_approved_payback - num_people_n
 Das ist unsere Ausgangssituation: Eine Bank vergibt Kredite von ${total_credit}€.
 
 - Personen, die einen Kredit erhalten und zurückzahlen, zahlen den Betrag mit ${100*interest_rate} \% Zinsen zurück. Das heißt, die Bank erhält ${total_credit + total_credit * interest_rate}€ zurück.
-- Vergibt die Bank einen Kredit an Personen, die diesen nicht oder nur teilweise zurückzahlen, macht die Bank im Durchschnitt ${loss}€ Verlust (Hinweis: Die Bank ist versichert, daher verliert sie nicht den vollen Betrag).
+- Vergibt die Bank einen Kredit an eine Personen, die diesen nicht oder nur teilweise zurückzahlen, macht die Bank ${loss}€ Verlust pro Person (Hinweis: Die Bank ist versichert, daher verliert sie meist nicht den vollen Betrag).
 
 <div class="tip" label="Aufgabe">Fülle nun die folgende Tabelle aus.</div>
 
