@@ -37,7 +37,8 @@ export function calculateMetrics(data, ageGroup, threshold) {
     const accuracy = Math.round(((n_true_positive + n_true_negative) / (n_true_positive + n_false_positive + n_false_negative + n_true_negative)) * 100);
     const positive_rate = Math.round(((n_true_positive + n_false_positive) / (n_true_positive + n_false_positive + n_false_negative + n_true_negative)) * 100);
     const true_positive_rate = recall;
-    const gewinn = 250 * n_true_positive - 1000 * n_false_positive
+    //const gewinn = 250 * n_true_positive - 1000 * n_false_positive
+    const gewinn = 300 * n_true_positive - 700 * n_false_positive
     return {
         grp,
         n_true_positive,

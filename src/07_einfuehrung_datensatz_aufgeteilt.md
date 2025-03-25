@@ -1,9 +1,15 @@
 ---
-title: Datensatz aufgeteilt
+title: Zwei Personengruppen
 style: css/custom.css
 ---
 
-# Was finden wir wirklich in unseren Daten?
+# Zwei Personengruppen
+
+## Was finden wir wirklich in unseren Daten?
+
+<!-- Include Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
 
 ```js
 const data = FileAttachment("data/user/distribution.csv").csv({
@@ -11,12 +17,12 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 });
 ```
 
-Bisher haben wir unseren Datensatz eingefärbt basierend auf der Frage, ob eine Person den beantragten Kredit zurückzahlen wird.
+Bisher haben wir die 400 Personen in unserem Datensatz lediglich danach unterschieden, ob sie zahlungsfähig sind (dunkelblau) oder nicht (hellblau).
 
 ```js
 const fig = Plot.plot({
-  width: 1000,
-  height: 500,
+  width: 600,
+  height: 200,
   style: {
     fontSize: 18,
   },
@@ -35,6 +41,11 @@ const fig = Plot.plot({
         x: "score",
         fill: "type",
         sort: "type",
+                sort: {
+          value: "type", 
+          reverse: false 
+        },
+        reverse: true
       })
     ),
     Plot.ruleY([0]),
@@ -43,12 +54,17 @@ const fig = Plot.plot({
 display(fig);
 ```
 
-Was wir allerdings verschwiegen haben: In unserem Datensatz waren zwei diskrete Klassen von Bewerben vertreten. Zum einen haben wir Bewerber im jungen Alter (grün), zum anderen sehen wir Bewerber im hohen Alter (lila).
+Wir wissen allerdings noch mehr. Unser Datensatz besteht tatsächlich aus zwei Bevölkerungsgruppen, die sich in einem wesentlichen Merkmal unterscheiden. Dieses Merkmal könnte beispielsweise das Geschlecht, die ethnische Herkunft oder das Alter (alt vs. jung) sein. In unserem Datenbeispiel unterscheiden wir die Personen nach ihrer fiktiven Herkunft aus “Grünhausen” und “Pinklandia”.
+
+In beiden Bevölkerungsgruppen gibt es je 100 Personen, die zahlungsfähig sind, und 100 Personen, die nicht zahlungsfähig sind. Damit ist es in beiden Populationen gleichwahrscheinlich, dass eine Person zahlungsfähig ist. 
+
+Die Anwendung des Kreditscore-Modells liefert jedoch deutlich unterschiedliche Verteilungen für die beiden Personengruppen. Dies wird in den folgenden Grafiken ersichtlich. 
+
 
 ```js
-const fig = Plot.plot({
-  width: 1000,
-  height: 500,
+const fig_left = Plot.plot({
+  width: 600,
+  height: 200,
   style: {
     fontSize: 18,
   },
@@ -57,42 +73,9 @@ const fig = Plot.plot({
     label: "Score",
     domain: [0, 99],
   },
-  color: {
-    legend: true,
-    domain: ["Jung", "Alt"],
-    range: ["#33a02c", "#6a3d9a"],
+  y : {
+    domain: [0, 10]
   },
-  marks: [
-    Plot.dot(
-      data,
-      Plot.stackY2({
-        x: "score",
-        fill: "age",
-        sort: "type",
-        fillOpacity: (d) => (d.type == "Zahlt zurück" ? 1 : 0.3),
-      })
-    ),
-    Plot.ruleY([0]),
-  ],
-});
-display(fig);
-```
-
-Wir können die beiden Verteilungen auch separat betrachten. Hier ist die Verteilung der jungen Bewerber.
-
-```js
-const fig = Plot.plot({
-  width: 1000,
-  height: 250,
-  style: {
-    fontSize: 18,
-  },
-
-  x: {
-    label: "Score",
-    domain: [0, 99],
-  },
-
   color: {
     legend: true,
     domain: ["Zahlt zurück", "Zahlt nicht zurück"],
@@ -105,22 +88,20 @@ const fig = Plot.plot({
         x: "score",
         fill: "type",
         sort: "type",
+                sort: {
+          value: "type", 
+          reverse: false 
+        },
+        reverse: true
       })
     ),
     Plot.ruleY([0]),
   ],
 });
-display(fig);
-```
 
-Hier sehen wir 500 Bewerber und Bewerberinnen welche ihren Kredit zurück zahlen würden (mittlerer Kreditscore von 55), sowie 500 Bewerber und Bewerberinnen die ihren Kredit nicht zurück zahlen würden (mittlerer Kreditscore von 40).
-
-Als nächstes sehen wir die Verteilung der alten Bewerber.
-
-```js
-const fig = Plot.plot({
-  width: 1000,
-  height: 250,
+const fig_right = Plot.plot({
+  width: 600,
+  height: 200,
   style: {
     fontSize: 18,
   },
@@ -128,6 +109,9 @@ const fig = Plot.plot({
   x: {
     label: "Score",
     domain: [0, 99],
+  },
+  y : {
+    domain: [0, 10]
   },
 
   color: {
@@ -142,14 +126,45 @@ const fig = Plot.plot({
         x: "score",
         fill: "type",
         sort: "type",
+        sort: {
+          value: "type", 
+          reverse: false 
+        },
+        reverse: true
       })
     ),
     Plot.ruleY([0]),
   ],
 });
-display(fig);
 ```
 
-Auch hier sehen wir 500 Bewerber und Bewerberinnen welche ihren Kredit zurück zahlen würden, sowie 500 Bewerber und Bewerberinnen die ihren Kredit nicht zurück zahlen würden. Allerdings sind die mittleren Kreditscores hierbei 65 (zahlt zurück) und 50 (zahlt nicht zurück).
 
-Wir stellen fest: Obwohl die Wahrscheinlichkeit, dass ein Kredit zurück gezahlt wird, in beiden Gruppen bei 50% liegt, hat die Gruppe der alten Bewerber einen höheren Kreditscore als die Gruppe der jungen Bewerber.
+<img src="img/fairness_grafik.png" alt="Verteilung der beiden Personengruppen" />
+<div class="grid grid-cols-2">
+  <div class="card" style="max-width: 700px; ">
+
+```js
+display(fig_left);
+```
+  </div>
+  <div class="card" style="max-width: 700px; ">
+
+```js
+display(fig_right);
+```
+
+  </div>
+</div>
+
+
+<div class="tip" label="Aufgabe">
+ <i class="fas fa-pencil-alt"></i>
+  Die Bank entscheidet sich, deine "optimale" Entscheidungsgrenze aus der vorherigen Aufgabe für beide Personengruppen zu verwenden. 
+<ol type="a">
+  <li>Finde möglichst viele Kritikpunkte an diesem Ansatz</li>
+  <li>Argumentiere aus Sicht der Bank, wieso das ein guter Ansatz ist.</li>
+</ol>
+</div>
+
+
+

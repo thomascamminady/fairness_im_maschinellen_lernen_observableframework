@@ -1,28 +1,31 @@
 ---
-title: Variable Entscheidungsgrenze
+title: Variable Decision Boundary
 style: css/custom.css
 ---
 
-# Variable Entscheidungsgrenze
-
-<!-- Include Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
+# Variable Decision Boundary
 
 ```js
-const data = FileAttachment("data/user/distribution.csv").csv({
+const data = await FileAttachment("data/user/distribution.csv").csv({
   typed: true,
+});
+
+data.forEach(d => {
+  if (d.type === "Zahlt zurück") {
+    d.type_en = "Repays";
+  } else if (d.type === "Zahlt nicht zurück") {
+    d.type_en = "Does not repay";
+  }
 });
 ```
 
-Jetzt kannst du die Entscheidungsgrenze variieren und die aus deiner Sicht optimale Entscheidungsgrenze festlegen.
+Here you can vary the decision boundary and set what you consider to be the optimal decision boundary.
 
-<div class="tip" label="Aufgabe">
-   <i class="fas fa-pencil-alt"></i>
-Welcher Wert stellt aus deiner Sicht eine optimale Entscheidungsgrenze dar? Notiere den Wert und begründe deine Wahl.
+<div class="tip" label="Task">
+Note down your chosen decision boundary value and explain your choice.
 </div>
 
-Entscheidungsgrenze:
+Decision boundary:
 
 ```js
 const threshAlt = view(
@@ -45,6 +48,9 @@ display(
       label: "Score",
       domain: [0, 99],
     },
+    y: {
+      label: "Count",
+    },
     color: {
       legend: true,
       scheme: "Paired",
@@ -54,14 +60,14 @@ display(
         data,
         Plot.stackY2({
           x: "score",
-          fill: "type",
-          sort: "type",
+          fill: "type_en",
+          sort: "type_en",
           fillOpacity: (d) => (d.score < threshAlt ? 0.3 : 1),
-                  sort: {
-          value: "type", 
-          reverse: false 
-        },
-        reverse: true
+          sort: {
+            value: "type_en",
+            reverse: false
+          },
+          reverse: true
         })
       ),
       Plot.ruleY([0]),
@@ -71,7 +77,7 @@ display(
 );
 ```
 
-Unsere Vorhersage bei einer Entscheidungsgrenze von ${threshAlt}:
+Our prediction with a decision boundary of ${threshAlt}:
 
 ```js
 import { calculateMetrics } from "./js/calculateMetrics.js";
@@ -102,19 +108,19 @@ const {
       <tr>
         <th></th>
         <th>
-          Vorhersage:<br />
-          zahlt zurück
+          Prediction:<br />
+          will repay
         </th>
         <th>
-          Vorhersage:<br />
-          zahlt nicht zurück
+          Prediction:<br />
+          will not repay
         </th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th>Daten:<br />zahlt zurück</th>
-        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.35); color: black;">
+        <th>Data:<br />repays</th>
+        <td contenteditable="false">
           ${groupedData['Zahlt zurück']['abovethreshold']}
         </td>
         <td contenteditable="false">
@@ -122,11 +128,11 @@ const {
         </td>
       </tr>
       <tr>
-        <th>Daten:<br />zahlt nicht zurück</th>
-        <td contenteditable="false"> 
+        <th>Data:<br />does not repay</th>
+        <td contenteditable="false">
           ${groupedData['Zahlt nicht zurück']['abovethreshold']}
         </td>
-        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.35); color: black;">
+        <td contenteditable="false">
           ${groupedData['Zahlt nicht zurück']['belowthreshold']}
         </td>
       </tr>
@@ -136,17 +142,15 @@ const {
 </div>
 ```
 
-
-
 ```html
 <div class="table-container">
   <table>
     <thead>
       <tr>
-        <th>Genauigkeit</th>
-        <th>Positivrate</th>
-        <th>Richtig-positiv-Rate</th>
-        <th>Gewinn</th>
+        <th>Accuracy</th>
+        <th>Positive Rate</th>
+        <th>True Positive Rate</th>
+        <th>Profit</th>
       </tr>
     </thead>
     <tbody>

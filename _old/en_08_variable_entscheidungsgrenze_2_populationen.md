@@ -1,49 +1,37 @@
 ---
-title: Faire Entscheidungsgrenzen!?
+title: Variable Decision Boundary, Two Population Groups
 style: css/custom.css
 ---
-
 ```js
 import { calculateMetrics } from "./js/calculateMetrics.js";
 ```
 
-# Faire Entscheidungsgrenzen!?
+# Variable Decision Boundaries for Two Population Groups
 
-<!-- Include Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+The dataset used so far consists of data from two population groups: the Purple Population and the Green Population.
 
+In the following two histograms, the data of both population groups are shown separately. The bank can choose different decision boundaries for both population groups - but doesn't have to.
 
-In den folgenden beiden Diagrammen werden die Daten der beiden Bevölkerungsgruppen getrennt dargestellt. Die Bank kann für beide Personengruppen unterschiedliche Entscheidungsgrenzen wählen – muss sie aber nicht.
-
-<div class="tip" label="Aufgabe 1 (Diskussion)">
-<p>
- <i class="fas fa-comments"></i> Diskutiert in Gruppen, ob ihr unterschiedliche Entscheidungsgrenzen wählen würdet oder nur eine, die für beide Gruppen gilt. 
-Ziel sollte sein, dass keine Gruppe von Menschen ungerecht behandelt oder systematisch benachteiligt wird.
-</p>
-
-<p>
-Diskutiert, was aus eurer Sicht faire Entscheidungsgrenzen für die beiden Personengruppen sind. Berücksichtigt dabei, dass auch die Bank mit ihrem Gewinn zufrieden sein sollte.
-</p>
-</div>
-
-
-<div class="tip" label="Aufgabe 2">
- <i class="fas fa-pencil-alt"></i>
-  Notiert die Grenzen, die ihr für die beiden Personengruppen wählt. Notiert zudem eure zugehörigen Argumente, warum diese Grenzen fair für beide Gruppen sind.
-</div>
-
-<div class="tip" label="Aufgabe 3">
-   <i class="fas fa-pencil-alt"></i> Notiere deine Antworten zu folgenden Fragen auf dem Antwortblatt.
-<ol type="a">
-  <li>Welche statistischen Gütemaße habt ihr genutzt, um eure Entscheidungsgrenzen festzulegen? </li>
-  <li>Wieso habt ihr genau diese als relevant ausgewählt? </li>
-  <li>Wie seid ihr basierend auf diesen Gütemaßen zur Festlegung eurer Entscheidungsgrenzen gekommen?</li>
-</ol>
+<div class="tip" label="Task">
+Discuss in groups how you would choose the two decision boundaries to be as fair as possible from your perspective. Note down the values for your decision boundaries and justify your choice. Also describe what you understand by "fair".
 </div>
 
 ```js
-const data = FileAttachment("data/user/distribution.csv").csv({
+const data = await FileAttachment("data/user/distribution.csv").csv({
   typed: true,
+});
+
+data.forEach(d => {
+  if (d.type === "Zahlt zurück") {
+    d.type_en = "Repays";
+  } else if (d.type === "Zahlt nicht zurück") {
+    d.type_en = "Does not repay";
+  }
+  if (d.age === "Jung") {
+    d.age_en = "Green Population";
+  } else if (d.age === "Alt") {
+    d.age_en = "Purple Population"; 
+  }
 });
 ```
 
@@ -51,14 +39,14 @@ const data = FileAttachment("data/user/distribution.csv").csv({
 const connected = view(
   Inputs.radio(
     [
-      "Unabhängig von Pinklandia",
-      "Gleiche Entscheidungsgrenzen",
-      "Gleiche Positivraten",
-      "Gleiche Richtig-positiv-Raten",
+      "Independent",
+      "Same Threshold",
+      "Same Positive Rate",
+      "Same True Positive Rate",
     ],
     {
-      label: "Einstellung des Sliders von Grünhausen",
-      value: "Unabhängig",
+      label: "Green Population Controls",
+      value: "Independent",
     }
   )
 );
@@ -67,7 +55,7 @@ const connected = view(
 <div class="grid grid-cols-2">
   <div class="card" style="max-width: 700px; ">
 
-<h2>Entscheidungsgrenze Pinklandia</h2>
+<h2>Decision Boundary Purple Population</h2>
 
 ```js
 const threshold_Alt = view(
@@ -112,24 +100,25 @@ display(
     },
     y: {
       domain: [0, 10],
-      label: "Anzahl"
+      label: "Count"
     },
     color: {
       legend: true,
-      domain: ["Zahlt nicht zurück", "Zahlt zurück"],
+      domain: ["Does not repay", "Repays"],
       range: ["#cab2d6", "#6a3d9a"],
+      label: "Repayment Status"
     },
     opacity: {
       legend: true,
     },
     marks: [
       Plot.dot(
-        data.filter((d) => d.age === "Alt"),
+        data.filter((d) => d.age_en === "Purple Population"),
         Plot.stackY2({
           x: "score",
-          fill: "type",
+          fill: "type_en",
           sort: {
-            value: "type",
+            value: "type_en",
             reverse: false
           },
           reverse: true,
@@ -149,14 +138,14 @@ display(
     <thead>
       <tr>
         <th></th>
-        <th>Vorhersage:<br />zahlt zurück</th>
-        <th>Vorhersage:<br />zahlt nicht zurück</th>
+        <th>Prediction:<br />repays</th>
+        <th>Prediction:<br />does not repay</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th>Daten:<br />zahlt zurück</th>
-        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.35); color: black;">
+        <th>Data:<br />repays</th>
+        <td contenteditable="false">
           ${grp_Alt['Zahlt zurück']['abovethreshold']}
         </td>
         <td contenteditable="false">
@@ -164,11 +153,11 @@ display(
         </td>
       </tr>
       <tr>
-        <th>Daten:<br />zahlt nicht zurück</th>
+        <th>Data:<br />does not repay</th>
         <td contenteditable="false">
           ${grp_Alt['Zahlt nicht zurück']['abovethreshold']}
         </td>
-        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.35); color: black;">
+        <td contenteditable="false">
           ${grp_Alt['Zahlt nicht zurück']['belowthreshold']}
         </td>
       </tr>
@@ -183,10 +172,10 @@ display(
   <table>
     <thead>
       <tr>
-        <th>Genauig- keit</th>
-        <th>Positivrate</th>
-        <th>Richtig-positiv-Rate</th>
-        <th>Gewinn</th>
+        <th>Accuracy</th>
+        <th>Positive Rate</th>
+        <th>True Positive Rate</th>
+        <th>Profit</th>
       </tr>
     </thead>
     <tbody>
@@ -205,14 +194,14 @@ display(
 
   <div class="card" style="max-width: 500px; ">
 
-<h2>Entscheidungsgrenze Grünhausen</h2>
+<h2>Decision Boundary Green Population</h2>
 
 ```js
-// Determine threshold for "Jung"
+// Update the threshold logic to use English values
 let value = 70;
-if (connected === "Gleiche Entscheidungsgrenzen") {
+if (connected === "Same Threshold") {
   value = threshold_Alt;
-} else if (connected === "Gleiche Richtig-positiv-Raten") {
+} else if (connected === "Same True Positive Rate") {
   // Reference value from "Alt" group
   const ref = true_positive_rate_Alt;
   let bestThreshold = 0;
@@ -243,7 +232,7 @@ if (connected === "Gleiche Entscheidungsgrenzen") {
   }
 
   value = bestThreshold;
-} else if (connected === "Gleiche Positivraten") {
+} else if (connected === "Same Positive Rate") {
   // Reference value from "Alt" group
   const ref = positive_rate_Alt;
   let bestThreshold = 0;
@@ -321,21 +310,25 @@ display(
     },
     y: {
       domain: [0, 10],
-      label: "Anzahl"
+      label: "Count"
     },
     color: {
       legend: true,
-      domain: ["Zahlt nicht zurück", "Zahlt zurück"],
+      domain: ["Does not repay", "Repays"],
       range: ["#b2df8a", "#33a02c"],
+      label: "Repayment Status"
+    },
+    opacity: {
+      legend: true,
     },
     marks: [
       Plot.dot(
-        data.filter((d) => d.age === "Jung"),
+        data.filter((d) => d.age_en === "Green Population"),
         Plot.stackY2({
           x: "score",
-          fill: "type",
+          fill: "type_en",
           sort: {
-            value: "type",
+            value: "type_en",
             reverse: false
           },
           reverse: true,
@@ -355,14 +348,14 @@ display(
     <thead>
       <tr>
         <th></th>
-        <th>Vorhersage:<br />zahlt zurück</th>
-        <th>Vorhersage:<br />zahlt nicht zurück</th>
+        <th>Prediction:<br />repays</th>
+        <th>Prediction:<br />does not repay</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th>Daten:<br />zahlt zurück</th>
-        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.35); color: black;">
+        <th>Data:<br />repays</th>
+        <td contenteditable="false">
           ${grp_Jung['Zahlt zurück']['abovethreshold']}
         </td>
         <td contenteditable="false">
@@ -370,11 +363,11 @@ display(
         </td>
       </tr>
       <tr>
-        <th>Daten:<br />zahlt nicht zurück</th>
+        <th>Data:<br />does not repay</th>
         <td contenteditable="false">
           ${grp_Jung['Zahlt nicht zurück']['abovethreshold']}
         </td>
-        <td contenteditable="false" style="background-color: rgba(0, 128, 0, 0.35); color: black;">
+        <td contenteditable="false">
           ${grp_Jung['Zahlt nicht zurück']['belowthreshold']}
         </td>
       </tr>
@@ -389,10 +382,10 @@ display(
   <table>
     <thead>
       <tr>
-        <th>Genauig- keit</th>
-        <th>Positivrate</th>
-        <th>Richtig-positiv-Rate</th>
-        <th>Gewinn</th>
+        <th>Accuracy</th>
+        <th>Positive Rate</th>
+        <th>True Positive Rate</th>
+        <th>Profit</th>
       </tr>
     </thead>
     <tbody>
@@ -408,8 +401,8 @@ display(
 ```
 
 </div>
+</div>
 
 ```html
-<p>
-Der Gesamtgewinn der Bank beträgt ${gewinn_Alt + gewinn_Jung}€.
-</p>
+The total profit of the bank is ${gewinn_Alt + gewinn_Jung}€.
+```
