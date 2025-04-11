@@ -99,25 +99,6 @@ display(
 );
 ```
 
-```js
-const groupedData = data.reduce((acc, item) => {
-    const type = item.type;
-    const score = item.score;
-    if (!acc[type]) {
-        acc[type] = {
-            belowThreshAlt: 0,
-            aboveThreshAlt: 0,
-        };
-    }
-    if (score < fixedThreshAlt) {
-        acc[type].belowThreshAlt += 1;
-    } else {
-        acc[type].aboveThreshAlt += 1;
-    }
-    return acc;
-}, {});
-```
-
 ## Die Konfusionsmatrix
 
 Die Anzahl der richtigen und falschen Vorhersagen für beide Personengruppen (“zahlt zurück” und “zahlt nicht zurück”) sind in der folgenden Tabelle dargestellt. Diese Tabelle wird auch als Konfusionsmatrix bezeichnet.
