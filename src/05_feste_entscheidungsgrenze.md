@@ -8,10 +8,50 @@ style: css/custom.css
 ## Ist die Entscheidungsgrenze wirklich gut gewählt?
 
 ```js
-const data = FileAttachment("data/user/distribution.csv").csv({
+const data = await FileAttachment("data/user/distribution.csv").csv({
     typed: true,
 });
 const fixedThreshAlt = 70;
+
+// Calculate grouped data for the confusion matrix
+const groupedData = data.reduce((acc, item) => {
+    const type = item.type;
+    const score = item.score;
+    if (!acc[type]) {
+        acc[type] = {
+            belowThreshAlt: 0,
+            aboveThreshAlt: 0,
+        };
+    }
+    if (score < fixedThreshAlt) {
+        acc[type].belowThreshAlt += 1;
+    } else {
+        acc[type].aboveThreshAlt += 1;
+    }
+    return acc;
+}, {});
+
+// Calculate metrics for the validation
+const TP = groupedData["Zahlt zurück"].aboveThreshAlt;
+const FN = groupedData["Zahlt zurück"].belowThreshAlt;
+const FP = groupedData["Zahlt nicht zurück"].aboveThreshAlt;
+const TN = groupedData["Zahlt nicht zurück"].belowThreshAlt;
+
+const totalPersons = TP + FN + FP + TN;
+const totalCreditReceived = TP + FP;
+const nonPayingWithCredit = FP;
+
+// Calculate metrics
+const accuracy = Math.round(((TP + TN) / totalPersons) * 100);
+const positiveRate = Math.round((totalCreditReceived / totalPersons) * 100);
+const truePositiveRate = Math.round((TP / (TP + FN)) * 100);
+const profit = TP * 300 - FP * 700;
+
+// Calculate percentages for other questions
+const percentCapablePaying = Math.round((TP / (TP + FN)) * 100);
+const percentTotalCredit = Math.round(
+    (totalCreditReceived / totalPersons) * 100
+);
 ```
 
 Zur Beantwortung dieser Frage und zur Validierung des Kreditvergabesystems werden wir den Gesamtprofit sowie verschiedene statische Gütemaße nutzen.
@@ -142,7 +182,10 @@ display(html` <div class="table-container">
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="true" data-correct="33"></td>
+                <td
+                    contenteditable="true"
+                    data-correct="${totalCreditReceived}"
+                ></td>
             </tr>
         </tbody>
     </table>
@@ -172,7 +215,10 @@ display(html` <div class="table-container">
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="true" data-correct="1"></td>
+                <td
+                    contenteditable="true"
+                    data-correct="${nonPayingWithCredit}"
+                ></td>
             </tr>
         </tbody>
     </table>
@@ -214,10 +260,13 @@ Berechne die Werte der vier Gütemaße. Nutze dazu die Werte in der Konfusionsma
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="true" data-correct="1"></td>
-                <td contenteditable="true" data-correct="1"></td>
-                <td contenteditable="true" data-correct="1"></td>
-                <td contenteditable="true" data-correct="1"></td>
+                <td contenteditable="true" data-correct="${accuracy}"></td>
+                <td contenteditable="true" data-correct="${positiveRate}"></td>
+                <td
+                    contenteditable="true"
+                    data-correct="${truePositiveRate}"
+                ></td>
+                <td contenteditable="true" data-correct="${profit}"></td>
             </tr>
         </tbody>
     </table>
@@ -247,7 +296,10 @@ display(html` <div class="table-container">
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="true" data-correct="1"></td>
+                <td
+                    contenteditable="true"
+                    data-correct="${percentCapablePaying}"
+                ></td>
             </tr>
         </tbody>
     </table>
@@ -277,7 +329,10 @@ display(html` <div class="table-container">
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="true" data-correct="1"></td>
+                <td
+                    contenteditable="true"
+                    data-correct="${percentTotalCredit}"
+                ></td>
             </tr>
         </tbody>
     </table>

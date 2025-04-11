@@ -149,7 +149,7 @@ display(html`
                 </tr>
                 <tr>
                     <th>Aufgabe 2</th>
-                    <td contenteditable="true" data-correct="C"></td>
+                    <td contenteditable="true" data-correct="B"></td>
                 </tr>
                 <tr>
                     <th>Aufgabe 3</th>

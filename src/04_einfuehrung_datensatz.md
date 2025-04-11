@@ -17,6 +17,24 @@ const numberOfPersons = data.length;
 // Count the number of people who repay and don't repay
 const repayCount = data.filter((d) => d.type === "Zahlt zurück").length;
 const noRepayCount = data.filter((d) => d.type === "Zahlt nicht zurück").length;
+
+// Calculate the correct thresholds for the validation
+const nonPayingScores = data
+    .filter((d) => d.type === "Zahlt nicht zurück")
+    .map((d) => d.score);
+const payingScores = data
+    .filter((d) => d.type === "Zahlt zurück")
+    .map((d) => d.score);
+
+// Aufgabe 1: Threshold where only paying customers get credit
+// This is the score right above the highest non-paying score
+const maxNonPayingScore = Math.max(...nonPayingScores);
+const threshold1 = maxNonPayingScore + 1;
+
+// Aufgabe 2: Threshold where all paying customers get credit
+// This is the minimum score of anyone who repays
+const minPayingScore = Math.min(...payingScores);
+const threshold2 = minPayingScore;
 ```
 
 Ab sofort arbeiten wir mit einem größeren Datensatz. Dieser besteht aus Daten von ${numberOfPersons} Personen. Davon sind ${repayCount} Personen zahlungsfähig ("zahlt zurück") und ${noRepayCount} Personen nicht zahlungsfähig ("zahlt nicht zurück").
@@ -85,7 +103,7 @@ display(html` <div class="table-container">
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="true" data-correct="88"></td>
+                <td contenteditable="true" data-correct="${threshold1}"></td>
             </tr>
         </tbody>
     </table>
@@ -117,7 +135,7 @@ display(html` <div class="table-container">
         </thead>
         <tbody>
             <tr>
-                <td contenteditable="true" data-correct="70"></td>
+                <td contenteditable="true" data-correct="${threshold2}"></td>
             </tr>
         </tbody>
     </table>
