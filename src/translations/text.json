@@ -1,0 +1,16 @@
+{
+  "de": {
+    "title": "Kreditvergabe und Gesamtgewinn",
+    "situation_intro": "Das ist unsere Ausgangssituation: Eine Bank vergibt Kredite von ${total_credit}€.",
+    "point_payback": "Personen, die einen Kredit erhalten und zurückzahlen, zahlen den Betrag mit ${100*interest_rate} % Zinsen zurück. Das heißt, die Bank erhält ${total_credit + total_credit * interest_rate}€ zurück.",
+    "point_loss": "Vergibt die Bank einen Kredit an eine Personen, die diesen nicht oder nur teilweise zurückzahlen, macht die Bank ${loss}€ Verlust pro Person (Hinweis: Die Bank ist versichert, daher verliert sie meist nicht den vollen Betrag).",
+    "task_label": "Aufgabe",
+    "task_content": "Fülle nun die folgende Tabelle aus.",
+    "table_head_description": "Beschreibung",
+    "table_head_amount": "Betrag in €",
+    "row_payback": "Gewinn der Bank:<br />Kredit genehmigt und Person zahlt zurück",
+    "row_no_payback": "Verlust der Bank:<br />Kredit genehmigt und Person zahlt nicht zurück",
+    "row_total_profit": "Gesamtgewinn bei ${0} Personen die ihren Kredit zurückzahlen und ${1} Personen die ihren Kredit nicht zurückzahlen",
+    "button_validate": "Ergebnis überprüfen"
+  }
+}
