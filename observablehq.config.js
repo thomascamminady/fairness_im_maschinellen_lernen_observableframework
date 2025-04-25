@@ -40,10 +40,6 @@ export default {
             path: "/08_variable_entscheidungsgrenze_2_populationen",
         },
         {
-            name: "VIII. Metriken",
-            path: "/09_datenuebersicht",
-        },
-        {
             name: "Einleitung: Faire Kreditvergabe (EN)",
             path: "/en_index",
         },
@@ -74,10 +70,6 @@ export default {
         {
             name: "VII. Faire Entscheidungsgrenzen!? (EN)",
             path: "/en_08_variable_entscheidungsgrenze_2_populationen",
-        },
-        {
-            name: "VIII. Metriken (EN)",
-            path: "/en_09_datenuebersicht",
         },
     ],
 
