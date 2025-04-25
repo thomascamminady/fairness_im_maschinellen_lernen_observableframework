@@ -52,23 +52,23 @@ export default {
             path: "/en_03_histogram",
         },
         {
-            name: "III. Der Datensatz (EN)",
+            name: "III. The data set",
             path: "/en_04_einfuehrung_datensatz",
         },
         {
-            name: "IV. Statistische Gütemaße (EN)",
+            name: "IV. Statistical quality measures",
             path: "/en_05_feste_entscheidungsgrenze",
         },
         {
-            name: "V. Variable Entscheidungsgrenze (EN)",
+            name: "V. Variable decision boundary",
             path: "/en_06_variable_entscheidungsgrenze",
         },
         {
-            name: "VI. Zwei Personengruppen (EN)",
+            name: "VI. Two populations",
             path: "/en_07_einfuehrung_datensatz_aufgeteilt",
         },
         {
-            name: "VII. Faire Entscheidungsgrenzen!? (EN)",
+            name: "VII. Fair decision boundaries!?",
             path: "/en_08_variable_entscheidungsgrenze_2_populationen",
         },
     ],
