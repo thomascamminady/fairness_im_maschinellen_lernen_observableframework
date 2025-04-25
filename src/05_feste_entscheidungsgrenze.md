@@ -225,7 +225,7 @@ Es gibt verschiedene Gütemaße, die wir zur Bewertung unseres Modells verwenden
 -   <b>Gewinn:</b> Erzielter Gesamtgewinn der Bank (Erinnerung: die Bank erhält 300€ für jeden zurückgezahlten Kredit und verliert 700€ für jeden nicht zurückgezahlten Kredit).
 
 <div class="tip" label="Aufgabe 3">
-Berechne die Werte der vier Gütemaße. Nutze dazu die Werte in der Konfusionsmatrix. Trage deine Ergebnisse in der folgenden Tabelle ein.
+Berechne die Werte der vier Gütemaße. Nutze dazu die Werte in der Konfusionsmatrix. Trage deine Ergebnisse in der folgenden Tabelle ein. Runde stets auf ganzzahlige Werte!
 </div>
 
 ```html
