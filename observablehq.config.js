@@ -40,15 +40,15 @@ export default {
             path: "/08_variable_entscheidungsgrenze_2_populationen",
         },
         {
-            name: "Einleitung: Faire Kreditvergabe (EN)",
+            name: "Introduction: Fair Credit Granting",
             path: "/en_index",
         },
         {
-            name: "I. Kreditvergabe und Gesamtgewinn (EN)",
+            name: "I. Credit granting and total profit",
             path: "/en_02_vierfelder",
         },
         {
-            name: "II. Die Daten verstehen (EN)",
+            name: "II. Understanding the data",
             path: "/en_03_histogram",
         },
         {
