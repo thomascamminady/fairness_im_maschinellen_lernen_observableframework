@@ -8,7 +8,9 @@ style: css/custom.css
 ## Is the decision threshold really well chosen?
 
 ```js
-const data = await FileAttachment("data/user/distribution.csv").csv({
+import { translateData } from "./js/translateData.js";
+
+var data = await FileAttachment("data/user/distribution.csv").csv({
     typed: true,
 });
 const fixedThreshAlt = 70;
@@ -52,6 +54,8 @@ const percentCapablePaying = Math.round((TP / (TP + FN)) * 100);
 const percentTotalCredit = Math.round(
     (totalCreditReceived / totalPersons) * 100
 );
+
+data = translateData(data);
 ```
 
 To answer this question and validate the credit approval system, we will use total profit and various statistical performance measures.

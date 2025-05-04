@@ -11,9 +11,11 @@ style: css/custom.css
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 ```js
-const data = FileAttachment("data/user/distribution.csv").csv({
+import { translateData } from "./js/translateData.js";
+
+const data = translateData(await FileAttachment("data/user/distribution.csv").csv({
   typed: true,
-});
+}));
 ```
 
 So far, we have only differentiated the 400 individuals in our dataset by whether they are creditworthy (dark blue) or not (light blue).
@@ -76,12 +78,12 @@ const fig_left = Plot.plot({
   },
   color: {
     legend: true,
-    domain: ["Zahlt zurück", "Zahlt nicht zurück"],
+    domain: ["Repays", "Does not repay"],
     range: ["#33a02c", "#b2df8a"],
   },
   marks: [
     Plot.dot(
-      data.filter((d) => d.age == "Jung"),
+      data.filter((d) => d.age == "Young"),
       Plot.stackY2({
         x: "score",
         fill: "type",
@@ -114,12 +116,12 @@ const fig_right = Plot.plot({
 
   color: {
     legend: true,
-    domain: ["Zahlt zurück", "Zahlt nicht zurück"],
+    domain: ["Repays", "Does not repay"],
     range: ["#6a3d9a", "#cab2d6"],
   },
   marks: [
     Plot.dot(
-      data.filter((d) => d.age == "Alt"),
+      data.filter((d) => d.age == "Old"),
       Plot.stackY2({
         x: "score",
         fill: "type",
