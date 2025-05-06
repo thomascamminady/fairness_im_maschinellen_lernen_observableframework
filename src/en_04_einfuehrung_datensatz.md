@@ -9,7 +9,9 @@ style: css/custom.css
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 ```js
-const data = await FileAttachment("data/user/distribution.csv").csv({
+import { translateData } from "./js/translateData.js";
+
+var data = await FileAttachment("data/user/distribution.csv").csv({
     typed: true,
 });
 const numberOfPersons = data.length;
@@ -35,6 +37,8 @@ const threshold1 = maxNonPayingScore + 1;
 // This is the minimum score of anyone who repays
 const minPayingScore = Math.min(...payingScores);
 const threshold2 = minPayingScore;
+
+data = translateData(data);
 ```
 
 From now on, we are working with a larger dataset. It consists of data from ${numberOfPersons} individuals. Of these, ${repayCount} are creditworthy ("repays") and ${noRepayCount} are not creditworthy ("does not repay").
@@ -66,7 +70,7 @@ display(
         color: {
             legend: true,
             scheme: "Paired",
-            domain: ["Zahlt nicht zurück", "Zahlt zurück"],
+            domain: ["Does not repay", "Repays"],
         },
         marks: [
             Plot.dot(

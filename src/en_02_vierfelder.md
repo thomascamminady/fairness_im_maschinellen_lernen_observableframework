@@ -6,6 +6,8 @@ style: css/custom.css
 # Loan Approval and Total Profit
 
 ```js
+const REPAYS = "Repays";
+const DOES_NOT_REPAY = "Does not repay";
 const total_credit = 1000;
 const interest_rate = 0.3;
 const loss = 700;

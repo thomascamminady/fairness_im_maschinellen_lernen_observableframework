@@ -1,7 +1,7 @@
 // Translates German data labels to English
 export function translateData(data) {
-  // Create a copy of the data array
-  const translatedData = [...data];
+  // Create a deep copy of the data array with all properties
+  const translatedData = data.map(item => ({...item}));
   
   translatedData.forEach(d => {
     if (d.type === "Zahlt zurück") {

@@ -9,9 +9,13 @@ style: css/custom.css
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 ```js
-const data = FileAttachment("data/user/distribution.csv").csv({
+import { translateData } from "./js/translateData.js";
+
+const raw_data = await FileAttachment("data/user/distribution.csv").csv({
   typed: true,
 });
+
+const data = translateData(raw_data);
 ```
 
 Now you can vary the decision threshold and determine what you consider the optimal value.
@@ -91,7 +95,7 @@ const {
   true_positive_rate,
   gewinn,
   accuracy,
-} = calculateMetrics(data, "", threshAlt);
+} = calculateMetrics(raw_data, "", threshAlt);
 ```
 
 ```html

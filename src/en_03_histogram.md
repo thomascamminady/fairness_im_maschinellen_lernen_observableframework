@@ -16,15 +16,17 @@ Before working with a larger dataset, you will first explore the structure of th
 Here is a table with fictional but realistic data.
 
 ```js
-const names1 = FileAttachment("data/user/random_user_1.csv").csv({
+import { translateData } from "./js/translateData.js";
+
+const names1 = translateData(await FileAttachment("data/user/random_user_1.csv").csv({
     typed: true,
-});
-const names2 = FileAttachment("data/user/random_user_2.csv").csv({
+}));
+const names2 = translateData(await FileAttachment("data/user/random_user_2.csv").csv({
     typed: true,
-});
-const names3 = FileAttachment("data/user/random_user_3.csv").csv({
+}));
+const names3 = translateData(await FileAttachment("data/user/random_user_3.csv").csv({
     typed: true,
-});
+}));
 
 function createTable(data) {
     return Inputs.table(data, {
